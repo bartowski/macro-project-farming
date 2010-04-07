@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<strings>
+
+	<!-- Main Labels -->
+
+	<string id="31000">KATEGORIER</string>
+	<string id="31001">ÅR</string>
+	<string id="31002">SKUESPILLERE</string>
+	<string id="31003">FILER</string>
+	<string id="31005">VIDEO INDSTILLINGER</string>
+	<string id="31004">NU AFSPILLES</string>
+	<string id="31006">MUSIKVIDEOER</string>
+	<string id="31007">EKSTRA</string>
+	<string id="31008">FAVORITTER</string>
+	<string id="31009">PROGRAMMER</string>
+	<string id="31010">MUSIK</string>
+	<string id="31011">SPIL</string>
+	<string id="31012">BILLEDER</string>
+	<string id="31013">FILM</string>
+	<string id="31014">SERIER</string>
+	<string id="31015">VIDEOER</string>
+	<string id="31016">INDSTILLINGER</string>
+	<string id="31017">VEJR</string>
+	<string id="31018">AFSPIL DVD</string>
+	<string id="31019">AFSLUT</string>
+	<string id="31020">SCRIPTS</string>
+	<string id="31021">START OM</string>
+	<string id="31022">LOG UD</string>
+
+</strings>

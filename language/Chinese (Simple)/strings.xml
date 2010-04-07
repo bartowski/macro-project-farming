@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+ <strings>
+
+	<!-- Main Labels -->
+	
+	<string id="31000">类型</string>
+	<string id="31001">年份</string>
+	<string id="31002">演员</string>
+	<string id="31003">文件</string>
+	<string id="31005">视频设置</string>
+	<string id="31004">正在播放</string>
+	<string id="31006">音乐视频</string>
+	<string id="31007">插件</string>
+	<string id="31008">收藏夹</string>
+	<string id="31009">程序</string>
+	<string id="31010">音乐</string>
+	<string id="31011">游戏</string>
+	<string id="31012">图片</string>
+	<string id="31013">电影</string>
+	<string id="31014">剧集</string>
+	<string id="31015">视频</string>
+	<string id="31016">设置</string>
+	<string id="31017">天气</string>
+	<string id="31018">光盘</string>
+	<string id="31019">关机</string>
+	<string id="31020">脚本</string>
+	<string id="31021">重启</string>
+	<string id="31022">注销</string>
+
+</strings>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<strings>
+
+	<!-- Main Labels -->
+
+	<string id="31000">GENEROS</string>
+	<string id="31001">AÑOS</string>
+	<string id="31002">ACTORES</string>
+	<string id="31003">ARCHIVOS</string>
+	<string id="31005">AJUSTES DE VÍDEO</string>
+	<string id="31004">REPRODUCIENDO</string>
+	<string id="31006">VIDEOS MUSICALES</string>
+	<string id="31007">PLUGINS</string>
+	<string id="31008">FAVORITOS</string>
+	<string id="31009">PROGRAMAS</string>
+	<string id="31010">MÚSICA</string>
+	<string id="31011">JUEGOS</string>
+	<string id="31012">IMÁGENES</string>
+	<string id="31013">PELÍCULAS</string>
+	<string id="31014">SERIES DE TV</string>
+	<string id="31015">VÍDEOS</string>
+	<string id="31016">AJUSTES</string>
+	<string id="31017">TIEMPO</string>
+	<string id="31018">REPRODUCIR DISCO</string>
+	<string id="31019">APAGAR</string>
+	<string id="31020">SCRIPTS</string>
+	<string id="31021">REINICIAR</string>
+	<string id="31022">CERRAR SESIÓN</string>
+
+</strings>

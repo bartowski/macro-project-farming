@@ -1,0 +1,592 @@
+<!--Alaska-->
+
+<includes>
+
+	<include name="Viewtype_Fanart">
+
+		<!-- Browser -->
+		<control type="image"><!-- 1st overlay -->
+			<visible>Control.IsVisible(56) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>panel/panel-back.png</texture>
+		</control>
+		<control type="largeimage">
+			<visible>Control.IsVisible(56) + [Container.Content(movies) | Container.Content(tvshows)] + !Player.HasMedia</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>570</width>
+			<height>318</height>
+			<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(56).listitem.property(fanart_image)]</texture>
+			<fadetime>400</fadetime>
+			<aspectratio>stretch</aspectratio>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_Viewtype_Panel_Fanart</include>
+		</control>
+		
+		<control type="panel" id="56">
+			<visible>Container.Content(Movies) | [Container.Content(tvshows) + Skin.HasSetting(TVPosters)]</visible>
+			<posx>520</posx>
+			<posy>-105</posy><!-- -105 -->
+			<width>800</width>
+			<height>885</height><!-- 1570  1280 -->
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>300</scrolltime>
+			<orientation>vertical</orientation>
+			<viewtype label="Panel">List</viewtype>
+			<onleft>7000</onleft>
+			<onright>7000</onright>
+			<onup>56</onup>
+			<ondown>56</ondown>
+			<preloaditems>2</preloaditems>
+			<include>Animation_Viewtype_Panel_FocusArea</include>
+			<include>Animation_HiddenByInfo</include>
+			<itemlayout width="230" height="350">
+			<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+				<control type="image">
+					<posx>1</posx>
+					<posy>131</posy>
+					<width>215</width>
+					<height>320</height>
+					<texture>postermatteNF.png</texture>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>131</posy>
+					<width>215</width>
+					<height>320</height>
+					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>!Container.Content(Genres)</visible>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>131</posy>
+					<width>215</width>
+					<height>320</height>
+					<texture>postermatteNF.png</texture>
+					<colordiffuse>89000000</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>131</posy>
+					<width>215</width>
+					<height>320</height>
+					<texture background="true" diffuse="postermatteNF.png" fallback="defaultmoviegenre.jpg">extras\moviegenres\$INFO[ListItem.Label].jpg</texture>
+					<fadetime>200</fadetime>
+					<colordiffuse>89FFFFFF</colordiffuse>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Container.Content(Genres)</visible>
+				</control>
+				<control type="image">
+					<posx>-12</posx>
+					<posy>118</posy>
+					<width>240</width>
+					<height>346</height>
+					<texture>posterframeF.png</texture>
+					<colordiffuse>39FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>130</posy>
+					<width>216</width>
+					<height>322</height>
+					<texture>posterframeNF.png</texture>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>132</posy>
+					<width>25</width>
+					<height>25</height>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
+					<info>ListItem.Overlay</info>
+					<colordiffuse>89FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>132</posy>
+					<width>25</width>
+					<height>25</height>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
+					<info>ListItem.Overlay</info>
+					<colordiffuse>89FFFFFF</colordiffuse>
+				</control>
+			</control>
+			</itemlayout>
+			
+			<focusedlayout width="300" height="184">
+			<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+				<control type="image">
+					<posx>-40</posx>
+					<posy>106</posy>
+					<width>300</width>
+					<height>388</height>
+					<texture>panel/panel_poster_glow.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+						<effect type="fade" start="0" end="60" time="800" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>131</posy>
+					<width>215</width>
+					<height>320</height>
+					<texture>postermatteNF.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>131</posy>
+					<width>215</width>
+					<height>320</height>
+					<texture background="true" diffuse="postermatteNF.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>!Container.Content(Genres)</visible>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>131</posy>
+					<width>215</width>
+					<height>320</height>
+					<texture background="true" diffuse="postermatteNF.png" fallback="defaultmoviegenre.jpg">extras\moviegenres\$INFO[ListItem.Label].jpg</texture>
+					<fadetime>200</fadetime>
+					<colordiffuse>89FFFFFF</colordiffuse>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Container.Content(Genres)</visible>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>-12</posx>
+					<posy>118</posy>
+					<width>240</width>
+					<height>346</height>
+					<texture>posterframeF.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>130</posy>
+					<width>216</width>
+					<height>322</height>
+					<texture>posterframeNF.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>132</posy>
+					<width>25</width>
+					<height>25</height>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
+					<info>ListItem.Overlay</info>
+					<colordiffuse>89FFFFFF</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>132</posy>
+					<width>25</width>
+					<height>25</height>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
+					<info>ListItem.Overlay</info>
+					<colordiffuse>89FFFFFF</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+			</control>
+			</focusedlayout>
+		</control>
+		
+		<control type="panel" id="56">
+				<visible>Container.Content(tvshows) + !Skin.HasSetting(TVPosters) + !Skin.HasSetting(TVBanners)</visible>
+				<posx>560</posx>
+				<posy>-126</posy><!-- -105 -->
+				<width>800</width>
+				<height>885</height><!-- 1570  1280 -->
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>300</scrolltime>
+				<orientation>vertical</orientation>
+				<viewtype label="Panel">Wall</viewtype>
+				<onleft>7000</onleft>
+				<onright>7000</onright>
+				<onup>56</onup>
+				<ondown>56</ondown>
+				<preloaditems>2</preloaditems>
+				<include>Animation_Viewtype_Panel_FocusArea</include>
+				<include>Animation_HiddenByInfo</include>
+			<itemlayout width="320" height="180">
+			<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+				<control type="image">
+					<posx>1</posx>
+					<posy>131</posy>
+					<width>300</width>
+					<height>168</height>
+					<texture>postermatteNF.png</texture>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>131</posy>
+					<width>300</width>
+					<height>168</height>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>!Container.Content(Genres)</visible>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>131</posy>
+					<width>300</width>
+					<height>168</height>
+					<texture>postermatteNF.png</texture>
+					<colordiffuse>black</colordiffuse>
+					<animation effect="fade" start="10" end="70" time="0" condition="true">Conditional</animation>
+				</control>
+				<control type="image">
+					<posx>-12</posx>
+					<posy>120</posy>
+					<width>326</width>
+					<height>190</height>
+					<texture>tv-landscape/landscapeframeFO.png</texture>
+					<colordiffuse>39FFFFFF</colordiffuse>
+				</control>
+			</control>
+			</itemlayout>
+			
+			<focusedlayout width="300" height="184">
+			<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+				<control type="image">
+					<posx>-70</posx>
+					<posy>62</posy>
+					<width>438</width>
+					<height>302</height>
+					<texture>tv-landscape/glow1.png</texture>
+					<colordiffuse>89FFFFFF</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
+						<effect type="fade" start="0" end="100" time="800" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>131</posy>
+					<width>300</width>
+					<height>168</height>
+					<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>!Container.Content(Genres)</visible>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>-12</posx>
+					<posy>120</posy>
+					<width>326</width>
+					<height>190</height>
+					<texture>tv-landscape/landscapeframeFO.png</texture>
+					<colordiffuse>89FFFFFF</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+			</control>
+			</focusedlayout>
+		</control>
+
+		<control type="fixedlist" id="56">
+			<visible>Container.Content(tvshows) + Skin.HasSetting(TVBanners)</visible>
+			<posx>560</posx>
+			<posy>20</posy>
+			<height>885</height>
+			<width>880</width>
+			<onup>56</onup>
+			<ondown>56</ondown>
+			<onleft>7000</onleft>
+			<onright>7000</onright>
+			<scrolltime>0</scrolltime>
+			<viewtype label="Panel">list</viewtype>
+			<orientation>vertical</orientation>
+			<focusposition>2</focusposition>
+			<movement>2</movement>
+			<pagecontrol>60</pagecontrol>
+			<preloaditems>2</preloaditems>
+			<include>Animation_Viewtype_Panel_FocusArea</include>
+			<include>Animation_HiddenByInfo</include>
+			<itemlayout width="660" height="140">
+			<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+				<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>646</width>
+					<height>126</height>
+					<texture>list/listbannermatte.png</texture>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>646</width>
+					<height>126</height>
+					<texture background="true" diffuse="list/listbannermatte.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>!Container.Content(Genres)</visible>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>646</width>
+					<height>126</height>
+					<texture>list/listbannermatte.png</texture>
+					<colordiffuse>89000000</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>646</width>
+					<height>126</height>
+					<texture>list/listbannermatte_cover.png</texture>
+					<colordiffuse>89FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>132</posy>
+					<width>25</width>
+					<height>25</height>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
+					<info>ListItem.Overlay</info>
+					<colordiffuse>89FFFFFF</colordiffuse>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>132</posy>
+					<width>25</width>
+					<height>25</height>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
+					<info>ListItem.Overlay</info>
+					<colordiffuse>89FFFFFF</colordiffuse>
+				</control>
+			</control>
+			</itemlayout>
+			
+			<focusedlayout width="660" height="140">
+			<control type="group">
+			<posx>60</posx>
+			<posy>0</posy>
+				<control type="image">
+					<posx>-60</posx>
+					<posy>-60</posy>
+					<width>768</width>
+					<height>245</height>
+					<texture>list/banner_glow.png</texture>
+					<colordiffuse>89FFFFFF</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+						<effect type="fade" start="0" end="100" time="800" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>646</width>
+					<height>126</height>
+					<texture>list/listbannermatte.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>646</width>
+					<height>126</height>
+					<texture background="true" diffuse="list/listbannermatte.png">$INFO[ListItem.Icon]</texture>
+					<fadetime>200</fadetime>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>!Container.Content(Genres)</visible>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>646</width>
+					<height>126</height>
+					<texture>list/listbannermatte_cover.png</texture>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>0</posy>
+					<width>25</width>
+					<height>25</height>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
+					<info>ListItem.Overlay</info>
+					<colordiffuse>89FFFFFF</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>2</posx>
+					<posy>0</posy>
+					<width>25</width>
+					<height>25</height>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
+					<info>ListItem.Overlay</info>
+					<colordiffuse>89FFFFFF</colordiffuse>
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="145,202" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+			</control>
+			</focusedlayout>
+		</control>
+		
+		<!-- Browser label and flags -->
+	<control type="group">
+	<include>Animation_Viewtype_Panel_Title</include>
+	<include>Animation_HiddenByInfo</include>	
+		<control type="label"><!--Movie title-->
+			<visible>Control.IsVisible(56) + Container.Content(movies)</visible>
+			<posx>15</posx>
+			<posy>320</posy>
+			<width>555</width>
+			<height>50</height>
+			<align>center</align>
+			<font>Font_InfoYear2</font>
+			<textcolor>ff67ffff</textcolor>
+			<label>$INFO[ListItem.Label]</label>
+		</control>
+		<control type="image" id="7017">
+			<visible>Control.IsVisible(56) + Container.Content(tvshows)</visible><!--Clear Title-->
+			<posx>160</posx>
+			<posy>300</posy>
+			<width>230</width>
+			<height>89</height>
+			<texture>cleartitle/$INFO[ListItem.TVShowTitle].png</texture>
+			<fadetime>300</fadetime>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="label"><!--Movie title-->
+			<visible>Control.IsVisible(56) + Container.Content(tvshows) + IsEmpty(Control.GetLabel(7017))</visible>
+			<posx>15</posx>
+			<posy>320</posy>
+			<width>555</width>
+			<height>50</height>
+			<align>center</align>
+			<font>Font_InfoYear2</font>
+			<textcolor>ff67ffff</textcolor>
+			<label>$INFO[ListItem.Label]</label>
+		</control>
+		<control type="label"><!--Movie runtime-->
+			<visible>Control.IsVisible(56) + Container.Content(tvshows) + IsEmpty(Control.GetLabel(7017))</visible>
+			<posx>15</posx>
+			<posy>358</posy>
+			<width>555</width>
+			<height>50</height>
+			<align>center</align>
+			<font>Font_Bartowski_Showcase_runtime_year</font>
+			<textcolor>ffffffff</textcolor>
+			<label>$INFO[ListItem.Genre]</label>
+		</control>
+		<control type="label"><!--TV genre-->
+			<visible>Control.IsVisible(56) + Container.Content(movies)</visible>
+			<posx>15</posx>
+			<posy>356</posy>
+			<width>555</width>
+			<height>50</height>
+			<align>center</align>
+			<font>Font_Bartowski_Showcase_runtime_year</font>
+			<textcolor>ffffffff</textcolor>
+			<label>$INFO[ListItem.Duration]</label>
+		</control>
+	</control>
+	<control type="group">
+	<visible>Control.IsVisible(56)</visible>
+	<include>Animation_HiddenByInfo</include>
+		<control type="textbox"><!--Movie Plot-->
+			<visible>Container.Content(movies)</visible>
+			<posx>15</posx>
+			<posy>390</posy>
+			<width>555</width>
+			<height>264</height>
+			<font>Font_Bartowski_Showcase_plot</font>
+			<textcolor>ffffffff</textcolor>
+			<label>$INFO[ListItem.Plot]</label>
+			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			<include>Animation_Viewtype_Panel_BottomArea</include>
+		</control>
+		<control type="textbox"><!--TV Plot-->
+			<visible>Container.Content(tvshows)</visible>
+			<posx>15</posx>
+			<posy>410</posy>
+			<width>555</width>
+			<height>264</height>
+			<font>Font_Bartowski_Showcase_plot</font>
+			<textcolor>ffffffff</textcolor>
+			<label>$INFO[ListItem.Plot]</label>
+			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			<include>Animation_Viewtype_Panel_BottomArea</include>
+		</control>
+		<control type="image"><!-- last overlay -->
+			<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>panel/last-overlay.png</texture>
+		</control>
+		<control type="grouplist">
+			<visible>Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
+			<description>Media Codec Flagging Images</description>
+			<posx>20</posx>
+			<posy>680</posy>
+			<width>1280</width>
+			<align>left</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<include>VideoCodecFlaggingConditions</include>
+			<include>AudioCodecFlaggingConditions</include>
+			<include>AspectCodecFlaggingConditions</include>
+			<include>VideoTypeHackFlaggingConditions</include>
+			<include>VideoMPAAFlaggingConditions</include>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_Viewtype_Panel_BottomArea</include>
+		</control>
+	</control>
+		<include>Trailer_Panel</include>
+	</include>
+</includes>

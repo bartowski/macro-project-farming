@@ -1,0 +1,216 @@
+<!--Alaska-->
+
+<window id="25">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<control type="largeimage">
+			<include>Dimensions_Fullscreen</include>
+			<texture background="true">$INFO[Fanart.Image]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>400</fadetime>
+			<include>VisibleFadeEffect</include>
+			<visible>![IsEmpty(Fanart.Image) | Control.IsVisible(59) | Control.IsVisible(54)]</visible>
+		</control>
+		<control type="largeimage">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<aspectratio>scale</aspectratio>
+			<include>Animation_CommonFade</include>
+			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart) | Control.IsVisible(54) | Control.IsVisible(59) | Control.IsVisible(56)]</visible>
+		</control>
+		<control type="largeimage">
+			<include>Dimensions_Fullscreen</include>
+			<texture>special://skin/media/backdrops/curtains.png</texture>
+			<aspectratio>scale</aspectratio>
+			<include>VisibleFadeEffect</include>
+			<visible>!Control.IsVisible(54) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image) + [substring(Container.FolderPath,videodb://1/) | substring(Container.FolderPath,videodb://4/)]]</visible>
+		</control>
+		<control type="largeimage">
+			<include>Dimensions_Fullscreen</include>
+			<texture>special://skin/media/backdrops/curtains.png</texture>
+			<aspectratio>scale</aspectratio>
+			<include>VisibleFadeEffect</include>
+			<visible>!Control.IsVisible(54) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image) + [substring(Container.FolderPath,videodb://2/) | substring(Container.FolderPath,videodb://5/)]]</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>backdrops/curtains.png</texture>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(56)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>400</fadetime>
+			<texture>backdrops/curtains_diffuse.png</texture>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(59) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)]</visible>
+		</control>
+		<!--<control type="largeimage">
+			<posx>480</posx>
+			<posy>150</posy>
+			<width>800</width>
+			<height>448</height>
+			<fadetime>400</fadetime>
+			<texture diffuse="Showcase/showcase-diffuse.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<include>Animation_CommonFade</include>
+			<visible>Control.IsVisible(55)</visible>
+		</control>-->
+		<!--<include>Global_Filter</include>-->
+
+		<include>Object_MovieInfoLines</include>
+		<include>Viewtype_Showcase</include>
+		<include>Viewtype_Files</include>
+		<include>Viewtype_Poster</include>
+		<include>Viewtype_Fanart</include>
+		<include>Viewtype_List</include>
+		<include>Viewtype_Landscape</include>
+		<include>Viewtype_Episode</include>
+		<include>Viewtype_16x9</include>
+		<include>Viewtype_Wall</include>
+		
+		<!--<control type="group">
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<include>PosterMediaFlags</include>
+		</control>-->
+
+		<include>7000_has_focus</include>
+		<!--<include>Global_ContextFilter</include>-->
+		<control type="image"><!-- Floor -->
+			<posx>0</posx>
+			<posy>650</posy>
+			<width>1280</width>
+			<height>70</height>
+			<texture>backdrops/test2.png</texture>
+			<visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
+			<include>Animation_ViewOptions</include>
+		</control>
+		<control type="label">
+			<include>WindowID</include>
+			<label>MyVideoNav.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+
+		<control type="grouplist" id="7000">
+			<visible>!Skin.HasSetting(LockViews)</visible>
+			<include>WindowMenuVars</include>
+			<posy>680</posy>
+			<control type="button" id="20">
+				<include>WindowMenuButton</include>
+				<label>$INFO[Container.ViewMode]</label>
+				<onclick>Container.NextViewMode</onclick>
+			</control>
+			<control type="togglebutton" id="22">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>Gimme Fanart</label>
+				<altlabel>Dark Showcase</altlabel>
+				<onclick>Skin.ToggleSetting(ShowcaseFanart)</onclick>
+				<selected>Skin.HasSetting(ShowcaseFanart)</selected>
+				<visible>Control.IsVisible(58)</visible>
+			</control>
+			<control type="togglebutton" id="25">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>Show Thumbs</label>
+				<altlabel>Disable Thumbs</altlabel>
+				<onclick>Skin.ToggleSetting(extrathumbs)</onclick>
+				<selected>Skin.HasSetting(extrathumbs)</selected>
+				<visible>Control.IsVisible(58)</visible>
+			</control>
+			<control type="togglebutton" id="24">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>Use Cleartitle</label>
+				<altlabel>No Cleartitle</altlabel>
+				<onclick>Skin.ToggleSetting(ClearTitle)</onclick>
+				<selected>Skin.HasSetting(ClearTitle)</selected>
+				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+			</control>
+			<control type="togglebutton" id="23">
+				<description>Toggle MoviesFanart</description>
+				<include>WindowMenuButton</include>
+				<label>Disable Flags</label>
+				<altlabel>Show Flags</altlabel>
+				<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
+				<selected>Skin.HasSetting(no_media_flags)</selected>
+				<visible>!Control.IsVisible(58)</visible>
+			</control>
+			<control type="button" id="3">
+				<include>WindowMenuButton</include>
+				<label>103</label>
+			</control>
+			<control type="togglebutton" id="14">
+				<include>WindowMenuButton</include>
+				<!-- LOC -->
+				<label>SHOWN</label>
+				<!-- LOC -->
+				<altlabel>HIDDEN</altlabel>				
+			</control>
+			<control type="button" id="8">
+				<include>WindowMenuButton</include>
+				<label>137</label>
+			</control>	
+			<control type="button" id="19">
+				<include>WindowMenuButton</include>
+				<label>587</label>
+			</control>
+		</control>
+
+		<control type="grouplist">
+			<visible>!Skin.HasSetting(LockViews)</visible>
+			<include>WindowMenuVars</include>
+			<posy>658</posy>
+			<control type="button" id="40">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>VIEWTYPE</label>
+			</control>
+			<control type="button" id="45">
+				<include>WindowMenuLabel</include>
+				<label>VIEW OPTIONS</label>
+				<visible>Control.IsVisible(58) + Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>		
+			</control>
+			<control type="button" id="46">
+				<include>WindowMenuLabel</include>
+				<label>Extrathumbs</label>
+				<visible>Control.IsVisible(58)</visible>		
+			</control>
+			<control type="button" id="46">
+				<include>WindowMenuLabel</include>
+				<label>Flags</label>
+				<visible>!Control.IsVisible(58)</visible>		
+			</control>
+			<control type="button" id="41">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>ORDER</label>
+			</control>
+			<control type="button" id="42">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>WATCHED</label>
+			</control>
+			<control type="button" id="43">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>TITLE</label>
+			</control>	
+			<control type="button" id="44">
+				<include>WindowMenuLabel</include>
+				<!-- LOC -->
+				<label>TITLE</label>
+			</control>				
+		</control>
+		<include>Global_Time</include>
+		<include>Global_Heading</include>
+		<include>Global_RSS</include>
+
+		<include>Object_DebugGrid</include>
+
+	</controls>	
+</window>

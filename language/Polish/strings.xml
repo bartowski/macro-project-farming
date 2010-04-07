@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<strings>
+
+	<!-- Main Labels -->
+
+	<string id="31000">GATUNKI</string>
+	<string id="31001">LATA</string>
+	<string id="31002">AKTORZY</string>
+	<string id="31003">PLIKI</string>
+	<string id="31005">USTAWIENIA WIDEO</string>
+	<string id="31004">ODTWARZANE TERAZ</string>
+	<string id="31006">TELEDYSKI</string>
+	<string id="31007">WTYCZKI</string>
+	<string id="31008">ULUBIONE</string>
+	<string id="31009">PROGRAMY</string>
+	<string id="31010">MUZYKA</string>
+	<string id="31011">GRY</string>
+	<string id="31012">OBRAZY</string>
+	<string id="31013">FILMY</string>
+	<string id="31014">SERIALE</string>
+	<string id="31015">WIDEO</string>
+	<string id="31016">USTAWIENIA</string>
+	<string id="31017">POGODA</string>
+	<string id="31018">ODTWARZAJ PLYTE</string>
+	<string id="31019">WYLACZ</string>
+	<string id="31020">SKRYPTY</string>
+	<string id="31021">RESTART</string>
+	<string id="31022">WYLOGUJ</string>
+
+</strings>

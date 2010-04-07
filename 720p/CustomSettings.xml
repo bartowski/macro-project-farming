@@ -1,0 +1,1926 @@
+<!--Alaska-->
+
+<window id="56">
+	<defaultcontrol>9000</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>Global_Background</include>
+		<include>Global_Filter</include>
+		<control type="group">
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>1280</width>
+			<height>720</height>
+			<include>Animation_ZoomOutZoomIn</include>
+			<include>Animation_ZoomedByMenu</include>
+			<control type="list" id="9000">
+				<description>List</description>
+				<posx>150</posx>
+				<posy>175</posy>
+				<width>300</width>
+				<height>480</height>
+				<onleft>9010</onleft>
+				<onright>9010</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<pagecontrol>-</pagecontrol>
+				<itemlayout height="34" width="300">
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="34" width="300">
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<font>Font_Settings</font>
+						<textcolor>TextFocused</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus(9000)</visible>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>300</width>
+						<font>Font_Settings</font>
+						<textcolor>TextFocused</textcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(9000)</visible>
+					</control>
+				</focusedlayout>
+
+				<content>
+					<item id="1">
+						<description>General</description>
+						<label>128</label>
+						<onclick>SetFocus(9001)</onclick>
+					</item>
+					<item id="2">
+						<description>Home</description>
+						<label>10000</label>
+						<onclick>SetFocus(9002)</onclick>
+					</item>
+					<item id="3">
+						<description>Views</description>
+						<!-- LOC -->
+						<label>Views</label>
+						<onclick>SetFocus(9003)</onclick>
+					</item>
+					<item id="4">
+						<description>Artwork</description>
+						<!-- LOC -->
+						<label>Artwork</label>
+						<onclick>SetFocus(9004)</onclick>
+					</item>
+					<item id="5">
+						<description>Sub Menus</description>
+						<!-- LOC -->
+						<label>Sub Menus</label>
+						<onclick>SetFocus(9005)</onclick>
+						<visible>![Skin.HasSetting(home2) | Skin.HasSetting(home3)]</visible>
+					</item>
+					<item id="6">
+						<description>Debug</description>
+						<!-- LOC -->
+						<label>Debug</label>
+						<onclick>SetFocus(9006)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="group" id="9010">
+				<posy>175</posy>
+				<posx>360</posx>
+				<control type="grouplist" id="9001">
+					<visible>Container(9000).Hasfocus(1)</visible>
+					<width>740</width>
+					<height>320</height>
+					<itemgap>6</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					<include>Animation_CommonFadeNoHide</include>
+					<control type="radiobutton" id="100">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Scroll Plot</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
+						<selected>Skin.HasSetting(autoscroll)</selected>
+					</control>
+					<control type="radiobutton" id="101">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Global Temp.</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(ShowGlobalTemp)</onclick>
+						<selected>Skin.HasSetting(ShowGlobalTemp)</selected>
+					</control>
+					<control type="radiobutton" id="102">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Larger RSS</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(largeRSS)</onclick>
+						<selected>Skin.HasSetting(largeRSS)</selected>
+					</control>
+					<control type="radiobutton" id="103">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Only show RSS on home screen</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(RSS_only_on_home)</onclick>
+						<selected>Skin.HasSetting(RSS_only_on_home)</selected>
+					</control>
+				</control>
+				<control type="grouplist" id="9002">
+					<visible>Container(9000).Hasfocus(2)</visible>
+					<width>740</width>
+					<height>320</height>
+					<itemgap>6</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9002</onup>
+					<ondown>9002</ondown>
+					<pagecontrol>60</pagecontrol>
+					<include>Animation_CommonFadeNoHide</include>
+					<control type="button" id="200">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Home Style 1</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetBool(home2)</onclick>
+						<onclick>SetFocus(9000)</onclick>
+						<visible>![Skin.HasSetting(home2) | Skin.HasSetting(home3)]</visible>
+					</control>
+					<control type="button" id="201">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Home Style 2</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetBool(home3)</onclick>
+						<onclick>Skin.Reset(home2)</onclick>
+						<onclick>SetFocus(9000)</onclick>
+						<visible>Skin.HasSetting(home2)</visible>
+					</control>
+					<control type="button" id="202">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Home Style 3</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.Reset(home3)</onclick>
+						<onclick>SetFocus(9000)</onclick>
+						<visible>Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="radiobutton" id="250">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Link Programs to Launcher Plugin</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(launcherforgames)</onclick>
+						<selected>Skin.HasSetting(launcherforgames)</selected>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="radiobutton" id="251">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Programs</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(noprograms)</onclick>
+						<selected>Skin.HasSetting(noprograms)</selected>
+					</control>
+					<control type="radiobutton" id="253">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Videos</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(novideos)</onclick>
+						<selected>Skin.HasSetting(novideos)</selected>
+					</control>
+					<control type="radiobutton" id="254">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Music</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(nomusic)</onclick>
+						<selected>Skin.HasSetting(nomusic)</selected>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="radiobutton" id="255">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Movies</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(nomovies)</onclick>
+						<selected>Skin.HasSetting(nomovies)</selected>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="radiobutton" id="256">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide TV Shows</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(notvshows)</onclick>
+						<selected>Skin.HasSetting(notvshows)</selected>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="radiobutton" id="257">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Pictures</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(nopictures)</onclick>
+						<selected>Skin.HasSetting(nopictures)</selected>
+					</control>
+					<control type="radiobutton" id="258">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Weather</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(noweather)</onclick>
+						<selected>Skin.HasSetting(noweather)</selected>
+					</control>
+					<control type="radiobutton" id="259">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Settings</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(nosettings)</onclick>
+						<selected>Skin.HasSetting(nosettings)</selected>
+					</control>
+					<control type="radiobutton" id="260">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Scripts</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(noscripts)</onclick>
+						<selected>Skin.HasSetting(noscripts)</selected>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="radiobutton" id="261">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Shutdown</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(noshutdown)</onclick>
+						<selected>Skin.HasSetting(noshutdown)</selected>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+				</control>
+
+				<control type="grouplist" id="9003">
+					<visible>Container(9000).Hasfocus(3)</visible>
+					<width>740</width>
+					<height>320</height>
+					<itemgap>6</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9003</onup>
+					<ondown>9003</ondown>
+					<pagecontrol>-</pagecontrol>
+					<include>Animation_CommonFadeNoHide</include>
+					<control type="radiobutton" id="309">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Show Language Flags</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(nolanguagepanel)</onclick>
+						<selected>!Skin.HasSetting(nolanguagepanel)</selected>
+					</control>
+					<control type="radiobutton" id="308">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Show Year Flags</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(noyearpanel)</onclick>
+						<selected>!Skin.HasSetting(noyearpanel)</selected>
+					</control>
+					<control type="radiobutton" id="300">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Show Rating Flags</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(noratingpanel)</onclick>
+						<selected>!Skin.HasSetting(noratingpanel)</selected>
+					</control>
+					<control type="radiobutton" id="301">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Show Video Flags</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(novideopanel)</onclick>
+						<selected>!Skin.HasSetting(novideopanel)</selected>
+					</control>
+					<control type="radiobutton" id="302">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Show Audio Flags</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(noaudiopanel)</onclick>
+						<selected>!Skin.HasSetting(noaudiopanel)</selected>
+					</control>
+					<control type="radiobutton" id="303">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Show Studio Flags</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(nostudiopanel)</onclick>
+						<selected>!Skin.HasSetting(nostudiopanel)</selected>
+					</control>
+					<control type="radiobutton" id="304">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Show Rating Stars</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(NoStars)</onclick>
+						<selected>!Skin.HasSetting(NoStars)</selected>
+					</control>
+					<control type="radiobutton" id="305">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Show Movie Watched Overlay</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
+						<selected>Skin.HasSetting(movieoverlays)</selected>
+					</control>
+					<control type="radiobutton" id="306">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Show TV Watched Overlay</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
+						<selected>Skin.HasSetting(tvoverlays)</selected>
+					</control>
+					<control type="radiobutton" id="307">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>File View Focus Line</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(File_View_Focus_Line)</onclick>
+						<selected>Skin.HasSetting(File_View_Focus_Line)</selected>
+					</control>
+				</control>
+				<control type="grouplist" id="9004">
+					<visible>Container(9000).Hasfocus(4)</visible>
+					<width>740</width>
+					<height>320</height>
+					<itemgap>6</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9004</onup>
+					<ondown>9004</ondown>
+					<pagecontrol>60</pagecontrol>
+					<include>Animation_CommonFadeNoHide</include>
+					<control type="radiobutton" id="400">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Fanart</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidefanart)</onclick>
+						<selected>Skin.HasSetting(hidefanart)</selected>
+					</control>
+					<control type="radiobutton" id="401">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Show current Weather in panel</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(homeweather)</onclick>
+						<selected>Skin.HasSetting(homeweather)</selected>
+						<visible>![Skin.HasSetting(home2) | Skin.HasSetting(home3)]</visible>
+					</control>
+					<control type="radiobutton" id="402">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Show current Weather in background</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(homeweather)</onclick>
+						<selected>Skin.HasSetting(homeweather)</selected>
+						<visible>Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="togglebutton" id="403">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Movie Artwork Folder</label>
+						<altlabel>Reset Home Movie Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomMoviesFolder)</onclick>
+						<onclick>Skin.Reset(CustomMoviesImage)</onclick>
+						<altclick>Skin.Reset(CustomMoviesFolder)</altclick>
+						<usealttexture>Skin.String(CustomMoviesFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="404">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Movie Artwork Image</label>
+						<altlabel>Reset Home Movie Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomMoviesImage)</onclick>
+						<onclick>Skin.Reset(CustomMoviesFolder)</onclick>
+						<altclick>Skin.Reset(CustomMoviesImage)</altclick>
+						<usealttexture>Skin.String(CustomMoviesImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="405">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home TV Artwork Folder</label>
+						<altlabel>Reset Home TV Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomTVShowsFolder)</onclick>
+						<onclick>Skin.Reset(CustomTVShowsImage)</onclick>
+						<altclick>Skin.Reset(CustomTVShowsFolder)</altclick>
+						<usealttexture>Skin.String(CustomTVShowsFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="406">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home TV Artwork Image</label>
+						<altlabel>Reset Home TV Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomTVShowsImage)</onclick>
+						<onclick>Skin.Reset(CustomTVShowsFolder)</onclick>
+						<altclick>Skin.Reset(CustomTVShowsImage)</altclick>
+						<usealttexture>Skin.String(CustomTVShowsImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="407">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Music Artwork Folder</label>
+						<altlabel>Reset Home Music Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomMusicFolder)</onclick>
+						<onclick>Skin.Reset(CustomMusicImage)</onclick>
+						<altclick>Skin.Reset(CustomMusicFolder)</altclick>
+						<usealttexture>Skin.String(CustomMusicFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="408">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Music Artwork Image</label>
+						<altlabel>Reset Home Music Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomMusicImage)</onclick>
+						<onclick>Skin.Reset(CustomMusicFolder)</onclick>
+						<altclick>Skin.Reset(CustomMusicImage)</altclick>
+						<usealttexture>Skin.String(CustomMusicImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="409">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Videos Artwork Folder</label>
+						<altlabel>Reset Home Videos Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomVideosFolder)</onclick>
+						<onclick>Skin.Reset(CustomVideosImage)</onclick>
+						<altclick>Skin.Reset(CustomVideosFolder)</altclick>
+						<usealttexture>Skin.String(CustomVideosFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="410">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Videos Artwork Image</label>
+						<altlabel>Reset Home Videos Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomVideosImage)</onclick>
+						<onclick>Skin.Reset(CustomVideosFolder)</onclick>
+						<altclick>Skin.Reset(CustomVideosImage)</altclick>
+						<usealttexture>Skin.String(CustomVideosImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="411">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Pictures Artwork Folder</label>
+						<altlabel>Reset Home Pictures Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomPicturesFolder)</onclick>
+						<onclick>Skin.Reset(CustomPicturesImage)</onclick>
+						<altclick>Skin.Reset(CustomPicturesFolder)</altclick>
+						<usealttexture>Skin.String(CustomPicturesFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="412">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Pictures Artwork Image</label>
+						<altlabel>Reset Home Pictures Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomPicturesImage)</onclick>
+						<onclick>Skin.Reset(CustomPicturesFolder)</onclick>
+						<altclick>Skin.Reset(CustomPicturesImage)</altclick>
+						<usealttexture>Skin.String(CustomPicturesImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="413">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Weather Artwork Folder</label>
+						<altlabel>Reset Home Weather Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomWeatherFolder)</onclick>
+						<onclick>Skin.Reset(CustomWeatherImage)</onclick>
+						<altclick>Skin.Reset(CustomWeatherFolder)</altclick>
+						<usealttexture>Skin.String(CustomWeatherFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+						<visible>!Skin.HasSetting(homeweather)</visible>
+					</control>
+					<control type="togglebutton" id="414">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Weather Artwork Image</label>
+						<altlabel>Reset Home Weather Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomWeatherImage)</onclick>
+						<onclick>Skin.Reset(CustomWeatherFolder)</onclick>
+						<altclick>Skin.Reset(CustomWeatherImage)</altclick>
+						<usealttexture>Skin.String(CustomWeatherImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+						<visible>!Skin.HasSetting(homeweather)</visible>
+					</control>
+					<control type="togglebutton" id="415">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Programs Artwork Folder</label>
+						<altlabel>Reset Home Programs Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomProgramsFolder)</onclick>
+						<onclick>Skin.Reset(CustomProgramsImage)</onclick>
+						<altclick>Skin.Reset(CustomProgramsFolder)</altclick>
+						<usealttexture>Skin.String(CustomProgramsFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="416">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Programs Artwork Image</label>
+						<altlabel>Reset Home Programs Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomProgramsImage)</onclick>
+						<onclick>Skin.Reset(CustomProgramsFolder)</onclick>
+						<altclick>Skin.Reset(CustomProgramsImage)</altclick>
+						<usealttexture>Skin.String(CustomProgramsImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="417">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Games Artwork Folder</label>
+						<altlabel>Reset Home Games Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomGamesFolder)</onclick>
+						<onclick>Skin.Reset(CustomGamesImage)</onclick>
+						<altclick>Skin.Reset(CustomGamesFolder)</altclick>
+						<usealttexture>Skin.String(CustomGamesFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="418">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Games Artwork Image</label>
+						<altlabel>Reset Home Games Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomGamesImage)</onclick>
+						<onclick>Skin.Reset(CustomGamesFolder)</onclick>
+						<altclick>Skin.Reset(CustomGamesImage)</altclick>
+						<usealttexture>Skin.String(CustomGamesImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="419">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Scripts Artwork Folder</label>
+						<altlabel>Reset Home Scripts Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomScriptsFolder)</onclick>
+						<onclick>Skin.Reset(CustomScriptsImage)</onclick>
+						<altclick>Skin.Reset(CustomScriptsFolder)</altclick>
+						<usealttexture>Skin.String(CustomScriptsFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="togglebutton" id="420">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Scripts Artwork Image</label>
+						<altlabel>Reset Home Scripts Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomScriptsImage)</onclick>
+						<onclick>Skin.Reset(CustomScriptsFolder)</onclick>
+						<altclick>Skin.Reset(CustomScriptsImage)</altclick>
+						<usealttexture>Skin.String(CustomScriptsImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="togglebutton" id="421">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home PlayDisc Artwork Folder</label>
+						<altlabel>Reset Home PlayDisc Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomPlayDiscFolder)</onclick>
+						<onclick>Skin.Reset(CustomPlayDiscImage)</onclick>
+						<altclick>Skin.Reset(CustomPlayDiscFolder)</altclick>
+						<usealttexture>Skin.String(CustomPlayDiscFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="togglebutton" id="422">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home PlayDisc Artwork Image</label>
+						<altlabel>Reset Home PlayDisc Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomPlayDiscImage)</onclick>
+						<onclick>Skin.Reset(CustomPlayDiscFolder)</onclick>
+						<altclick>Skin.Reset(CustomPlayDiscImage)</altclick>
+						<usealttexture>Skin.String(CustomPlayDiscImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="togglebutton" id="423">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Shutdown Artwork Folder</label>
+						<altlabel>Reset Home Shutdown Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomShutdownFolder)</onclick>
+						<onclick>Skin.Reset(CustomShutdownImage)</onclick>
+						<altclick>Skin.Reset(CustomShutdownFolder)</altclick>
+						<usealttexture>Skin.String(CustomShutdownFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="togglebutton" id="424">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Shutdown Artwork Image</label>
+						<altlabel>Reset Home Shutdown Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomShutdownImage)</onclick>
+						<onclick>Skin.Reset(CustomShutdownFolder)</onclick>
+						<altclick>Skin.Reset(CustomShutdownImage)</altclick>
+						<usealttexture>Skin.String(CustomShutdownImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+						<visible>Skin.HasSetting(home2) | Skin.HasSetting(home3)</visible>
+					</control>
+					<control type="togglebutton" id="425">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Settings Artwork Folder</label>
+						<altlabel>Reset Home Settings Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomSettingsFolder)</onclick>
+						<onclick>Skin.Reset(CustomSettingsImage)</onclick>
+						<altclick>Skin.Reset(CustomSettingsFolder)</altclick>
+						<usealttexture>Skin.String(CustomSettingsFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="426">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home Settings Artwork Image</label>
+						<altlabel>Reset Home Settings Artwork Image</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetImage(CustomSettingsImage)</onclick>
+						<onclick>Skin.Reset(CustomSettingsFolder)</onclick>
+						<altclick>Skin.Reset(CustomSettingsImage)</altclick>
+						<usealttexture>Skin.String(CustomSettingsImage)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+					<control type="togglebutton" id="427">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Set Home HD Movies Artwork Folder</label>
+						<altlabel>Reset Home HD Movies Artwork Folder</altlabel>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.SetPath(CustomHDMoviesFolder)</onclick>
+						<onclick>Skin.Reset(CustomHDMoviesImage)</onclick>
+						<altclick>Skin.Reset(CustomHDMoviesFolder)</altclick>
+						<usealttexture>Skin.String(CustomHDMoviesFolder)</usealttexture>
+						<texturenofocus>-</texturenofocus>
+						<texturefocus>-</texturefocus>
+						<alttexturenofocus>-</alttexturenofocus>
+						<alttexturefocus>-</alttexturefocus>
+					</control>
+				</control>
+
+				<!-- Sub Menus -->
+				<control type="grouplist" id="9005">
+					<visible>Container(9000).Hasfocus(5)</visible>
+					<width>740</width>
+					<height>320</height>
+					<itemgap>6</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9005</onup>
+					<ondown>9005</ondown>
+					<pagecontrol>-</pagecontrol>
+					<include>Animation_CommonFadeNoHide</include>
+					<!-- Hide Program Items -->
+					<control type="radiobutton" id="500">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Programs (Click to open)</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<include>ResetItems</include>
+						<textureradiofocus>arrowdownfo.png</textureradiofocus>
+						<textureradionofocus>arrowdownnf.png</textureradionofocus>
+						<onclick>Skin.ToggleSetting(programitems)</onclick>
+						<selected>Skin.HasSetting(programitems)</selected>
+					</control>
+					<control type="radiobutton" id="501">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Games</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidegames)</onclick>
+						<selected>Skin.HasSetting(hidegames)</selected>
+						<visible>Skin.HasSetting(programitems)</visible>
+					</control>
+					<control type="radiobutton" id="502">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Scripts</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidescripts)</onclick>
+						<selected>Skin.HasSetting(hidescripts)</selected>
+						<visible>Skin.HasSetting(programitems)</visible>
+					</control>
+					<control type="radiobutton" id="503">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Favourites</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<selected>Skin.HasSetting(hidefavs)</selected>
+						<onclick>Skin.ToggleSetting(hidefavs)</onclick>
+						<visible>Skin.HasSetting(programitems)</visible>
+					</control>
+					<!-- Add Program Items -->
+					<control type="button" id="504">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Programs - Add Items</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>-</onclick>
+						<selected>-</selected>
+						<visible>false</visible>
+					</control>
+					<!-- Hide Video Items -->
+					<control type="radiobutton" id="510">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<textureradiofocus>arrowdownfo.png</textureradiofocus>
+						<textureradionofocus>arrowdownnf.png</textureradionofocus>
+						<!-- LOC -->
+						<label>Videos (Click to open)</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<include>ResetItems</include>
+						<onclick>Skin.ToggleSetting(videoitems)</onclick>
+						<selected>Skin.HasSetting(videoitems)</selected>
+					</control>
+					<control type="radiobutton" id="511">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Plugins</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hideplugins)</onclick>
+						<selected>Skin.HasSetting(hideplugins)</selected>
+						<visible>Skin.HasSetting(videoitems)</visible>
+					</control>
+					<control type="radiobutton" id="512">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Music Vids</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemusicvids)</onclick>
+						<selected>Skin.HasSetting(hidemusicvids)</selected>
+						<visible>Skin.HasSetting(videoitems)</visible>
+					</control>
+					<control type="radiobutton" id="513">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Video Settings</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidevideosettings)</onclick>
+						<selected>Skin.HasSetting(hidevideosettings)</selected>
+						<visible>Skin.HasSetting(videoitems)</visible>
+					</control>
+					<!-- Add Video Items -->
+					<control type="radiobutton" id="514">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Videos - Add Items</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>-</onclick>
+						<selected>-</selected>
+						<visible>false</visible>
+					</control>
+					<!-- Hide Music Items -->
+					<control type="radiobutton" id="520">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<textureradiofocus>arrowdownfo.png</textureradiofocus>
+						<textureradionofocus>arrowdownnf.png</textureradionofocus>
+						<!-- LOC -->
+						<label>Music (Click to open)</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<include>ResetItems</include>
+						<onclick>Skin.ToggleSetting(musicitems)</onclick>
+						<selected>Skin.HasSetting(musicitems)</selected>
+					</control>
+					<control type="radiobutton" id="521">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide New Albums</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemusicnew)</onclick>
+						<selected>Skin.HasSetting(hidemusicnew)</selected>
+						<visible>Skin.HasSetting(musicitems)</visible>
+					</control>
+					<control type="radiobutton" id="522">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Party Mode</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidepartymode)</onclick>
+						<selected>Skin.HasSetting(hidepartymode)</selected>
+						<visible>Skin.HasSetting(musicitems)</visible>
+					</control>
+					<control type="radiobutton" id="523">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Music Genres</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemusicgenres)</onclick>
+						<selected>Skin.HasSetting(hidemusicgenres)</selected>
+						<visible>Skin.HasSetting(musicitems)</visible>
+					</control>
+					<control type="radiobutton" id="524">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Music Artists</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemusicartists)</onclick>
+						<selected>Skin.HasSetting(hidemusicartists)</selected>
+						<visible>Skin.HasSetting(musicitems)</visible>
+					</control>
+					<control type="radiobutton" id="525">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Music Years</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemusicyears)</onclick>
+						<selected>Skin.HasSetting(hidemusicyears)</selected>
+						<visible>Skin.HasSetting(musicitems)</visible>
+					</control>
+					<control type="radiobutton" id="526">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Music Plugins</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemusicplugins)</onclick>
+						<selected>Skin.HasSetting(hidemusicplugins)</selected>
+						<visible>Skin.HasSetting(musicitems)</visible>
+					</control>
+					<control type="radiobutton" id="527">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Music Settings</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemusicsettings)</onclick>
+						<selected>Skin.HasSetting(hidemusicsettings)</selected>
+						<visible>Skin.HasSetting(musicitems)</visible>
+					</control>
+					<!-- Add Music Items -->
+					<control type="button" id="528">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Music - Add Items</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>-</onclick>
+						<selected>-</selected>
+						<visible>false</visible>
+					</control>
+					<!-- Hide Movie Items -->
+					<control type="radiobutton" id="530">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<textureradiofocus>arrowdownfo.png</textureradiofocus>
+						<textureradionofocus>arrowdownnf.png</textureradionofocus>
+						<!-- LOC -->
+						<label>Movies (Click to open)</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<include>ResetItems</include>
+						<onclick>Skin.ToggleSetting(movieitems)</onclick>
+						<selected>Skin.HasSetting(movieitems)</selected>
+					</control>
+					<control type="radiobutton" id="531">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide New Movies</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemovienew)</onclick>
+						<selected>Skin.HasSetting(hidemovienew)</selected>
+						<visible>Skin.HasSetting(movieitems)</visible>
+					</control>
+					<control type="radiobutton" id="532">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Movie Studios</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemoviestudios)</onclick>
+						<selected>Skin.HasSetting(hidemoviestudios)</selected>
+						<visible>Skin.HasSetting(movieitems)</visible>
+					</control>
+					<control type="radiobutton" id="533">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Movie Genres</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemoviegenres)</onclick>
+						<selected>Skin.HasSetting(hidemoviegenres)</selected>
+						<visible>Skin.HasSetting(movieitems)</visible>
+					</control>
+					<control type="radiobutton" id="534">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Movie Actors</label>
+						<align>left</align>
+						<textoffsetx>20</textoffsetx>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemovieactors)</onclick>
+						<selected>Skin.HasSetting(hidemovieactors)</selected>
+						<visible>Skin.HasSetting(movieitems)</visible>
+					</control>
+					<control type="radiobutton" id="535">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Movie Years</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemovieyears)</onclick>
+						<selected>Skin.HasSetting(hidemovieyears)</selected>
+						<visible>Skin.HasSetting(movieitems)</visible>
+					</control>
+					<control type="radiobutton" id="536">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Movie Files</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemoviefiles)</onclick>
+						<selected>Skin.HasSetting(hidemoviefiles)</selected>
+						<visible>Skin.HasSetting(movieitems)</visible>
+					</control>
+					<control type="radiobutton" id="537">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Movie Settings</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidemoviesettings)</onclick>
+						<selected>Skin.HasSetting(hidemoviesettings)</selected>
+						<visible>Skin.HasSetting(movieitems)</visible>
+					</control>
+					<!-- Add Movie Items -->
+					<control type="button" id="538">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Movie - Add Items</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>-</onclick>
+						<selected>-</selected>
+						<visible>false</visible>
+					</control>
+					<!-- Hide TV Items -->
+					<control type="radiobutton" id="540">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<textureradiofocus>arrowdownfo.png</textureradiofocus>
+						<textureradionofocus>arrowdownnf.png</textureradionofocus>
+						<!-- LOC -->
+						<label>TV Shows (Click to open)</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<include>ResetItems</include>
+						<onclick>Skin.ToggleSetting(tvitems)</onclick>
+						<selected>Skin.HasSetting(tvitems)</selected>
+					</control>
+					<control type="radiobutton" id="541">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide New Episodes</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidetvnew)</onclick>
+						<selected>Skin.HasSetting(hidetvnew)</selected>
+						<visible>Skin.HasSetting(tvitems)</visible>
+					</control>
+					<control type="radiobutton" id="542">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide TV Genres</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidetvgenres)</onclick>
+						<selected>Skin.HasSetting(hidetvgenres)</selected>
+						<visible>Skin.HasSetting(tvitems)</visible>
+					</control>
+					<control type="radiobutton" id="543">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide TV Actors</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidetvactors)</onclick>
+						<selected>Skin.HasSetting(hidetvactors)</selected>
+						<visible>Skin.HasSetting(tvitems)</visible>
+					</control>
+					<control type="radiobutton" id="544">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide TV Years</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidetvyears)</onclick>
+						<selected>Skin.HasSetting(hidetvyears)</selected>
+						<visible>Skin.HasSetting(tvitems)</visible>
+					</control>
+					<control type="radiobutton" id="545">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide TV Files</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidetvfiles)</onclick>
+						<selected>Skin.HasSetting(hidetvfiles)</selected>
+						<visible>Skin.HasSetting(tvitems)</visible>
+					</control>
+					<control type="radiobutton" id="546">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide TV Settings</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidetvsettings)</onclick>
+						<selected>Skin.HasSetting(hidetvsettings)</selected>
+						<visible>Skin.HasSetting(tvitems)</visible>
+					</control>
+					<!-- Add TV Items -->
+					<control type="button" id="547">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>TV - Add Items</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>-</onclick>
+						<selected>-</selected>
+						<visible>false</visible>
+					</control>
+					<!-- Hide Picture Items -->
+					<control type="radiobutton" id="550">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<textureradiofocus>arrowdownfo.png</textureradiofocus>
+						<textureradionofocus>arrowdownnf.png</textureradionofocus>
+						<!-- LOC -->
+						<label>Pictures (Click to open)</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<include>ResetItems</include>
+						<onclick>Skin.ToggleSetting(pictureitems)</onclick>
+						<selected>Skin.HasSetting(pictureitems)</selected>
+					</control>
+					<control type="radiobutton" id="551">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Picture Setting</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidepicturesettings)</onclick>
+						<selected>Skin.HasSetting(hidepicturesettings)</selected>
+						<visible>Skin.HasSetting(pictureitems)</visible>
+					</control>
+					<!-- Add Picture Items -->
+					<control type="button" id="552">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Picture - Add Items</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>-</onclick>
+						<selected>-</selected>
+						<visible>false</visible>
+					</control>
+					<!-- Hide Weather Items -->
+					<control type="radiobutton" id="560">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<textureradiofocus>arrowdownfo.png</textureradiofocus>
+						<textureradionofocus>arrowdownnf.png</textureradionofocus>
+						<!-- LOC -->
+						<label>Weather (Click to open)</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<include>ResetItems</include>
+						<onclick>Skin.ToggleSetting(weatheritems)</onclick>
+						<selected>Skin.HasSetting(weatheritems)</selected>
+					</control>
+					<control type="radiobutton" id="561">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Today</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hideday0)</onclick>
+						<selected>Skin.HasSetting(hideday0)</selected>
+						<visible>Skin.HasSetting(weatheritems)</visible>
+					</control>
+					<control type="radiobutton" id="562">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Tomorrow</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hideday1)</onclick>
+						<selected>Skin.HasSetting(hideday1)</selected>
+						<visible>Skin.HasSetting(weatheritems)</visible>
+					</control>
+					<control type="radiobutton" id="563">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Next Day</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hideday2)</onclick>
+						<selected>Skin.HasSetting(hideday2)</selected>
+						<visible>Skin.HasSetting(weatheritems)</visible>
+					</control>
+					<control type="radiobutton" id="564">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide The Day After</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hideday3)</onclick>
+						<selected>Skin.HasSetting(hideday3)</selected>
+						<visible>Skin.HasSetting(weatheritems)</visible>
+					</control>
+					<control type="radiobutton" id="565">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Weather Settings</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hideweathersettings)</onclick>
+						<selected>Skin.HasSetting(hideweathersettings)</selected>
+						<visible>Skin.HasSetting(weatheritems)</visible>
+					</control>
+					<!-- Add Weather Items -->
+					<control type="button" id="566">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Weather - Add Items</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>-</onclick>
+						<selected>-</selected>
+						<visible>false</visible>
+					</control>
+					<!-- Hide Settings Items -->
+					<control type="radiobutton" id="570">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<textureradiofocus>arrowdownfo.png</textureradiofocus>
+						<textureradionofocus>arrowdownnf.png</textureradionofocus>
+						<!-- LOC -->
+						<label>Settings (Click to open)</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<include>ResetItems</include>
+						<onclick>Skin.ToggleSetting(settingitems)</onclick>
+						<selected>Skin.HasSetting(settingitems)</selected>
+					</control>
+					<control type="radiobutton" id="571">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Quit</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidequit)</onclick>
+						<selected>Skin.HasSetting(hidequit)</selected>
+						<visible>Skin.HasSetting(settingitems)</visible>
+					</control>
+					<control type="radiobutton" id="572">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Shutdown</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hideshutdown)</onclick>
+						<selected>Skin.HasSetting(hideshutdown)</selected>
+						<visible>Skin.HasSetting(settingitems)</visible>
+					</control>
+					<control type="radiobutton" id="573">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Reset</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidereset)</onclick>
+						<selected>Skin.HasSetting(hidereset)</selected>
+						<visible>Skin.HasSetting(settingitems)</visible>
+					</control>
+					<control type="radiobutton" id="574">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Suspend</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidesuspend)</onclick>
+						<selected>Skin.HasSetting(hidesuspend)</selected>
+						<visible>Skin.HasSetting(settingitems)</visible>
+					</control>
+					<control type="radiobutton" id="575">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Hibernate</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidehibernate)</onclick>
+						<selected>Skin.HasSetting(hidehibernate)</selected>
+						<visible>Skin.HasSetting(settingitems)</visible>
+					</control>
+					<control type="radiobutton" id="576">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Logoff</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hidelogoff)</onclick>
+						<selected>Skin.HasSetting(hidelogoff)</selected>
+						<visible>Skin.HasSetting(settingitems)</visible>
+					</control>
+					<control type="radiobutton" id="577">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Hide Info</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(hideinfo)</onclick>
+						<selected>Skin.HasSetting(hideinfo)</selected>
+						<visible>Skin.HasSetting(settingitems)</visible>
+					</control>
+					<!-- Add Settings Items -->
+					<control type="button" id="578">
+						<width>740</width>
+						<textoffsetx>20</textoffsetx>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Settings - Add Items</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>-</onclick>
+						<selected>-</selected>
+						<visible>false</visible>
+					</control>
+				</control>
+
+				<control type="grouplist" id="9006">
+					<visible>Container(9000).Hasfocus(6)</visible>
+					<width>740</width>
+					<height>320</height>
+					<itemgap>6</itemgap>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9006</onup>
+					<ondown>9006</ondown>
+					<pagecontrol>-</pagecontrol>
+					<include>Animation_CommonFadeNoHide</include>
+					<control type="radiobutton" id="600">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Debug mode</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(debugmode)</onclick>
+						<selected>Skin.HasSetting(debugmode)</selected>
+					</control>
+					<control type="radiobutton" id="601">
+						<width>740</width>
+						<font>Font_Settings</font>
+						<textcolor>Text</textcolor>
+						<focusedcolor>TextFocused</focusedcolor>
+						<!-- LOC -->
+						<label>Debug Grid</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<onclick>Skin.ToggleSetting(debuggrid)</onclick>
+						<selected>Skin.HasSetting(debuggrid)</selected>
+					</control>
+				</control>
+
+				<control type="image">
+					<include>Animation_CommonFadeNoHide</include>
+					<posx>712</posx>
+					<posy>2</posy>
+					<height>20</height>
+					<width>20</width>
+					<texture>arrowdownfo.png</texture>
+					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<visible>Container(9000).Hasfocus(2) + [Control.HasFocus(200) | Control.HasFocus(201) | Control.HasFocus(202)]</visible>
+				</control>
+
+				<control type="image">
+					<include>Animation_CommonFadeNoHide</include>
+					<include>Animation_ZoomOutZoomIn</include>
+					<include>Animation_ZoomedByMenu</include>
+					<posx>172</posx>
+					<posy>-28</posy>
+					<height>20</height>
+					<width>20</width>
+					<texture>arrowupfo.png</texture>
+					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<visible>Container(9000).Hasfocus(4) | [Container(9000).Hasfocus(2) + [Skin.HasSetting(home2) | Skin.HasSetting(home3)]]</visible>
+				</control>
+
+				<control type="image">
+					<include>Animation_CommonFadeNoHide</include>
+					<include>Animation_ZoomOutZoomIn</include>
+					<include>Animation_ZoomedByMenu</include>
+					<posx>172</posx>
+					<posy>330</posy>
+					<height>20</height>
+					<width>20</width>
+					<texture>arrowdownfo.png</texture>
+					<colordiffuse>ButtonFilterColor</colordiffuse>
+					<visible>Container(9000).Hasfocus(4) | [Container(9000).Hasfocus(2) + [Skin.HasSetting(home2) | Skin.HasSetting(home3)]]</visible>
+				</control>
+
+			</control>
+		</control>
+		<include>Global_ContextFilter</include>
+		<include>Global_Time</include>
+		<include>Setting_Heading</include>
+		<include>Global_RSS</include>
+		<!-- debug -->
+		<include>Object_DebugGrid</include>
+		<control type="label">
+			<include>WindowID</include>
+			<label>CustomSettings.xml</label>
+			<visible>Skin.HasSetting(debugmode)</visible>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<strings>
+
+	<!-- Main Labels -->
+
+	<string id="31000">GENURI</string>
+	<string id="31001">ANI</string>
+	<string id="31002">ACTORI</string>
+	<string id="31003">FISIERE</string>
+	<string id="31005">SETARI VIDEO</string>
+	<string id="31004">ACUM</string>
+	<string id="31006">VIDEOCLIPURI</string>
+	<string id="31012">IMAGINI</string>
+	<string id="31007">PLUGINURI</string>
+	<string id="31008">FAVORITE</string>
+	<string id="31009">PROGRAME</string>
+	<string id="31010">MUZICA</string>
+	<string id="31011">JOCURI</string>
+	<string id="31013">FILME</string>
+	<string id="31014">SERIALE</string>
+	<string id="31015">FISIERE</string>
+	<string id="31016">SETARI</string>
+	<string id="31017">VREMEA</string>
+	<string id="31018">DVD</string>
+	<string id="31019">EXIT</string>
+	<string id="31020">SCRIPTURI</string>
+	<string id="31021">RESTART</string>
+	<string id="31022">IESIRE CONT</string>
+
+</strings>

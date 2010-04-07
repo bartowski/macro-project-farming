@@ -1,0 +1,141 @@
+<colors>
+
+	<!-- Theme Colours -->
+	
+	<color name="BackgroundColor">d7000000</color>
+	<color name="BackgroundFilterColor">ff009ACD</color>
+	<color name="ButtonFilterColor">ff009ACD</color>
+
+	<!-- Home 1 Colours -->
+
+	<color name="HomeFrameColor">ff0086b2</color>
+	<color name="HomeFrameDiffuseColor">d7000000</color>
+	<color name="MainMenuLabel">FFFFFFFF</color>	
+
+	<!-- Home 2 & 3 Colour -->
+	
+	<color name="MainMenu">193c3c3c</color>
+
+	<!-- Background Test Colours
+	
+	<color name="BackgroundColor">ee000025</color>
+	<color name="BackgroundFilterColor">44009ACD</color>
+	<color name="BackgroundColor">dd000025</color>
+	<color name="BackgroundFilterColor">cc151579</color>
+	<color name="BackgroundColor">bb4aff46</color>
+	<color name="BackgroundFilterColor">dd024d00</color>
+	-->
+
+	<!-- Global Colours -->
+	
+	<color name="Time">FFFFFFFF</color>
+	<color name="TimeAMPM">ff009ACD</color>
+	<color name="Date">ff009ACD</color>
+	<color name="RSSBody">ff009ACD</color>
+	<color name="RSSHighlight">ff009ACD</color>
+	<color name="RSSHeadline">FFFFFFFF</color>
+	<color name="RSSTitle">ff009ACD</color>
+	<color name="NowPlayingArtist">FFFFFFFF</color>
+	<color name="NowPlayingAlbum">ff009ACD</color>
+	<color name="NowPlayingTrack">ff009ACD</color>
+	<color name="MediaMenu">FFFFFFFF</color>
+	<color name="TextFocused">ff009ACD</color>
+	<color name="Text">FFFFFFFF</color>
+	<color name="TextDisabled">FF3333333</color>
+	<color name="TextSelected">FFFFFFFF</color>
+
+	<!-- Flags -->
+
+	<color name="FlagDiffuse">FFFFFFFF</color>
+	<color name="FlagText">d7000000</color>
+	<color name="FlagText2">FFFFFFFF</color>
+	<color name="StarDiffuse">FF009ACD</color>
+
+	<!-- OSD -->
+
+	<color name="OSDPlayingArtist">FFFFFFFF</color>
+	<color name="OSDPlayingTrack">FFFFFFFF</color>
+	<color name="OSDPlayingAlbum">ff009ACD</color>
+	<color name="OSDPlayingPN">FF686868</color>
+	<color name="OSDDetails">FF686868</color>
+	<color name="OSDTime">B9202020</color>
+	<color name="OSDProgress">55ffffff</color>
+	<color name="OSDProgressBar">cbFFFFFF</color>
+	<color name="OSDStatusBackground">11009ACD</color>
+	<color name="OSDStatus">cc009ACD</color>
+	<color name="OSDPlayingDuration">FFFFFFFF</color>
+	
+	
+
+	<!-- Window menu colours -->
+
+	<color name="MenuValue">FFFFFFFF</color>
+	<color name="MenuValueFO">FF009ACD</color>
+
+	<!-- Poster view colours -->
+
+	<color name="PosterTitle">FFFFFFFF</color>
+	<color name="EpisodeLabelF">FFFFFFFF</color>	
+	<color name="EpisodePlot">FFB3B3B3</color>	
+	<color name="EpisodeNumber">FF575757</color>		
+
+	<!-- Info dialog colours -->
+
+	<color name="InfoTitle">FFFFFFFF</color>
+	<color name="InfoPlot">FFFFFFFF</color>
+	<color name="InfoYear">FFB3B3B3</color>	
+	<color name="InfoGenre">FFB3B3B3</color>	
+	<color name="InfoDetails">FFB3B3B3</color>
+	<color name="MovieInfoLines">ff009ACD</color>
+	<color name="OSDrating">FFB3B3B3</color>
+
+	<!-- Progress dialogs -->
+
+	<color name="ProgressDialog">FFB3B3B3</color>
+	<color name="SettingsHeading">FFFFFFFF</color>	
+	<color name="SettingsDetail">FFB3B3B3</color>		
+
+	<!-- List & File colours -->
+
+	<color name="ListTrackNF">FF575757</color>
+	<color name="ListTitleNF">FF575757</color>
+	<color name="ListTrackF">FFB3B3B3</color>
+	<color name="ListTitleF">FFFFFFFF</color>
+	<color name="FileTitleNF">FF575757</color>	
+
+	<!-- Poster colours -->
+
+	<color name="WallIconDiffuse">FF262626</color>
+	<color name="IconDiffuse">FF262626</color>
+	<color name="WatchedIconDiffuseNF">68009ACD</color>
+	<color name="WatchedIconDiffuseFO">ff009ACD</color>
+
+	<!-- Fanart colours -->
+
+	<color name="FanartTitle">FFFFFFFF</color>
+	<color name="FanartText">FFB3B3B3</color>
+
+	<!-- Dialogs -->
+
+	<color name="DialogLargeLabel">CC747474</color>
+	<color name="DialogLargeLabelAccent">CCdadada</color>
+
+	<!-- Favorites -->
+
+	<color name="FavListPanel">ff75b7cd</color>
+	<color name="FavListItem">d7666666</color>
+	<color name="FavListItemSelected">ffcc0000</color>
+	<color name="FavListItemFocusedSelected">CCcccccc</color>
+
+	<!-- Filemanager -->
+
+	<color name="FM_ListTitle">dc777777</color>
+	<color name="FM_ListTitleAccent">CCdadada</color>
+	<color name="FM_ListSelected">dc990000</color>
+	<color name="FM_ListFocused">ffffffff</color>
+	<color name="FM_ListFocusedAccent">00CCCCCC</color>
+	<color name="FM_ListUnfocused">d7333333</color>
+	<color name="FM_ListFocusSelected">CCcccccc</color>
+	<color name="FM_Focusbar">ff333333</color>
+
+</colors>

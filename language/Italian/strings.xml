@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<strings>
+
+	<!-- Main Labels -->
+
+	<string id="31000">GENERI</string> 
+	<string id="31001">ANNI</string> 
+	<string id="31002">ATTORI</string> 
+	<string id="31003">FILE</string> 
+	<string id="31005">IMPOSTAZIONI VIDEO</string> 
+	<string id="31004">IN RIPRODUZIONE</string> 
+	<string id="31006">VIDEO MUSICALI</string> 
+	<string id="31007">PLUGIN</string> 
+	<string id="31008">PREFERITI</string> 
+	<string id="31009">PROGRAMMI</string> 
+	<string id="31010">MUSICA</string> 
+	<string id="31011">GIOCHI</string> 
+	<string id="31012">IMMAGINI</string> 
+	<string id="31013">FILM</string> 
+	<string id="31014">SERIE TV</string> 
+	<string id="31015">VIDEO</string> 
+	<string id="31016">IMPOSTAZIONI</string> 
+	<string id="31017">METEO</string> 
+	<string id="31018">AVVIA DISCO</string> 
+	<string id="31019">SPEGNI</string> 
+	<string id="31020">SCRIPT</string> 
+	<string id="31021">RIAVVIA</string> 
+	<string id="31022">ESCI</string> 
+
+</strings>
