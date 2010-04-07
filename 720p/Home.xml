@@ -25,6 +25,14 @@
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
+			<height>500</height>
+			<width>500</width>
+			<texture>dialogs/red.png</texture>
+			<colordiffuse></colordiffuse>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
 			<include>Dimensions_Fullscreen</include>
 			<texture>mainmenu/recently_back.png</texture>
 			<colordiffuse>ff15efd9</colordiffuse>
