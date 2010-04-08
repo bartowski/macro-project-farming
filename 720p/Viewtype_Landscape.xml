@@ -411,8 +411,18 @@
 					<height>100</height>
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
-					<label>[B]First Premiered in $INFO[ListItem.Year] on [/B]</label>
+					<label>[B]First Premiered in $INFO[ListItem.Year][/B]</label>
 					<visible>Control.IsVisible(52) + Container.Content(tvshows)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width min="5" max="1034">auto</width>
+					<height>100</height>
+					<font>Font_TVShow</font>
+					<textcolor>ff67ffff</textcolor>
+					<label>[B] on [/B]</label>
+					<visible>Control.IsVisible(52) + Container.Content(tvshows) + !IsEmpty(ListItem.Studio)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -431,8 +441,18 @@
 					<height>100</height>
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
-					<label>[B]This Show Aired $INFO[ListItem.Date] on [/B]</label>
+					<label>[B]This Show Aired $INFO[ListItem.Date][/B]</label>
 					<visible>Control.IsVisible(52) + Container.Content(episodes)</visible>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width min="5" max="1034">auto</width>
+					<height>100</height>
+					<font>Font_TVShow</font>
+					<textcolor>ff67ffff</textcolor>
+					<label>[B] on [/B]</label>
+					<visible>Control.IsVisible(52) + Container.Content(episodes) + !IsEmpty(ListItem.Studio)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
