@@ -300,7 +300,7 @@
 						<include>Animation_HiddenByInfo</include>
 						<animation effect="rotatex" start="180" end="180" center="350" time="0" condition="true">Conditional</animation>
 						<animation type="Focus" reversible="false">
-							<effect type="fade" center="60,238" start="0" end="100" time="600" delay="600" tween="back" easing="out" />
+							<effect type="fade" center="60,238" start="0" end="100" time="300" delay="300" tween="back" easing="out" />
 						</animation>
 						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
 					</control>

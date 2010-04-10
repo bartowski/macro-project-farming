@@ -1,71 +1,123 @@
-<!--Alaska-->
-
 <window id="139">
-	<defaultcontrol>5</defaultcontrol>
-	<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-	<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
+	<defaultcontrol always="true">5</defaultcontrol>
 	<controls>
-		<!--control type="group">
-			<include>Animation_CommonFade</include>
-		</control-->
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
-			<colordiffuse>BackgroundColor</colordiffuse>
-			<texture diffuse="backdrops/mask_2.png">common/white.png</texture>
+			<texture>common/7000_focus.png</texture>
+			<animation effect="fade" start="0" end="100" time="600">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="600">Hidden</animation>
 		</control>
-		<control type="image">
-			<include>Dimensions_Fullscreen</include>
-			<texture>backdrops/mask_2.png</texture>
-			<colordiffuse>BackgroundFilterColor</colordiffuse>
+		<control type="group">
+			<posx>-100</posx>
+			<include>Animation_Bartowski_Context_Zoom</include>
+			<control type="image">
+				<posx>160</posx>
+				<posy>180</posy>
+				<width>490</width>
+				<height>360</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<bordertexture border="8">common/thumb_border.png</bordertexture>
+				<bordersize>8</bordersize>
+				<visible>!Container.Content(Genres)</visible>
+				<include>Animation_Music_Fullscreen_Left</include>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<posx>700</posx>
+				<posy>40</posy>
+				<width>710</width>
+				<height>30</height>
+				<font>Font_Bartowski_MainMenu_Context</font>
+				<label>$LOCALIZE[13406]</label>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="list" id="5">
+				<posx>670</posx>
+				<posy>90</posy>
+				<width>560</width>
+				<height>601</height>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="40">
+					<control type="label">
+						<posx>170</posx>
+						<posy>0</posy>
+						<width>160</width>
+						<height>35</height>
+						<font>font13caps_title</font>
+						<aligny>center</aligny>
+						<textcolor>mainblue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<label>$INFO[ListItem.Label][COLOR=grey2] : [/COLOR]</label>
+					</control>
+					<control type="label">
+						<posx>170</posx>
+						<posy>0</posy>
+						<width>390</width>
+						<height>35</height>
+						<font>Font_KeyboardEdit</font>
+						<aligny>center</aligny>
+						<shadowcolor>black</shadowcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>560</width>
+						<height>41</height>
+						<visible>!Control.HasFocus(5)</visible>
+						<texture border="5">MenuItemNF.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>560</width>
+						<height>41</height>
+						<visible>Control.HasFocus(5)</visible>
+						<texture border="5">confluence/button-focus.png</texture>
+					</control>
+					<control type="label">
+						<posx>170</posx>
+						<posy>0</posy>
+						<width>160</width>
+						<height>35</height>
+						<font>font13caps_title</font>
+						<aligny>center</aligny>
+						<textcolor>mainblue</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>right</align>
+						<label>$INFO[ListItem.Label][COLOR=grey2] : [/COLOR]</label>
+					</control>
+					<control type="label">
+						<posx>170</posx>
+						<posy>0</posy>
+						<width>390</width>
+						<height>35</height>
+						<font>Font_KeyboardEdit</font>
+						<aligny>center</aligny>
+						<shadowcolor>black</shadowcolor>
+						<textcolor>white</textcolor>
+						<align>left</align>
+						<info>ListItem.Label2</info>
+					</control>
+				</focusedlayout>
+			</control>
 		</control>
-		<control type="label">
-			<include>DialogID</include>
-			<label>DialogPictureInfo.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
-		<control type="list" id="5">
-			<posx>380</posx>
-			<posy>170</posy>
-			<width>520</width>
-			<height>380</height>
-			<onleft>450</onleft>
-			<onright>450</onright>
-			<onup>450</onup>
-			<ondown>450</ondown>
-			<itemlayout height="32">
-				<control type="label">
-					<posx>5</posx>
-					<width>465</width>
-					<height>30</height>
-					<info>ListItem.Label</info>
-					<scroll>false</scroll>
-				</control>
-				<control type="label">
-					<posx>487</posx>
-					<width>465</width>
-					<height>30</height>
-					<align>right</align>
-					<info>ListItem.Label2</info>
-				</control>
-			</itemlayout>
-			<focusedlayout height="32">
-				<control type="label">
-					<posx>5</posx>
-					<width>465</width>
-					<height>30</height>
-					<textcolor>Text</textcolor>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="label">
-					<posx>487</posx>
-					<width>465</width>
-					<height>30</height>
-					<align>right</align>
-					<textcolor>Text</textcolor>
-					<info>ListItem.Label2</info>
-				</control>
-			</focusedlayout>
-		</control>
-		<include>Object_DebugGrid</include>
+		<include>SideBladeRight</include>
+		<include>Clock</include>
 	</controls>
 </window>

@@ -124,7 +124,7 @@
 					<visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
 				</item>
 				<item id="7">
-					<label>Games</label>
+					<label>Programs</label>
 					<icon>special://skin/media/backgrounds/games.png</icon>
 					<thumb>$INFO[Skin.String(CustomGamesFolder)]</thumb>				
 					<onclick>XBMC.ActivateWindow(MyPrograms)</onclick>
@@ -149,7 +149,7 @@
 					<icon>special://skin/media/backgrounds/scripts.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>	
 					<onclick>XBMC.ActivateWindow(20)</onclick>
-					<visible>Skin.HasSetting(scripts)</visible>
+					<visible>!Skin.HasSetting(scripts)</visible>
 				</item>
 				<item id="11">
 					<icon>special://skin/media/mainmenu/playdisc.png</icon>						
