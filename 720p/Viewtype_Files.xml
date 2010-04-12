@@ -726,7 +726,7 @@
 			<visible>Control.IsVisible(55) + IsEmpty(Control.GetLabel(7019))</visible>
 		</control>
 		<control type="label">
-			<visible>Control.IsVisible(55) + IsEmpty(Control.GetLabel(7019)) + [Container.Content(seasons) | Container.Content(tvshows)]</visible>
+			<visible>Control.IsVisible(55) + IsEmpty(Control.GetLabel(7019)) + !IsEmpty(ListItem.Title) + [Container.Content(seasons) | Container.Content(tvshows)]</visible>
 			<posx>790</posx>
 			<posy>60</posy>
 			<width>500</width>

@@ -79,6 +79,17 @@
 						<height>47</height>
 						<texture>$INFO[listitem.studio,extras/Studios/,.png]</texture>
 					</control>
+					<control type="image">
+						<visible>Container.Content(episodes)</visible>
+						<posx>0</posx>
+						<posy>102</posy>
+						<width>260</width>
+						<height>10</height>
+						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+						<colordiffuse>ff67ffff</colordiffuse>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<!--<visible>!Skin.HasSetting(tvoverlay) + !IsEmpty(ListItem.Overlay)</visible>-->
+					</control>
 				</control>
 			</itemlayout>
 			<focusedlayout width="610" height="600">
@@ -172,6 +183,21 @@
 							<effect type="zoom" center="191,440" start="70" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
+					</control>
+					<control type="image">
+						<visible>Container.Content(episodes)</visible>
+						<posx>0</posx>
+						<posy>90</posy>
+						<width>500</width>
+						<height>12</height>
+						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+						<colordiffuse>ff67ffff</colordiffuse>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="191,440" start="70" end="100" time="400" tween="back" easing="out" />
+							<effect type="fade" start="80" end="100" time="400" />
+						</animation>
+						<!--<visible>!Skin.HasSetting(tvoverlay) + !IsEmpty(ListItem.Overlay)</visible>-->
 					</control>
 				</control>	
 			</focusedlayout>

@@ -63,7 +63,7 @@
 					</control>
 					<control type="image">
 						<posx>-2</posx>
-						<posy>362</posy>
+						<posy>360</posy>
 						<width>36</width>
 						<height>304</height>
 						<texture>movie-poster/reflect_bottom2.png</texture>
@@ -72,17 +72,17 @@
 					</control>
 					<control type="image">
 						<posx>-149</posx>
-						<posy>132</posy>
+						<posy>131</posy>
 						<width>162</width>
-						<height>239</height>
-						<texture>movie-poster/Movie_Thumb_Mask.png</texture>
+						<height>241</height>
+						<texture>movie-poster/posterview_diffuse.png</texture>
 					</control>
 					<control type="image">
 						<posx>-149</posx>
 						<posy>131</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture background="true" diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
@@ -98,17 +98,21 @@
 					</control>
 					<control type="image">
 						<posx>-150</posx>
-						<posy>130</posy>
-						<width>164</width>
-						<height>243</height>
-						<texture>posterframeNF.png</texture>
+						<posy>368</posy>
+						<width>162</width>
+						<height>241</height>
+						<texture flipy="true">movie-poster/posterview_diffuse_border.png</texture>
+						<fadetime>200</fadetime>
+						<colordiffuse>89FFFFFF</colordiffuse>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="fade" start="0" end="30" time="0" condition="true">Conditional</animation>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
-						<posy>372</posy>
+						<posy>368</posy>
 						<width>162</width>
 						<height>241</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -125,7 +129,7 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(Genres)</visible>
 					</control>
-					<control type="image">
+					<!--<control type="image">
 						<posx>-148</posx>
 						<posy>132</posy>
 						<width>200</width>
@@ -133,7 +137,7 @@
 						<texture>dialogs/watched/$INFO[ListItem.Overlay]</texture>
 						<colordiffuse>WatchedIconDiffuseNF</colordiffuse>
 						<visible></visible>
-					</control>
+					</control>-->
 				</control>
 				</itemlayout>
 				<focusedlayout width="220" height="515">
@@ -143,10 +147,10 @@
 				<!--<animation effect="zoom" start="100" end="120" time="600" delay="2800" condition="Container.Content(movies) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="40,-20" time="600" delay="2800" condition="Container.Content(movies) + ![Container(50).OnNext | Container(50).OnPrevious]">Conditional</animation>-->
 					<control type="image">
-						<posx>48</posx>
-						<posy>91</posy>
+						<posx>46</posx>
+						<posy>92</posy>
 						<width>33</width>
-						<height>300</height>
+						<height>295</height>
 						<texture>movie-poster/newcase.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -171,7 +175,7 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture>movie-poster/Movie_Thumb_Mask.png</texture>
+						<texture>movie-poster/posterview_diffuse.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -183,7 +187,7 @@
 						<posy>390</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture flipy="true" >movie-poster/Movie_Thumb_Mask.png</texture>
+						<texture flipy="true">movie-poster/posterview_diffuse.png</texture>
 						<colordiffuse>ff000000</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -196,7 +200,7 @@
 						<posy>90</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture background="true" diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -217,7 +221,7 @@
 						</animation>
 						<visible>Container.Content(Genres)</visible>
 					</control>
-					<control type="image">
+					<!--<control type="image">
 						<posx>-148</posx>
 						<posy>390</posy>
 						<width>211</width>
@@ -229,13 +233,27 @@
 							<effect type="zoom" center="60,238" start="51" end="100" time="600" tween="back" easing="out" />
 							<effect type="fade" start="0" end="50" time="600" />
 						</animation>
+					</control>-->
+					<control type="image">
+						<posx>-148</posx>
+						<posy>386</posy>
+						<width>211</width>
+						<height>300</height>
+						<texture flipy="true">movie-poster/posterview_diffuse_border.png</texture>
+						<fadetime>200</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="60,238" start="51" end="100" time="600" tween="back" easing="out" />
+							<effect type="fade" start="0" end="30" time="600" />
+						</animation>
+						<visible>!Container.Content(Genres)</visible>
 					</control>
 					<control type="image">
 						<posx>-148</posx>
-						<posy>390</posy>
+						<posy>386</posy>
 						<width>211</width>
 						<height>300</height>
-						<texture background="true" flipy="true" diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[ListItem.Icon]</texture>
+						<texture background="true" flipy="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
@@ -535,6 +553,8 @@
 				<textcolor>ffffffff</textcolor>
 				<label>*Press Down for Trailer*</label>
 				<shadowcolor>black</shadowcolor>
+				<include>Animation_ZoomInZoomOut</include>
+				<include>Animation_ZoomedByMenu</include>
 			</control>	
 			<control type="label"><!--Trailer Stop-->
 				<visible>Control.IsVisible(50) + Container.Content(movies) + Player.HasMedia</visible>
@@ -547,6 +567,8 @@
 				<textcolor>ffffffff</textcolor>
 				<label>*Press "X" to Stop*</label>
 				<shadowcolor>black</shadowcolor>
+				<include>Animation_ZoomInZoomOut</include>
+				<include>Animation_ZoomedByMenu</include>
 			</control>
 		<control type="grouplist">
 			<visible>Control.IsVisible(50) + Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
@@ -562,6 +584,8 @@
 			<include>AspectCodecFlaggingConditions</include>
 			<include>VideoTypeHackFlaggingConditions</include>
 			<include>Animation_HiddenByInfo</include>
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
 		</control>
 		<include>Trailer_Poster</include>
 	</include>
