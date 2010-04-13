@@ -1,94 +1,59 @@
-<!--Alaska-->
-
 <window id="145">
 	<defaultcontrol>11</defaultcontrol>
-	<animation type="WindowOpen" reversible="false">
-		<effect type="zoom" start="80" end="100" center="1580,49" delay="200" easing="out" tween="back" time="300" />
-		<effect type="fade" delay="200" start="0" end="100" time="300" />
-	</animation>
-	<animation type="WindowClose" reversible="false">
-		<effect type="zoom" start="100" end="80" center="1580,49" easing="in" tween="back" time="300" />
-		<effect type="fade" start="100" end="0" time="300" />
-	</animation>
+	<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+	<animation effect="slide" start="100" end="0" time="100">WindowClose</animation>
+	<coordinates>
+		<system>1</system>
+		<posx>405</posx>
+		<posy>0</posy>
+	</coordinates>
 	<controls>
-
-		<control type="label">
-			<include>DialogID</include>
-			<label>DialogSlider.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
+		<control type="image">
+			<posx>-405</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>osd/osd_back.png</texture>
+			<aspectratio>stretch</aspectratio>
 		</control>
-
-		<control type="group">
-			<posx>880</posx>
-			<posy>12</posy>
-			<width>707</width>
-			<height>183</height>
-			<control type="image">
-				<posx>100</posx>
-				<posy>-2</posy>
-				<width>322</width>
-				<height>74</height>
-				<texture border="37,0,0,0">dialogs/back.png</texture>
-			</control>
-			<control type="image">
-				<posx>322</posx>
-				<posy>10</posy>
-				<width>50</width>
-				<height>50</height>
-				<texture>dialogs/dialog_back.png</texture>
-			</control>
-			<control type="slider" id="11">
-				<description>Slider</description>
-				<posx>328</posx>
-				<posy>27</posy>
-				<width>38</width>
-				<height>13</height>
-				<texturesliderbar>osd/sliderback.png</texturesliderbar>
-				<textureslidernib>osd/slidernibnf.png</textureslidernib>
-				<textureslidernibfocus>osd/slidernibfo.png</textureslidernibfocus>
-				<animation type="WindowOpen" reversible="false">
-					<effect type="fade" delay="400" start="0" end="100" time="100" />
-				</animation>
-				<animation type="WindowClose" reversible="false">
-					<effect type="fade" start="100" end="0" time="10" />
-				</animation>
-				<onup>11</onup>
-				<ondown>11</ondown>
-				<onleft>11</onleft>
-				<onright>11</onright>
-			</control>
-			<control type="image">
-				<posx>322</posx>
-				<posy>10</posy>
-				<width>50</width>
-				<height>50</height>
-				<texture>dialogs/slider.png</texture>
-				<colordiffuse>ButtonFilterColor</colordiffuse>
-			</control>
-
-			<control type="label" id="10">
-				<description>Heading Label</description>
-				<posx>310</posx>
-				<posy>15</posy>
-				<width>627</width>
-				<height>51</height>
-				<textcolor>Time</textcolor>
-				<align>right</align>
-				<font>Font_ProgressDialog</font>
-			</control>
-
-			<control type="label" id="12">
-				<posx>310</posx>
-				<posy>35</posy>
-				<width>627</width>
-				<height>51</height>
-				<textcolor>Date</textcolor>
-				<align>right</align>
-				<font>Font_Date</font>
-			</control>
+		<control type="label" id="10">
+			<description>Dialog header</description>
+			<posx>20</posx>
+			<posy>10</posy>
+			<width>230</width>
+			<height>20</height>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>Font_Bartowski_ListView_Season</font>
+			<textcolor>white</textcolor>
 		</control>
-
-		<include>Object_DebugGrid</include>
-
+		<control type="label" id="12">
+			<description>Slider Value</description>
+			<posx>440</posx>
+			<posy>10</posy>
+			<width>260</width>
+			<height>20</height>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>Font_Bartowski_ListView_Season</font>
+			<textcolor>mainblue</textcolor>
+		</control>
+		<control type="slider" id="11">
+			<description>Slider</description>
+			<posx>20</posx>
+			<posy>35</posy>
+			<width>420</width>
+			<height>20</height>
+			<aligny>center</aligny>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<texturesliderbar>confluence/osd_slider_bg_2.png</texturesliderbar>
+			<textureslidernib>confluence/osd_slider_nibNF.png</textureslidernib>
+			<textureslidernibfocus>confluence/osd_slider_nib.png</textureslidernibfocus>
+			<onup>11</onup>
+			<ondown>11</ondown>
+			<onleft>11</onleft>
+			<onright>11</onright>
+		</control>
 	</controls>
 </window>

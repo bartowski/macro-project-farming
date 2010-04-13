@@ -12,14 +12,7 @@
 		<control type="group">
 			<posx>90</posx>
 			<posy>50</posy>
-			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-				<effect type="fade" start="0" end="100" time="300" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-				<effect type="fade" start="100" end="0" time="300" />
-			</animation>			
+			<include>Animation_Bartowski_Context_Zoom</include>			
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -51,7 +44,7 @@
 				<width>220</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
-				<texture>confluence/bartowski.png</texture>
+				<texture>confluence/bartowski2.png</texture>
 			</control>
 			<control type="list" id="9000">
 				<posx>10</posx>
@@ -268,13 +261,13 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
-						<label>Use Visualisation Instead of Fanart</label>
+						<label>Use Fanart Instead of Visualisation</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>!Skin.ToggleSetting(FanartNoVisualisation)</onclick>
-						<selected>!Skin.HasSetting(FanartNoVisualisation)</selected>
+						<onclick>Skin.ToggleSetting(FanartNoVisualisation)</onclick>
+						<selected>Skin.HasSetting(FanartNoVisualisation)</selected>
 					</control>
 					<control type="radiobutton" id="113">
 						<width>750</width>
@@ -299,18 +292,6 @@
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(DarkFullscreenMusicPlayback)</onclick>
 						<selected>Skin.HasSetting(DarkFullscreenMusicPlayback)</selected>
-					</control>
-					<control type="radiobutton" id="115">
-						<width>750</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<label>duh</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(duh)</onclick>
-						<selected>Skin.HasSetting(duh)</selected>
 					</control>
 					<control type="label" id="120">
 						<width>750</width>
@@ -1741,18 +1722,6 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>Use ClearTitle for TV Section</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.ToggleSetting(ClearTitle)</onclick>
-							<selected>Skin.HasSetting(ClearTitle)</selected>
-						</control>
-						<control type="radiobutton" id="502">
-							<width>750</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
 							<label>Use Posters for TV Section</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
@@ -1761,7 +1730,7 @@
 							<onclick>Skin.ToggleSetting(TVPosters)</onclick>
 							<selected>Skin.HasSetting(TVPosters)</selected>
 						</control>
-						<control type="radiobutton" id="503">
+						<control type="radiobutton" id="502">
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -1773,7 +1742,7 @@
 							<onclick>Skin.ToggleSetting(TVBanners)</onclick>
 							<selected>Skin.HasSetting(TVBanners)</selected>
 						</control>
-						<control type="radiobutton" id="504">
+						<control type="radiobutton" id="503">
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -1802,24 +1771,7 @@
 				</control>
 			</control>
 		</control>
-		<include>BehindDialogFadeOut</include>
-		<control type="image">
-			<posx>-820</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture>confluence/HomeBlade.png</texture>
-		</control>
-		<control type="image">
-			<posx>26r</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture flipx="true">confluence/HomeBlade.png</texture>
-		</control>
 		
-		<include>WindowTitleHomeButton</include>
-		<include>Clock</include>
 		<control type="label">
 			<include>WindowID</include>
 			<label>CustomSettings.xml</label>

@@ -11,7 +11,7 @@
 			<height>720</height>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
 			<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-			<visible>!Skin.HasSetting(FanartNoVisualisation) + !Skin.HasSetting(FullscreenJukebox)</visible>
+			<visible>!Skin.HasSetting(FanartNoVisualisation) | !Skin.HasSetting(FullscreenJukebox)</visible>
 		</control>
 		<control type="largeimage">
 			<posx>0</posx>

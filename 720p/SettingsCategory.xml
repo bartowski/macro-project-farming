@@ -38,14 +38,7 @@
 		<control type="group">
 			<posx>90</posx>
 			<posy>50</posy>
-			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-				<effect type="fade" start="0" end="100" time="300" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-				<effect type="fade" start="100" end="0" time="300" />
-			</animation>			
+			<include>Animation_Bartowski_Context_Zoom</include>			
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -60,7 +53,7 @@
 				<width>220</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
-				<texture>confluence/bartowski.png</texture>
+				<texture>confluence/bartowski2.png</texture>
 			</control>
 			<control type="grouplist" id="3">
 				<description>button area</description>
@@ -131,21 +124,7 @@
 				<orientation>vertical</orientation>
 			</control>
 		</control>
-		<include>BehindDialogFadeOut</include>
-		<control type="image">
-			<posx>-820</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture>confluence/HomeBlade.png</texture>
-		</control>
-		<control type="image">
-			<posx>26r</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture flipx="true">confluence/HomeBlade.png</texture>
-		</control>
+		
 
 		<control type="button" id="10">
 			<description>Default Category Button</description>
@@ -209,25 +188,6 @@
 			<font>-</font>
 			<visible>false</visible>
 		</control>
-		<control type="group">
-			<posx>60</posx>
-			<posy>0</posy>
-			<animation effect="slide" end="-310,0" time="400" tween="quadratic" easing="out" condition="!Window.Next(Settings)">WindowClose</animation>
-			<animation effect="slide" start="-310,0" time="400" tween="quadratic" easing="out" condition="!Window.Previous(Settings)">WindowOpen</animation>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>250</width>
-				<height>35</height>
-				<texture border="0,0,32,0">confluence/header.png</texture>
-			</control>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<posx>220</posx>
-				<label>$LOCALIZE[5]</label>
-			</control>
-		</control>
-		<include>WindowTitleHomeButton</include>
-		<include>Clock</include>
+		
 	</controls>
 </window>

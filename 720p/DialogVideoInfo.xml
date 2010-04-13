@@ -75,9 +75,9 @@
 						<description>Current Fanart image</description>
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>675</width>
+						<width>1020</width>
 						<height>380</height>
-						<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+						<texture background="true" diffuse="Showcase/showcase-diffuse.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<aspectratio>keep</aspectratio>
@@ -85,7 +85,7 @@
 					</control>
 					<control type="group">
 						<visible>IsEmpty(Listitem.Property(Fanart_Image))</visible>
-						<control type="image">
+						<!--<control type="image">
 							<description>No Fanart Back</description>
 							<posx>0</posx>
 							<posy>0</posy>
@@ -96,7 +96,7 @@
 							<bordersize>4</bordersize>
 							<aspectratio>stretch</aspectratio>
 							<colordiffuse>99FFFFFF</colordiffuse>
-						</control>
+						</control>-->
 						<control type="label">
 							<posx>0</posx>
 							<posy>0</posy>
