@@ -707,13 +707,25 @@
 			<posy>0</posy>
 			<width>230</width>
 			<height>89</height>
-			<texture>cleartitle/$INFO[ListItem.TVShowTitle].png</texture>
+			<texture>$INFO[ListItem.path]logo.png</texture>
 			<fadetime>300</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Files_RightArea</include>
 		</control>
-		<control type="label"><!-- Uncheck Cleartitle -->
+		<control type="image" id="9019">
+			<visible>Control.IsVisible(55)</visible>
+			<posx>920</posx>
+			<posy>0</posy>
+			<width>230</width>
+			<height>89</height>
+			<texture>$INFO[ListItem.path]../logo.png</texture>
+			<fadetime>300</fadetime>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_Viewtype_Files_RightArea</include>
+		</control>
+		<control type="label">
 			<posx>790</posx>
 			<posy>20</posy>
 			<width>470</width>
@@ -723,10 +735,10 @@
 			<textcolor>ff67ffff</textcolor>
 			<label>[B]$INFO[ListItem.TVShowtitle][/B]</label>
 			<include>Animation_Viewtype_Files_RightArea</include>
-			<visible>Control.IsVisible(55) + IsEmpty(Control.GetLabel(7019))</visible>
+			<visible>Control.IsVisible(55) + IsEmpty(Control.GetLabel(7019)) + IsEmpty(Control.GetLabel(9019))</visible>
 		</control>
 		<control type="label">
-			<visible>Control.IsVisible(55) + IsEmpty(Control.GetLabel(7019)) + !IsEmpty(ListItem.Title) + [Container.Content(seasons) | Container.Content(tvshows)]</visible>
+			<visible>Control.IsVisible(55) + IsEmpty(Control.GetLabel(7019)) + IsEmpty(Control.GetLabel(9019)) + !IsEmpty(ListItem.Title) + [Container.Content(seasons) | Container.Content(tvshows)]</visible>
 			<posx>790</posx>
 			<posy>60</posy>
 			<width>500</width>

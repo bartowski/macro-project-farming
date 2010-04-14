@@ -450,16 +450,26 @@
 			<label>$INFO[ListItem.Label]</label>
 		</control>
 		<control type="image" id="7017">
-			<visible>Control.IsVisible(56) + Container.Content(tvshows)</visible><!--Clear Title-->
+			<visible>Control.IsVisible(56) + Container.Content(tvshows)</visible>
 			<posx>160</posx>
 			<posy>300</posy>
 			<width>230</width>
 			<height>89</height>
-			<texture>cleartitle/$INFO[ListItem.TVShowTitle].png</texture>
+			<texture>$INFO[ListItem.path]logo.png</texture>
 			<fadetime>300</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
-		<control type="label"><!--Movie title-->
+		<control type="image" id="9017">
+			<visible>Control.IsVisible(56) + Container.Content(tvshows)</visible>
+			<posx>160</posx>
+			<posy>300</posy>
+			<width>230</width>
+			<height>89</height>
+			<texture>$INFO[ListItem.path]../logo.png</texture>
+			<fadetime>300</fadetime>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="label">
 			<visible>Control.IsVisible(56) + Container.Content(tvshows) + IsEmpty(Control.GetLabel(7017))</visible>
 			<posx>15</posx>
 			<posy>320</posy>
@@ -470,8 +480,8 @@
 			<textcolor>ff67ffff</textcolor>
 			<label>$INFO[ListItem.Label]</label>
 		</control>
-		<control type="label"><!--Movie runtime-->
-			<visible>Control.IsVisible(56) + Container.Content(tvshows) + IsEmpty(Control.GetLabel(7017))</visible>
+		<control type="label">
+			<visible>Control.IsVisible(56) + Container.Content(tvshows) + IsEmpty(Control.GetLabel(7017)) + IsEmpty(Control.GetLabel(9017))</visible>
 			<posx>15</posx>
 			<posy>358</posy>
 			<width>555</width>
@@ -481,7 +491,7 @@
 			<textcolor>ffffffff</textcolor>
 			<label>$INFO[ListItem.Genre]</label>
 		</control>
-		<control type="label"><!--TV genre-->
+		<control type="label">
 			<visible>Control.IsVisible(56) + Container.Content(movies)</visible>
 			<posx>15</posx>
 			<posy>356</posy>
