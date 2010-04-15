@@ -83,10 +83,10 @@
 					<posy>120</posy>
 					<width>240</width>
 					<height>4</height>
-					<!--<visible>!Skin.HasSetting(tvoverlay) + !IsEmpty(ListItem.Overlay)</visible>-->
 					<info>ListItem.Overlay</info>
 					<colordiffuse>ListTrackF</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout width="280" height="1285">
@@ -151,9 +151,9 @@
 					<posy>120</posy>
 					<width>250</width>
 					<height>4</height>
-					<!--<visible>!Skin.HasSetting(nomovieoverlays) + !IsEmpty(ListItem.Overlay)</visible>-->
 					<info>ListItem.Overlay</info>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</focusedlayout>
 		</control>

@@ -125,6 +125,16 @@
 						<include>Animation_HiddenByInfo</include>
 					</control>
 					<control type="image">
+						<visible>Container.Content(episodes)</visible>
+						<posx>-140</posx>
+						<posy>310</posy>
+						<width>280</width>
+						<height>8</height>
+						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					</control>
+					<control type="image">
 						<posx>-150</posx>
 						<posy>298</posy>
 						<width>304</width>
@@ -143,7 +153,7 @@
 						<height>8</height>
 						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<!--<visible>!Skin.HasSetting(tvoverlay) + !IsEmpty(ListItem.Overlay)</visible>-->
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</control>
 			</itemlayout>
@@ -270,7 +280,20 @@
 						<animation type="Focus" reversible="false">
 							<effect type="zoom" center="60,238" start="51" end="100" time="600" tween="back" easing="out" />
 						</animation>
-						<!--<visible>!Skin.HasSetting(tvoverlay) + !IsEmpty(ListItem.Overlay)</visible>-->
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					</control>
+					<control type="image">
+						<visible>Container.Content(episodes)</visible>
+						<posx>-140</posx>
+						<posy>330</posy>
+						<width>380</width>
+						<height>8</height>
+						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="60,238" start="51" end="100" time="600" tween="back" easing="out" />
+						</animation>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 					<control type="label"><!-- Episode Description -->
 						<posx>56</posx>

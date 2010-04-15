@@ -239,6 +239,30 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
+						<label>Enable Movies Watched Overlays</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
+						<selected>Skin.HasSetting(movieoverlays)</selected>
+					</control>
+					<control type="radiobutton" id="105">
+						<width>750</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<label>Enable TV Show Watched Overlays</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
+						<selected>Skin.HasSetting(tvoverlays)</selected>
+					</control>
+					<control type="radiobutton" id="106">
+						<width>750</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
 						<label>Lock Views in Place(Kiosk Mode)</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>

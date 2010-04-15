@@ -64,14 +64,6 @@ MOVIE SECTION
 			<include>Animation_HiddenByInfo</include>
 			<visible>Container.Content(movies)</visible>
 			<itemlayout width="168" height="245">
-				<!--<control type="image">
-					<posx>1</posx>
-					<posy>131</posy>
-					<width>162</width>
-					<height>241</height>
-					<texture>postermatteNF.png</texture>
-					<include>Animation_HiddenByInfo</include>
-				</control>-->
 				<control type="image">
 					<posx>1</posx>
 					<posy>131</posy>
@@ -128,24 +120,12 @@ MOVIE SECTION
 					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 				</control>
 				<control type="image">
-					<posx>2</posx>
-					<posy>132</posy>
-					<width>25</width>
-					<height>25</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>89FFFFFF</colordiffuse>
-					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>2</posx>
-					<posy>132</posy>
-					<width>25</width>
-					<height>25</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>89FFFFFF</colordiffuse>
-					<animation effect="slide" start="0,0" end="0,20" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+					<posx>90</posx>
+					<posy>326</posy>
+					<width>100</width>
+					<height>76</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>
 			
@@ -222,32 +202,15 @@ MOVIE SECTION
 					<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 				</control>
 				<control type="image">
-					<posx>12</posx>
-					<posy>30</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<include>Animation_HiddenByInfo</include>
+					<posx>130</posx>
+					<posy>344</posy>
+					<width>100</width>
+					<height>76</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="90,258" start="51" end="100" time="300" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
 					</animation>
-					<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
-				</control>
-				<control type="image">
-					<posx>12</posx>
-					<posy>30</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<include>Animation_HiddenByInfo</include>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="90,258" start="51" end="100" time="300" tween="back" easing="out" />
-						<effect type="fade" start="0" end="100" time="600" />
-					</animation>
-					<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</focusedlayout>
 		</control>

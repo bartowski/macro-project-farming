@@ -323,8 +323,8 @@
 					<height>465</height>
 					<onleft>300</onleft>
 					<onright>Control.SetFocus(8001,0)</onright>
-					<onup>9011</onup>
-					<ondown>9011</ondown>
+					<onup>9012</onup>
+					<ondown>9012</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(300).HasFocus(5)</visible>
 					<control type="button" id="90121">

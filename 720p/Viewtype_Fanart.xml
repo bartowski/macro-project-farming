@@ -99,22 +99,12 @@
 					<texture>posterframeNF.png</texture>
 				</control>
 				<control type="image">
-					<posx>2</posx>
-					<posy>132</posy>
-					<width>25</width>
-					<height>25</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>89FFFFFF</colordiffuse>
-				</control>
-				<control type="image">
-					<posx>2</posx>
-					<posy>132</posy>
-					<width>25</width>
-					<height>25</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>89FFFFFF</colordiffuse>
+					<posx>140</posx>
+					<posy>406</posy>
+					<width>100</width>
+					<height>76</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</control>
 			</itemlayout>
@@ -192,28 +182,15 @@
 					</animation>
 				</control>
 				<control type="image">
-					<posx>2</posx>
-					<posy>132</posy>
-					<width>25</width>
-					<height>25</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>89FFFFFF</colordiffuse>
+					<posx>146</posx>
+					<posy>422</posy>
+					<width>100</width>
+					<height>76</height>
+					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
 					</animation>
-				</control>
-				<control type="image">
-					<posx>2</posx>
-					<posy>132</posy>
-					<width>25</width>
-					<height>25</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>89FFFFFF</colordiffuse>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
-					</animation>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</control>
 			</focusedlayout>

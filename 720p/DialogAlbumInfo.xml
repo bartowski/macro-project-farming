@@ -475,7 +475,7 @@
 					<pagecontrol>61</pagecontrol>
 					<autoscroll time="3000" delay="4000" repeat="5000">!Control.HasFocus(61) + Skin.HasSetting(AutoScroll)</autoscroll>
 					<visible>!Control.IsVisible(50)</visible>
-*********					<include>Animation_Music_Fullscreen_Plot</include>
+					<include>Animation_Music_Fullscreen_Plot</include>
 				</control>
 				<control type="image">
 					<description>Actor image</description>

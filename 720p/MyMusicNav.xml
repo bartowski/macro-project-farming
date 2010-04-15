@@ -41,6 +41,7 @@
 		<include>Viewtype_MusicWall</include>
 		<include>Viewtype_JukeBox</include>
 		<include>Viewtype_Files</include>
+		<include>Viewtype_Songs</include>
 		<include>Viewtype_MusicShowcase</include>
 
 		<include>7000_has_focus</include>
