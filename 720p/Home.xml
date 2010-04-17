@@ -142,14 +142,14 @@
 					<icon>special://skin/media/backgrounds/settings.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>			
 					<onclick>XBMC.ActivateWindow(4)</onclick>
-					<visible>!Skin.HasSetting(nosettings)</visible>
+					<visible></visible>
 				</item>
 				<item id="10">
 					<label>Scripts</label>
 					<icon>special://skin/media/backgrounds/scripts.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomScriptsFolder)]</thumb>	
 					<onclick>XBMC.ActivateWindow(20)</onclick>
-					<visible>!Skin.HasSetting(scripts)</visible>
+					<visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
 				</item>
 				<item id="11">
 					<icon>special://skin/media/mainmenu/playdisc.png</icon>						
@@ -452,49 +452,7 @@
 						<visible>Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))</visible>
 					</control>
 				</control>
-				<control type="grouplist" id="9016">
-					<posx>10</posx>
-					<posy>0</posy>
-					<width>240</width>
-					<height>240</height>
-					<align>center</align>
-					<onleft>300</onleft>
-					<onright>Control.SetFocus(8000,0)</onright>
-					<onup>9016</onup>
-					<ondown>9016</ondown>
-					<itemgap>0</itemgap>
-					<visible>Container(300).HasFocus(10)</visible>
-					<control type="button" id="90161">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>Titles</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
-					</control>
-					<control type="button" id="90162">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>Genres</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
-					</control>
-					<control type="button" id="90163">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>Years</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
-					</control>
-					<control type="button" id="90164">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>Actors</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
-					</control>
-					<control type="button" id="90165">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>Directors</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
-					</control>
-					<control type="button" id="90166">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>Recently Added</label>
-						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
-					</control>
-				</control>
+				
 <!--MUSIC -->	<control type="grouplist" id="9017">
 					<posx>10</posx>
 					<posy>30</posy>

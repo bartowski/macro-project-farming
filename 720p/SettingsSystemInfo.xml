@@ -35,7 +35,7 @@
 				<width>220</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
-				<texture>confluence/bartowski.png</texture>
+				<texture>confluence/bartowski2.png</texture>
 			</control>
 			<control type="grouplist" id="9000">
 				<posx>10</posx>

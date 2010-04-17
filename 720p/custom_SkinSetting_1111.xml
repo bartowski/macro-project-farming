@@ -20,23 +20,6 @@
 				<height>640</height>
 				<texture border="20">confluence/DialogBack.png</texture>
 			</control>
-			<!--<control type="button">
-				<description>Close Window button</description>
-				<posx>980</posx>
-				<posy>9</posy>
-				<width>64</width>
-				<height>32</height>
-				<label>-</label>
-				<font>-</font>
-				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
-				<texturenofocus>DialogCloseButton.png</texturenofocus>
-				<onleft>1</onleft>
-				<onright>1</onright>
-				<onup>1</onup>
-				<ondown>1</ondown>
-				<visible>system.getbool(input.enablemouse)</visible>
-			</control>-->
 			<control type="image">
 				<description>LOGO</description>
 				<posx>30</posx>
@@ -417,7 +400,7 @@
 						<font>Font_KeyboardKeys</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>20176</label>
+						<label>20176 - not in yet</label>
 						<onclick>Skin.ToggleSetting(homepageVideoinfo)</onclick>
 						<selected>!Skin.HasSetting(homepageVideoinfo)</selected>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -430,7 +413,7 @@
 						<font>Font_KeyboardKeys</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>20083</label>
+						<label>20083 - not in yet</label>
 						<onclick>Skin.ToggleSetting(homepageMusicinfo)</onclick>
 						<selected>!Skin.HasSetting(homepageMusicinfo)</selected>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -443,7 +426,7 @@
 						<font>Font_KeyboardKeys</font>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
-						<label>20084</label>
+						<label>20084 - not in yet</label>
 						<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
 						<selected>!Skin.HasSetting(homepageWeatherinfo)</selected>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>

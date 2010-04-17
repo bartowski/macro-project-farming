@@ -20,7 +20,7 @@
 			<orientation>horizontal</orientation>
 			<onup>7000</onup>
 			<ondown>50</ondown>
-				
+			<visible>!Container.Content(Plugins)</visible>	
 			<itemlayout width="400" height="64">
 				<control type="image">
 					<posx>0</posx>
@@ -38,7 +38,7 @@
 					<font>Bartowski_settings_small</font>
 					<textcolor>black</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>IsEmpty(ListItem.Title)</visible>
+					<visible>IsEmpty(ListItem.Title) | Window.IsActive(501)</visible>
 				</control>
 				<control type="label">
 					<posx>92</posx>

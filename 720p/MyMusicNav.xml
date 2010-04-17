@@ -12,7 +12,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture fallback="special://skin/media/backdrops/curtains_diffuse.png" background="true">$INFO[Fanart.Image]</texture>
+			<texture fallback="special://skin/media/backdrops/curtains.png" background="true">$INFO[Fanart.Image]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<include>VisibleFadeEffect</include>
@@ -24,7 +24,7 @@
 			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
-			<texture fallback="special://skin/media/backdrops/curtains_diffuse.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+			<texture fallback="special://skin/media/backdrops/curtains.png" background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<include>VisibleFadeEffect</include>
