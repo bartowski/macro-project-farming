@@ -51,26 +51,29 @@
 			<control type="button" id="3">
 				<description>Default Button</description>
 				<height>40</height>
-				<font>font13</font>
-				<textcolor>grey2</textcolor>
+				<font>font13caps_title</font>
+				<textoffsetx>20</textoffsetx>
+				<textcolor>ff8F8D8E</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>confluence/button-focus-big.png</texturefocus>
 			</control>
 			<control type="radiobutton" id="4">
 				<description>Default RadioButton</description>
 				<height>40</height>
-				<font>font13</font>
-				<textcolor>grey2</textcolor>
+				<font>font13caps_title</font>
+				<textoffsetx>20</textoffsetx>
+				<textcolor>ff8F8D8E</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>confluence/button-focus-big.png</texturefocus>
 			</control>
 			<control type="spincontrolex" id="5">
 				<description>Default spincontrolex</description>
 				<height>40</height>
-				<textcolor>grey2</textcolor>
+				<textcolor>ff8F8D8E</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus>confluence/button-focus-big.png</texturefocus>
-				<font>font13</font>
+				<font>font13caps_title</font>
+				<textoffsetx>20</textoffsetx>
 				<aligny>center</aligny>
 				<reverse>yes</reverse>
 			</control>

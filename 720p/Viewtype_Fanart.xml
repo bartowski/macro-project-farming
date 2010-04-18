@@ -425,24 +425,24 @@
 			<textcolor>ff67ffff</textcolor>
 			<label>$INFO[ListItem.Label]</label>
 		</control>
-		<control type="image" id="7017">
+		<control type="largeimage" id="7017">
 			<visible>Control.IsVisible(56) + Container.Content(tvshows)</visible>
 			<posx>160</posx>
 			<posy>300</posy>
 			<width>230</width>
 			<height>89</height>
 			<texture>$INFO[ListItem.path]logo.png</texture>
-			<fadetime>300</fadetime>
+			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
-		<control type="image" id="9017">
+		<control type="largeimage" id="9017">
 			<visible>Control.IsVisible(56) + Container.Content(tvshows)</visible>
 			<posx>160</posx>
 			<posy>300</posy>
 			<width>230</width>
 			<height>89</height>
 			<texture>$INFO[ListItem.path]../logo.png</texture>
-			<fadetime>300</fadetime>
+			<fadetime>100</fadetime>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 		</control>
 		<control type="label">

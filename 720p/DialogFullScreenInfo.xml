@@ -61,7 +61,7 @@
 			<control type="group">
 				<posx>20</posx>
 				<posy>-160</posy>
-				<!--<animation effect="slide" start="130,0" end="130,0" time="0" tween="cubic" easing="out" condition="VideoPlayer.Content(episodes)">Conditional</animation>-->
+				<animation effect="slide" start="0,0" end="0,70" time="0" condition="VideoPlayer.Content(episodes)">Conditional</animation>
 				<control type="label">
 					<posx>0</posx>
 					<posy>20</posy>
@@ -139,7 +139,7 @@
 			</control>
 			<!-- Movie Info  -->
 			<control type="group">
-				<visible>Player.HasVideo</visible>
+				<visible>VideoPlayer.Content(movies)</visible>
 				<posx>20</posx>
 				<posy>-80</posy>
 				<control type="label">
@@ -188,27 +188,11 @@
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[VideoPlayer.Cover]</texture>
 			<bordertexture border="32">osd/paused_glow.png</bordertexture>
-			<fadetime>400</fadetime>
 			<bordersize>32</bordersize>
 			<animation type="WindowOpen">
 				<effect type="fade" start="0" end="100" time="900" delay="400" />
 			</animation>
-			<visible>!Skin.HasSetting(clearART) + VideoPlayer.Content(episodes)</visible>
-		</control>
-		<control type ="image"> 
-			<description>tv show image</description>
-			<posx>960</posx>     
-			<posy>-190</posy>    
-			<width>340</width>
-			<height>340</height>
-			<aspectratio align="right" aligny="bottom">keep</aspectratio>
-			<texture diffuse="movie-poster/Movie_Thumb_Mask.png">$INFO[VideoPlayer.Cover]</texture>
-			<bordertexture border="32">osd/paused_glow.png</bordertexture>
-			<bordersize>32</bordersize>
-			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="900" delay="400" />
-			</animation>
-			<visible>!VideoPlayer.Content(episodes)</visible>
+			<visible></visible>
 		</control>
 	</control>
 		
