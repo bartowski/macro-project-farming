@@ -155,7 +155,7 @@
 		</control>
 
 		<!-- Browser label and flags -->
-		<control type="image" id="7016">
+		<control type="largeimage" id="7016">
 			<posx>20</posx>
 			<posy>0</posy>
 			<width>300</width>
@@ -167,7 +167,7 @@
 			<include>Animation_Viewtype_Episode_LeftSide</include>
 			<visible>Control.IsVisible(51) + Container.Content(episodes)</visible>
 		</control>
-		<control type="image" id="9016">
+		<control type="largeimage" id="9016">
 			<posx>20</posx>
 			<posy>0</posy>
 			<width>300</width>

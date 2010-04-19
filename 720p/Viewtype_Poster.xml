@@ -347,7 +347,7 @@
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<visible>Container.Content(movies)</visible>
 			</control>
-			<control type="image" id="7015">
+			<control type="largeimage" id="7015">
 				<posx>20</posx>
 				<posy>-6</posy>
 				<width>230</width>
@@ -358,7 +358,7 @@
 				<include>Animation_HiddenByInfo</include>
 				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			</control>
-			<control type="image" id="9015">
+			<control type="largeimage" id="9015">
 				<posx>20</posx>
 				<posy>-6</posy>
 				<width>230</width>
@@ -389,7 +389,7 @@
 				<font>Font_Bartowski_Movies_Duration</font>
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.duration]</label>
-				<visible>Container.Content(movies) + !Player.HasVideo</visible>
+				<visible>Container.Content(movies) + ![Player.HasVideo | substring(container.folderpath,plugin://video/Apple Movie)]</visible>
 			</control>
 			<control type="label">
 				<posx>20</posx>
@@ -400,14 +400,14 @@
 				<font>Font_Bartowski_Movies_Duration</font>
 				<textcolor>ffffffff</textcolor>
 				<label>$INFO[ListItem.year]</label>
-				<visible>Container.Content(movies) + !Player.HasVideo</visible>
+				<visible>Container.Content(movies) + ![Player.HasVideo | substring(container.folderpath,plugin://video/Apple Movie)]</visible>
 			</control>
 			<control type="group">
 				<posx>100</posx>
 				<posy>82</posy>
 				<include>VideoMPAAFlaggingConditions</include>
 				<animation effect="zoom" start="80" end="80" time="0" condition="true">Conditional</animation>
-				<visible>Container.Content(movies) + !Player.HasVideo</visible>
+				<visible>Container.Content(movies) + ![Player.HasVideo | substring(container.folderpath,plugin://video/Apple Movie)]</visible>
 			</control>
 		</control>
 		

@@ -260,7 +260,7 @@
 						<texture>$INFO[listitem.studio,extras/Studios/,.png]</texture>
 					</control>
 				</control>	
-		<control type="list" id="59">
+		<!--<control type="list" id="59">
 			<posx>220</posx>
 			<posy>160</posy>
 			<width>1200</width>
@@ -272,7 +272,7 @@
 			<viewtype label="16x9">list</viewtype>
 			<orientation>vertical</orientation>
 			<!--<focusposition>2</focusposition>
-			<movement>2</movement>-->
+			<movement>2</movement>
 			<scrolltime>200</scrolltime>
 			<visible>Container.Content(seasons)</visible>
 			<itemlayout width="570" height="60">
@@ -327,7 +327,7 @@
 					</control>
 				</control>
 			</focusedlayout>
-		</control>
+		</control>-->
 		<!-- Browser label and flags -->
 		<control type="group">
 			<posx>400</posx>
@@ -571,5 +571,6 @@
 				<visible>Control.IsVisible(59) + Container.Content(episodes)</visible>
 			</control>
 		<include>Trailer_16x9</include>
+		<include>Music_Global_Showcase</include>
 	</include>
 </includes>

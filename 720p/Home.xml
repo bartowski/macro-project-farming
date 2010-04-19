@@ -528,9 +528,7 @@
 				<height>256</height>
 			</control>
 		</control>
-		<!--<include>Global_Time</include>
-		<include>Global_RSS</include>
-		<include>Object_ScanProgressIcon</include>-->
-		
+		<include>Music_Global_Showcase</include>
+
 	</controls>
 </window>

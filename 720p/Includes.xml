@@ -14,6 +14,8 @@
 	<include file="Viewtype_Files.xml" />
 	<include file="Viewtype_Showcase.xml" />
 	<include file="Viewtype_MusicShowcase.xml" />
+	<include file="Viewtype_PanelLandscape.xml" />
+	<include file="Viewtype_Banner_Panel.xml" />
 	<include file="Viewtype_Songs.xml" />
 	<include file="Viewtype_16x9.xml" />
 	<include file="Viewtype_Wall.xml" />
@@ -24,7 +26,7 @@
 	<include file="Includes_Backgrounds.xml" />
 	<include file="Includes_Home_1.xml" />
 	<include file="IncludesHomeRecentlyAdded.xml" />
-	
+	<include file="Includes_Music_Global.xml" />
 	
 	<include name="ButtonHomeSubCommonValues">
 		<width>600</width>

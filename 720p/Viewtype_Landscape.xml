@@ -33,13 +33,13 @@
 			<include>Animation_HiddenByInfo</include>
 			<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 			<itemlayout width="250" height="225">
-				<control type="image">
+				<control type="largeimage">
 					<visible>Container.Content(tvshows)</visible>
 					<posx>1</posx>
 					<posy>50</posy>
 					<width>230</width>
 					<height>89</height>
-					<texture>$INFO[ListItem.path]logo.png</texture>
+					<texture background="true">$INFO[ListItem.path]logo.png</texture>
 					<fadetime>300</fadetime>
 					<!--<colordiffuse>89FFFFFF</colordiffuse>-->
 					<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -99,13 +99,13 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<animation effect="zoom" start="130,120,1,1" end="0,0,234,4" time="200" delay="200">Focus</animation>
 				</control>
-				<control type="image">
+				<control type="largeimage">
 					<visible>Container.Content(tvshows)</visible>
 					<posx>20</posx>
 					<posy>50</posy>
 					<width>230</width>
 					<height>89</height>
-					<texture>$INFO[ListItem.path]logo.png</texture>
+					<texture background="true">$INFO[ListItem.path]logo.png</texture>
 					<fadetime>200</fadetime>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
@@ -158,7 +158,7 @@
 			</focusedlayout>
 		</control>
 		
-		<control type="image" id="7014">
+		<control type="largeimage" id="7014">
 			<visible></visible>
 			<posx>950</posx>
 			<posy>580</posy>
@@ -171,7 +171,7 @@
 			<include>Animation_Viewtype_Landscape_RightArea</include>
 			<visible>Control.IsVisible(52) + !Container.Content(tvshows)</visible>
 		</control>
-		<control type="image" id="9014">
+		<control type="largeimage" id="9014">
 			<visible></visible>
 			<posx>950</posx>
 			<posy>580</posy>
