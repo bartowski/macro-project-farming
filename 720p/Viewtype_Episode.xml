@@ -29,7 +29,7 @@
 			<onright>7000</onright>
 			<focusposition>2</focusposition>
 			<movement>2</movement>
-			<visible>Container.Content(episodes)</visible>
+			<visible>!Skin.HasSetting(no_Episode) + Container.Content(episodes)</visible>
 			<include>Animation_Viewtype_Episode_FocusArea</include>
 			<itemlayout width="633" height="142">
 				<control type="image">

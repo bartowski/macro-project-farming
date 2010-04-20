@@ -62,7 +62,7 @@ MOVIE SECTION
 			<preloaditems>2</preloaditems>
 			<include>Animation_Viewtype_Showcase_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>Container.Content(movies)</visible>
+			<visible>!Skin.HasSetting(no_Showcase) + Container.Content(movies)</visible>
 			<itemlayout width="168" height="245">
 				<control type="image">
 					<posx>1</posx>

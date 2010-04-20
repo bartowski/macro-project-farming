@@ -19,7 +19,7 @@
 			<focusposition>1</focusposition>
 			<scrolltime>300</scrolltime>
 			<preloaditems>2</preloaditems>
-			<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
+			<visible>!Skin.HasSetting(no_16x9) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)]</visible>
 			<itemlayout width="340" height="500">
 				<control type="group">
 				<posx>0</posx>

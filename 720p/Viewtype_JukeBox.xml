@@ -20,7 +20,7 @@
 			<orientation>horizontal</orientation>
 			<onup>7000</onup>
 			<ondown>50</ondown>
-			<visible>!Container.Content(Plugins)</visible>	
+			<visible>!Skin.HasSetting(no_Jukebox) + !Container.Content(Plugins)</visible>	
 			<itemlayout width="400" height="64">
 				<control type="image">
 					<posx>0</posx>

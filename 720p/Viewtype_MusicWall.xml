@@ -29,7 +29,7 @@
 			<include>Animation_ZoomedByMenu</include>
 			<include>Animation_HiddenByMusicInfo</include>
 			<include>music_slant</include>
-			<visible>Container.Content(artists) | Container.Content(albums)</visible>
+			<visible>!Skin.HasSetting(no_MusicWall) + [Container.Content(artists) | Container.Content(albums)]</visible>
 			<itemlayout width="200" height="200">
 				<control type="image">
 					<posx>17</posx>

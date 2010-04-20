@@ -26,7 +26,7 @@
 	
 	
 		<control type="panel" id="54">
-					<visible>Container.Content(Movies)</visible>
+					<visible>!Skin.HasSetting(no_Wall) + Container.Content(Movies)</visible>
 					<posx>0</posx>
 					<posy>-90</posy><!-- -105 -->
 					<width>1206</width>

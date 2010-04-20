@@ -27,7 +27,7 @@
 		</control>
 		
 		<control type="panel" id="57">
-				<visible>Container.Content(tvshows) + !Skin.HasSetting(TVPosters) + !Skin.HasSetting(TVBanners)</visible>
+				<visible>!Skin.HasSetting(no_LandPanel) + [Container.Content(tvshows) + !Skin.HasSetting(TVPosters) + !Skin.HasSetting(TVBanners)]</visible>
 				<posx>560</posx>
 				<posy>-126</posy><!-- -105 -->
 				<width>800</width>

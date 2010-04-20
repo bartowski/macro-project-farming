@@ -320,10 +320,10 @@
 	</include>
 	<include name="Animation_Viewtype_Episode_LeftSide">
 		<animation type="WindowOpen">
-			<effect type="slide" start="-400" end="0,0" time="600" tween="cubic" easing="inout" />
+			<effect type="slide" start="-800" end="0,0" time="600" tween="cubic" easing="inout" />
 		</animation>			
 		<animation type="WindowClose">
-			<effect type="slide" start="0" end="-400,0" time="600" tween="cubic" easing="inout" />
+			<effect type="slide" start="0" end="-800,0" time="600" tween="cubic" easing="inout" />
 		</animation>	
 	</include>
 	<include name="Animation_Viewtype_Episode_BottomArea">

@@ -129,6 +129,11 @@
 						<label2>Options</label2>
 						<onclick>-</onclick>
 					</item>
+					<item id="6">
+						<label>Disable Views</label>
+						<label2>Options</label2>
+						<onclick>-</onclick>
+					</item>
 				</content>
 			</control>
 			<control type="image">
@@ -1712,8 +1717,8 @@
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>
 						<onright>61</onright>
-						<onup>9004</onup>
-						<ondown>9004</ondown>
+						<onup>9005</onup>
+						<ondown>9005</ondown>
 						<control type="label" id="500">
 							<width>750</width>
 							<height>45</height>
@@ -1774,6 +1779,198 @@
 							<selected>Skin.HasSetting(TVscroll)</selected>
 						</control>-->
 						
+					</control>
+				</control>
+				<control type="group"><!--mcborzu Disable Views-->
+					<control type="grouplist" id="9006">
+						<visible>Container(9000).Hasfocus(6)</visible>
+						<posx>290</posx>
+						<posy>60</posy>
+						<width>750</width>
+						<height>526</height>
+						<itemgap>-1</itemgap>
+						<pagecontrol>61</pagecontrol>
+						<onleft>9000</onleft>
+						<onright>61</onright>
+						<onup>9006</onup>
+						<ondown>9006</ondown>
+						<control type="label" id="600">
+							<width>750</width>
+							<height>45</height>
+							<font>font16caps</font>
+							<label>Disable Movies and TV Views</label>
+							<textcolor>mainblue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+
+						<control type="radiobutton" id="601">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"16x9"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_16x9)</onclick>
+							<selected>Skin.HasSetting(no_16x9)</selected>
+						</control>
+						<control type="radiobutton" id="602">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"BannerPanel"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_BannerPanel)</onclick>
+							<selected>Skin.HasSetting(no_BannerPanel)</selected>
+						</control>
+						<control type="radiobutton" id="603">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"Episode"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_Episode)</onclick>
+							<selected>Skin.HasSetting(no_Episode)</selected>
+						</control>
+						<control type="radiobutton" id="604">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"Panel"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_Panel)</onclick>
+							<selected>Skin.HasSetting(no_Panel)</selected>
+						</control>
+						<control type="radiobutton" id="605">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"Landscape"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_Landscape)</onclick>
+							<selected>Skin.HasSetting(no_Landscape)</selected>
+						</control>no_LandPanel
+						<control type="radiobutton" id="606">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"3D Landscape"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_3DLandscape)</onclick>
+							<selected>Skin.HasSetting(no_3DLandscape)</selected>
+						</control>
+						<control type="radiobutton" id="607">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"LandPanel"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_LandPanel)</onclick>
+							<selected>Skin.HasSetting(no_LandPanel)</selected>
+						</control>
+						<control type="radiobutton" id="608">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"Poster"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_Poster)</onclick>
+							<selected>Skin.HasSetting(no_Poster)</selected>
+						</control>
+						<control type="radiobutton" id="609">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"Showcase"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_Showcase)</onclick>
+							<selected>Skin.HasSetting(no_Showcase)</selected>
+						</control>
+						<control type="radiobutton" id="610">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"Wall"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_Wall)</onclick>
+							<selected>Skin.HasSetting(no_Wall)</selected>
+						</control>
+						<control type="label" id="611">
+							<width>750</width>
+							<height>45</height>
+							<font>font16caps</font>
+							<label>Disable Music Views</label>
+							<textcolor>mainblue</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+						</control>
+						<control type="radiobutton" id="612">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"Jukebox"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_Jukebox)</onclick>
+							<selected>Skin.HasSetting(no_Jukebox)</selected>
+						</control>
+						<control type="radiobutton" id="613">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"Showcase"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_MusicShowcase)</onclick>
+							<selected>Skin.HasSetting(no_MusicShowcase)</selected>
+						</control>
+						<control type="radiobutton" id="614">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"Wall"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_MusicWall)</onclick>
+							<selected>Skin.HasSetting(no_MusicWall)</selected>
+						</control>
 					</control>
 				</control>
 			</control>

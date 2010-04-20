@@ -22,7 +22,7 @@
 			<texture>music/music_backdrop5.png</texture>
 		</control>
 		<control type="label"><!--Big Title-->
-			<visible>Control.IsVisible(58) + [Container.Content(artists) | Container.Content(albums)] | Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)</visible>
+			<visible>Control.IsVisible(58) + [Container.Content(artists) | Container.Content(albums)]</visible>
 			<animation effect="slide" start="0,0" end="0,-40" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 			<posx>0</posx>
 			<posy>330</posy>
@@ -33,6 +33,7 @@
 			<shadowcolor>678b8b8b</shadowcolor>
 			<textcolor>678b8b8b</textcolor>
 			<label>$INFO[ListItem.label]</label>
+			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		<control type="image">
 			<visible>Control.IsVisible(58) + !Skin.HasSetting(MusicShowcaseFanart) + [Container.Content(artists) | Container.Content(albums)]</visible>
@@ -64,7 +65,7 @@ MUSIC SECTION
 			<preloaditems>2</preloaditems>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
-			<visible>Container.Content(artists) | Container.Content(albums)</visible>
+			<visible>!Skin.HasSetting(no_MusicShowcase) + [Container.Content(artists) | Container.Content(albums)]</visible>
 			<itemlayout width="204" height="245">
 			<control type="group">
 			<posx>0</posx>

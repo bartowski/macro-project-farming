@@ -27,7 +27,7 @@
 		</control>
 		
 		<control type="fixedlist" id="592">
-			<visible>Container.Content(tvshows) + Skin.HasSetting(TVBanners)</visible>
+			<visible>!Skin.HasSetting(no_BannerPanel) + Container.Content(tvshows) + Skin.HasSetting(TVBanners)</visible>
 			<posx>560</posx>
 			<posy>0</posy>
 			<height>885</height>

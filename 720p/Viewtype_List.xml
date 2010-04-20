@@ -32,7 +32,7 @@
 			<include>Animation_Viewtype_3dLand_FocusArea</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="12" time="0" condition="true">Conditional</animation>
-			<visible>[Container.Content(tvshows) | Container.Content(seasons)] + ![Skin.HasSetting(TVPosters) | Skin.HasSetting(TVBanners)] | Container.Content(episodes)</visible>
+			<visible>!Skin.HasSetting(no_3DLandscape) + [[Container.Content(tvshows) | Container.Content(seasons)] + ![Skin.HasSetting(TVPosters) | Skin.HasSetting(TVBanners)] | Container.Content(episodes)]</visible>
 			<itemlayout width="316" height="245">
 				<control type="group">
 				<posx>150</posx>
