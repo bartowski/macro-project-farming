@@ -71,7 +71,7 @@
 	</include>
 	<include name="7000_has_focus">
 		<control type="image">
-			<visible>ControlGroup(7000).HasFocus | Window.IsActive(106) | Window.IsActive(111)</visible>
+			<visible>!Skin.HasSetting(LockViews) + [ControlGroup(7000).HasFocus | Window.IsActive(106) | Window.IsActive(111)]</visible>
 			<include>Dimensions_Fullscreen</include>
 			<texture>common/7000_focus.png</texture>
 			<animation effect="fade" start="0" end="100" time="600">Visible</animation>

@@ -42,7 +42,7 @@
 			<width>1280</width>
 			<height>70</height>
 			<texture>backdrops/test2.png</texture>
-			<visible>ControlGroup(7000).HasFocus</visible>
+			<visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
 			<include>Animation_BartowskiZoomInMenu</include>
 		</control>
 		<control type="label">
@@ -52,6 +52,7 @@
 		</control>
 
 		<control type="grouplist" id="7000">
+			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
 			<posy>680</posy>
 			
@@ -87,6 +88,7 @@
 		</control>
 
 		<control type="grouplist">
+			<visible>!Skin.HasSetting(LockViews)</visible>
 			<include>WindowMenuVars</include>
 			<posy>658</posy>
 			<control type="button" id="40">

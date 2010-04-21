@@ -513,6 +513,6 @@
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_3dland_Leftplot</include>
 		</control>
-		<include>Trailer_Poster</include>
+		<include>Trailer_3Dland</include>
 	</include>
 </includes>
