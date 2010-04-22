@@ -25,10 +25,10 @@
 			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<include>Animation_CommonFade</include>
 			<visible>Control.IsVisible(55)</visible>
-		</control>-->
+		</control>
 		<include>Global_Filter</include>
 		
-		<include>Object_MovieInfoLines</include>
+		<include>Object_MovieInfoLines</include>-->
 		
 		<include>Viewtype_Files</include>
 		<include>Viewtype_List</include>
@@ -123,9 +123,9 @@
 			</control>				
 		</control>
 		
-		<include>Global_Time</include>
+		<!--<include>Global_Time</include>
 		<include>Global_Heading</include>		
-		<include>Global_RSS</include>
+		<include>Global_RSS</include>-->
 		
 		<include>Object_DebugGrid</include>
 

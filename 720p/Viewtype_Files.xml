@@ -95,50 +95,28 @@
 					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + Container.Content(episodes)</visible>
 				</control>
 				<control type="image">
-					<posx>18</posx>
-					<posy>8</posy>
-					<width>30</width>
-					<height>30</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseNF</colordiffuse>
-					<include>Animation_ZoomInZoomOut</include>
-					<include>Animation_ZoomedByMenu</include>
-					<include>Animation_HiddenByMusicInfo</include>
-					<include>Animation_FilesInfoSlide</include>
+					<visible>Container.Content(episodes)</visible>
+					<posx>10</posx>
+					<posy>-16</posy>
+					<width>280</width>
+					<height>8</height>
+					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 				<control type="image">
-					<posx>18</posx>
-					<posy>8</posy>
-					<width>30</width>
-					<height>30</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseNF</colordiffuse>
-					<include>Animation_ZoomInZoomOut</include>
-					<include>Animation_ZoomedByMenu</include>
-					<include>Animation_HiddenByMusicInfo</include>
-					<include>Animation_FilesInfoSlide</include>
+					<visible>Container.Content(movies)</visible>
+					<posx>10</posx>
+					<posy>-16</posy>
+					<width>280</width>
+					<height>8</height>
+					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout width="1210" height="36">
-				<!--<control type="group">
-					<visible>Skin.HasSetting(File_View_Focus_Line) + Control.IsVisible(55)</visible>
-					<posx>-670</posx>
-					<posy>0</posy>
-					<include>Animation_ZoomInZoomOut</include>
-					<include>Animation_ZoomedByMenu</include>
-					<include>Animation_HiddenByInfo</include>
-					<include>Animation_HiddenByMusicInfo</include>
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>1680</width>
-						<height>120</height>
-						<texture>list/TextFocused.png</texture>
-						<colordiffuse>11000000</colordiffuse>
-					</control>
-				</control>-->
+				
 				<control type="image">
 					<posx>-70</posx>
 					<posy>-34</posy>
@@ -149,63 +127,6 @@
 						<effect type="fade" start="0" end="70" time="800" />
 					</animation>
 				</control>
-				<!--<control type="image">
-					<posx>-440</posx>
-					<posy>-118</posy>
-					<width>440</width>
-					<height>360</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="defaultmoviegenre.jpg">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
-					<bordertexture border="8">common/thumb_border.png</bordertexture>
-					<bordersize>8</bordersize>
-					<include>Animation_ZoomInZoomOut</include>
-					<include>Animation_ZoomedByMenu</include>
-					<include>Animation_HiddenByMusicInfo</include>
-					<include>Animation_FilesInfoSlide</include>
-					<visible>Window.IsActive(25) + Container.Content(Genres)</visible>
-					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="450,75" start="80" end="94" time="200" tween="cubic" easing="out" />
-						<effect type="fade" start="60" end="100" time="200" />
-					</animation>
-				</control>-->
-				<control type="image">
-					<posx>-20</posx>
-					<posy>40</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay) + Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseFO</colordiffuse>
-					<include>Animation_ZoomInZoomOut</include>
-					<include>Animation_ZoomedByMenu</include>
-					<include>Animation_HiddenByMusicInfo</include>
-					<include>Animation_FilesInfoSlide</include>
-				</control>
-				<control type="image">
-					<posx>-20</posx>
-					<posy>40</posy>
-					<width>40</width>
-					<height>40</height>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + !Container.Content(movies)</visible>
-					<info>ListItem.Overlay</info>
-					<colordiffuse>WatchedIconDiffuseFO</colordiffuse>
-					<include>Animation_ZoomInZoomOut</include>
-					<include>Animation_ZoomedByMenu</include>
-					<include>Animation_HiddenByMusicInfo</include>
-					<include>Animation_FilesInfoSlide</include>
-					<animation effect="slide" end="4,-42" time="0" condition="Container.Content(episodes)">Conditional</animation>
-				</control>
-				<!--<control type="label">
-					<posx>20</posx>
-					<posy>0</posy>
-					<width>680</width>
-					<height>46</height>
-					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
-					<textcolor>ffffffff</textcolor>
-					<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ][COLOR Date]$INFO[ListItem.Duration, ][/COLOR]</label>
-					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
-				</control>-->
 				<control type="label">
 					<posx>20</posx>
 					<posy>0</posy>
@@ -268,7 +189,7 @@
 					<height>46</height>
 					<aligny>center</aligny>
 					<font>Font_Bartowski_List_Main</font>
-					<label>[COLOR white]$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ][/COLOR][COLOR Date]$INFO[ListItem.Duration, ][/COLOR]</label>
+					<label>[COLOR white]$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]$INFO[ListItem.Duration, - ][/COLOR]</label>
 					<visible>!IsEmpty(ListItem.Duration) + !IsEmpty(ListItem.TrackNumber) + [Container.Content(songs) | Window.IsActive(500) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]]</visible>
 				</control>
 				<!--<control type="label">
@@ -492,6 +413,26 @@
 						<animation effect="slide" start="0,10" end="0,10" time="0" condition="Window.IsActive(500) | [ Window.IsActive(502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)]">Conditional</animation>
 					</control>
 				</control>-->
+				<control type="image">
+					<visible>Container.Content(episodes)</visible>
+					<posx>10</posx>
+					<posy>-16</posy>
+					<width>280</width>
+					<height>8</height>
+					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+				</control>
+				<control type="image">
+					<visible>Container.Content(movies)</visible>
+					<posx>10</posx>
+					<posy>-16</posy>
+					<width>280</width>
+					<height>8</height>
+					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+				</control>
 			</focusedlayout>
 		</control>		
 	<control type="group">	
@@ -629,7 +570,7 @@
 			<effect type="zoom" time="400" center="240,200" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" center="240,200" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnNext</visible>
+			<visible>Container(55).OnNext + !Container.Content(songs)</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -642,7 +583,7 @@
 			<effect type="zoom" time="400" center="240,200" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" center="240,200" start="100" end="0" />
 			</animation>
-			<visible>Container(55).OnPrevious</visible>
+			<visible>Container(55).OnPrevious + !Container.Content(songs)</visible>
 		</control>
 	</control>
 	<control type="group">

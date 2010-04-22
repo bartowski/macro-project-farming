@@ -71,5 +71,6 @@
 			<texturenofocus>-</texturenofocus>
 			<visible>!Skin.HasSetting(LockViews)</visible>
 		</control>
+		<include>Global_Time</include>
 	</controls>
 </window>

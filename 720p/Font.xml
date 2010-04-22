@@ -279,6 +279,11 @@
 			<filename>alaska_thin.ttf</filename>
 			<size>21</size>
 		</font>
+		<font>
+			<name>Font_RSS_Bartowski</name>
+			<filename>alaska_thin.ttf</filename>
+			<size>28</size>
+		</font>
 
 		<font>
 			<name>Font_RSS_Big</name>

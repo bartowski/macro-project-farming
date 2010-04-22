@@ -345,10 +345,10 @@
 	</include>
 	<include name="Animation_Viewtype_3dland_Lefttop">
 		<animation type="WindowOpen">
-			<effect type="slide" start="-600,0" end="0,0" time="600" tween="cubic" easing="inout" />
+			<effect type="slide" start="-900,0" end="0,0" time="600" tween="cubic" easing="inout" />
 		</animation>			
 		<animation type="WindowClose">
-			<effect type="slide" start="0,0" end="-600,0" time="600" tween="cubic" easing="inout" />
+			<effect type="slide" start="0,0" end="-900,0" time="600" tween="cubic" easing="inout" />
 		</animation>	
 	</include>
 	<include name="Animation_Viewtype_3dland_Leftplot">

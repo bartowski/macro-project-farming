@@ -44,6 +44,7 @@
 		<include>Viewtype_Songs</include>
 		<include>Viewtype_MusicShowcase</include>
 
+		<include>Global_Time</include>
 		<include>7000_has_focus</include>
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>

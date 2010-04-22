@@ -11,7 +11,7 @@
 			<texture background="true">$INFO[Fanart.Image]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
-			<include>VisibleFadeEffect</include>
+			<include>Animation_CommonFade</include>
 			<visible>![IsEmpty(Fanart.Image) | Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592)]</visible>
 		</control>
 		<control type="largeimage">
@@ -26,7 +26,7 @@
 			<include>Dimensions_Fullscreen</include>
 			<texture>special://skin/media/backdrops/curtains.png</texture>
 			<aspectratio>scale</aspectratio>
-			<include>VisibleFadeEffect</include>
+			<include>Animation_CommonFade</include>
 			<visible>!Control.IsVisible(54) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)]</visible>
 		</control>
 		<!--<control type="largeimage">
@@ -70,6 +70,10 @@
 		
 
 		<include>7000_has_focus</include>
+		<control type="group">
+			<include>Global_Time</include>
+		</control>
+		
 		
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>
@@ -197,9 +201,9 @@
 				<label>TITLE</label>
 			</control>				
 		</control>
-		<include>Global_Time</include>
+		<!--<include>Global_Time</include>
 		<include>Global_Heading</include>
-		<include>Global_RSS</include>
+		<include>Global_RSS</include>-->
 
 		<include>Object_DebugGrid</include>
 

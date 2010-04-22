@@ -25,12 +25,16 @@
 		<include>Viewtype_Files</include>
 		<include>Viewtype_MusicShowcase</include>
 		
-		<!--<control type="label">
+		<control type="label">
 			<posy>330</posy>
 			<label>MyMusicSongs.xml</label>
 			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>-->
+		</control>
+		
+		
 		<include>7000_has_focus</include>
+		<include>Global_Time</include>
+		
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>
 			<posy>650</posy>

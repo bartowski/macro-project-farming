@@ -203,6 +203,18 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
+						<label>Disable Clock</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(no_clock)</onclick>
+						<selected>Skin.HasSetting(no_clock)</selected>
+					</control>
+					<control type="radiobutton" id="103">
+						<width>750</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
 						<label>Scroll Plot for Movies and TV</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
@@ -211,7 +223,7 @@
 						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 						<selected>Skin.HasSetting(autoscroll)</selected>
 					</control>
-					<control type="radiobutton" id="103">
+					<control type="radiobutton" id="104">
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -223,7 +235,7 @@
 						<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
 						<selected>Skin.HasSetting(no_media_flags)</selected>
 					</control>
-					<control type="radiobutton" id="104">
+					<control type="radiobutton" id="105">
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -235,7 +247,7 @@
 						<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
 						<selected>Skin.HasSetting(movieoverlays)</selected>
 					</control>
-					<control type="radiobutton" id="105">
+					<control type="radiobutton" id="106">
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -247,7 +259,7 @@
 						<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
 						<selected>Skin.HasSetting(tvoverlays)</selected>
 					</control>
-					<control type="radiobutton" id="106">
+					<control type="radiobutton" id="107">
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>

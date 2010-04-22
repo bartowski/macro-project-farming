@@ -30,6 +30,7 @@
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
 			<include>Animation_Viewtype_3dLand_FocusArea</include>
+			<include>Animation_HiddenByInfo</include>
 			<camera x="1340" y="380" />
 			<animation effect="rotatey" center="50" start="12" end="12" time="0" condition="true">Conditional</animation>
 			<visible>!Skin.HasSetting(no_3DLandscape) + [[Container.Content(tvshows) | Container.Content(seasons)] + ![Skin.HasSetting(TVPosters) | Skin.HasSetting(TVBanners)] | Container.Content(episodes)]</visible>
@@ -44,7 +45,6 @@
 						<height>168</height>
 						<texture>movie-poster/newcase.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_HiddenByInfo</include>
 					</control>
 					<control type="image">
 						<posx>136</posx>
@@ -54,7 +54,6 @@
 						<texture>movie-poster/reflect_bottom2.png</texture>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_HiddenByInfo</include>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -63,7 +62,6 @@
 						<height>172</height>
 						<texture>movie-poster/xper_test.png</texture>
 						<colordiffuse>BackgroundColor</colordiffuse>
-						<include>Animation_HiddenByInfo</include>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -73,7 +71,6 @@
 						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Icon]</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_HiddenByInfo</include>
 					</control>
 					<control type="image">
 						<posx>-150</posx>
@@ -83,7 +80,6 @@
 						<texture>list/3d_back_overlay1.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_HiddenByInfo</include>
 						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
 					</control>
 					<control type="label"><!-- Episode Description -->
@@ -95,7 +91,6 @@
 						<font>Font_Landscape_TitleTVShow</font>
 						<textcolor>ffffffff</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<include>Animation_HiddenByInfo</include>
 						<animation effect="fade" start="60" end="60" time="0" condition="stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
 					</control>
@@ -109,7 +104,6 @@
 						<font>Font_Landscape_TitleTVShow</font>
 						<textcolor>ffffffff</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<include>Animation_HiddenByInfo</include>
 						<animation effect="rotatex" start="180" end="180" center="330" time="0" condition="true">Conditional</animation>
 						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
 					</control>
@@ -122,7 +116,6 @@
 						<fadetime>200</fadetime>
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_HiddenByInfo</include>
 					</control>
 					<control type="image">
 						<visible>Container.Content(episodes)</visible>
@@ -142,7 +135,6 @@
 						<texture flipy="true">list/3d_back_overlay1.png</texture>
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<include>Animation_HiddenByInfo</include>
 						<visible>!IsEmpty(ListItem.Title) + Container.Content(episodes)</visible>
 					</control>
 					<control type="image">
@@ -396,7 +388,6 @@
 				<texture>$INFO[ListItem.path]logo.png</texture>
 				<fadetime>200</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<include>Animation_HiddenByInfo</include>
 				<include>Animation_Viewtype_3dland_Lefttop</include>
 				<visible></visible>
 			</control>
@@ -408,7 +399,6 @@
 				<texture>$INFO[ListItem.path]../logo.png</texture>
 				<fadetime>200</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>
-				<include>Animation_HiddenByInfo</include>
 				<include>Animation_Viewtype_3dland_Lefttop</include>
 				<visible></visible>
 			</control>
@@ -426,7 +416,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>Control.IsVisible(53) + Container.Content(episodes)</visible>
+			<visible>Control.IsVisible(53) + Container.Content(episodes) + !IsEmpty(ListItem.Title)</visible>
 			<include>Animation_Viewtype_3dland_Leftplot</include>
 			<posx>0</posx>
 			<posy>210</posy>

@@ -529,6 +529,9 @@
 			</control>
 		</control>
 		<include>Music_Global_Showcase</include>
+	
+		<include>Global_Time</include>
+		<include>Global_RSS</include>
 
 	</controls>
 </window>
