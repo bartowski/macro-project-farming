@@ -482,8 +482,55 @@
 			<visible>Container(55).OnPrevious</visible>
 		</control>
 	</control>
+	<control type="group">	
+	<include>Animation_Viewtype_Files_RightArea</include>
+	<visible>Container.Content(Genres) + Control.IsVisible(55)</visible>
+		<control type="image">
+			<posx>790</posx>
+			<posy>-26</posy>
+			<width>512</width>
+			<height>770</height>
+			<aspectratio align="center" aligny="center">stretch</aspectratio>
+			<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+			<bordertexture border="28">osd/paused_glow1.png</bordertexture>
+			<fadetime>400</fadetime>
+			<bordersize>28</bordersize>
+		</control>
+		<control type="image">
+			<posx>790</posx>
+			<posy>-26</posy>
+			<width>512</width>
+			<height>770</height>
+			<aspectratio align="center" aligny="center">stretch</aspectratio>
+			<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem(-1).Label].jpg</texture>
+			<bordertexture border="28">osd/paused_glow1.png</bordertexture>
+			<fadetime>400</fadetime>
+			<bordersize>28</bordersize>
+			<animation type="Hidden">
+			<effect type="zoom" time="400" center="1040,600" start="100" end="180" tween="cubic" easing="in" />
+				<effect type="fade" time="400" center="1240,600" start="100" end="0" />
+			</animation>
+			<visible>Container(55).OnNext</visible>
+		</control>
+		<control type="image">
+			<posx>790</posx>
+			<posy>-26</posy>
+			<width>512</width>
+			<height>770</height>
+			<aspectratio align="center" aligny="center">stretch</aspectratio>
+			<texture diffuse="movie-poster/posterview_diffuse.png" fallback="defaultmoviegenre.jpg">special://skin/media/extras/moviegenres/$INFO[ListItem(1).Label].jpg</texture>
+			<bordertexture border="28">osd/paused_glow1.png</bordertexture>
+			<fadetime>400</fadetime>
+			<bordersize>28</bordersize>
+			<animation type="Hidden">
+			<effect type="zoom" time="400" center="1040,600" start="100" end="180" tween="cubic" easing="in" />
+				<effect type="fade" time="400" center="1240,600" start="100" end="0" />
+			</animation>
+			<visible>Container(55).OnPrevious</visible>
+		</control>
+	</control>
 	<control type="group">
-	<visible>Control.IsVisible(55) + ![Container.Content(movies) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
+	<visible>Control.IsVisible(55) + ![Container.Content(movies) | Container.Content(Genres) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
 			<posx>766</posx>
@@ -770,6 +817,6 @@
 			<texture>list/last-overlay.png</texture>
 			<visible>Control.IsVisible(55)</visible>
 		</control>-->
-		<include>Trailer_Files</include>
+		
 	</include>
 </includes>

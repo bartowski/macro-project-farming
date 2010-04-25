@@ -23,17 +23,18 @@
 			<texture>backdrops/test2.png</texture>
 		</control>
 		<control type="grouplist" id="1">
-			<posx>40</posx>
+			<posx>10</posx>
 			<posy>670</posy>
 			<onleft>1</onleft>
 			<onright>1</onright>
 			<onup>-</onup>
 			<ondown>-</ondown>
 			<orientation>horizontal</orientation>
+			<align>center</align>
 			<control type="button" id="3110">
 				<description>Settings</description>
 				<height>30</height>
-				<width>100</width>
+				<width min="40" max="170">auto</width>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -46,21 +47,21 @@
 			<control type="button" id="3111">
 				<description>Filemanager</description>
 				<height>30</height>
-				<width>170</width>
+				<width min="40" max="170">auto</width>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<texturefocus border="5">confluence/button-focus.png</texturefocus>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>Filemanager</label>
+				<label>$LOCALIZE[31067]</label>
 				<onclick>ActivateWindow(3)</onclick>
 			</control>
 
 			<control type="button" id="3117">
 				<description>Favourites</description>
 				<height>30</height>
-				<width>150</width>
+				<width min="40" max="170">auto</width>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -74,7 +75,7 @@
 			<control type="button" id="3112">
 				<description>Reboot</description>
 				<height>30</height>
-				<width>150</width>
+				<width min="40" max="170">auto</width>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -87,7 +88,7 @@
 			<control type="button" id="3113">
 				<description>Shutdown</description>
 				<height>30</height>
-				<width>150</width>
+				<width min="40" max="170">auto</width>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -100,7 +101,7 @@
 			<control type="button" id="3114">
 				<description>Restart Xbmc</description>
 				<height>30</height>
-				<width>170</width>
+				<width min="40" max="170">auto</width>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -113,7 +114,7 @@
 			<control type="button" id="3115">
 				<description>System Info Button</description>
 				<height>30</height>
-				<width>150</width>
+				<width min="40" max="170">auto</width>
 				<font>Font_Bartowski_Press_S</font>
 				<textcolor>MainBlack</textcolor>
 				<focusedcolor>white</focusedcolor>
@@ -123,7 +124,7 @@
 				<label>$LOCALIZE[130]</label>
 				<onclick>ActivateWindow(7)</onclick>
 			</control>
-			<control type="button" id="3116">
+			<!--<control type="button" id="3116">
 				<description>Reload Skin</description>
 				<height>30</height>
 				<width>150</width>
@@ -135,8 +136,7 @@
 				<aligny>middle</aligny>
 				<label>Reload Skin</label>
 				<onclick>ReloadSkin()</onclick>
-				
-			</control>
+			</control>-->
 		</control>
 		<include>Object_DebugGrid</include>
 	</controls>

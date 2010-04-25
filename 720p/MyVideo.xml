@@ -35,7 +35,18 @@
 		<include>Viewtype_Poster</include>
 		<include>Viewtype_Episode</include>
 
-		<include>Global_ContextFilter</include>
+		
+		<include>Trailer</include>
+		<include>Trailer_TVLandscape</include>
+		<include>Trailer_16x9</include>
+		<include>Trailer_Files</include>
+		<include>Trailer_Poster</include>
+		
+		<include>Music_Global_TopRight</include>
+		<include>Music_Global_Showcase</include>
+		<include>Music_Global_LowerRight</include>
+		
+		
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>
 			<posy>650</posy>

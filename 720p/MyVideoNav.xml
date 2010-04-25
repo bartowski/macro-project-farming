@@ -74,6 +74,15 @@
 			<include>Global_Time</include>
 		</control>
 		
+		<include>Trailer</include>
+		<include>Trailer_TVLandscape</include>
+		<include>Trailer_16x9</include>
+		<include>Trailer_Files</include>
+		<include>Trailer_Poster</include>
+		
+		<include>Music_Global_TopRight</include>
+		<include>Music_Global_Showcase</include>
+		<include>Music_Global_LowerRight</include>
 		
 		<control type="image"><!-- Floor -->
 			<posx>0</posx>
@@ -124,7 +133,7 @@
 				<altlabel>No Cleartitle</altlabel>
 				<onclick>Skin.ToggleSetting(ClearTitle)</onclick>
 				<selected>Skin.HasSetting(ClearTitle)</selected>
-				<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+				<visible>Control.IsVisible(59) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			</control>
 			<control type="togglebutton" id="23">
 				<description>Toggle MoviesFanart</description>
@@ -133,7 +142,7 @@
 				<altlabel>Show Flags</altlabel>
 				<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
 				<selected>Skin.HasSetting(no_media_flags)</selected>
-				<visible>!Control.IsVisible(58)</visible>
+				<visible>Container.Content(movies) | Container.Content(episodes)</visible>	
 			</control>
 			<control type="button" id="3">
 				<include>WindowMenuButton</include>
@@ -168,7 +177,7 @@
 			<control type="button" id="45">
 				<include>WindowMenuLabel</include>
 				<label>VIEW OPTIONS</label>
-				<visible>Control.IsVisible(58) + Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>		
+				<visible>[Control.IsVisible(58) | Control.IsVisible(59)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>		
 			</control>
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>
@@ -178,7 +187,7 @@
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>
 				<label>Flags</label>
-				<visible>!Control.IsVisible(58)</visible>		
+				<visible>Container.Content(movies) | Container.Content(episodes)</visible>		
 			</control>
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>
@@ -206,6 +215,6 @@
 		<include>Global_RSS</include>-->
 
 		<include>Object_DebugGrid</include>
-
+		<include>Global_Time2</include>
 	</controls>	
 </window>

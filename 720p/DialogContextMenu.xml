@@ -15,7 +15,6 @@
 			<width>370</width>
 			<height>74</height>
 			<texture border="45,45,45,0">confluence/DialogContextTop.png</texture>
-			<visible>!Skin.HasSetting(LockViews)</visible>
 		</control>
 		<control type="label">
 			<description>header label</description>
@@ -28,7 +27,6 @@
 			<align>center</align>
 			<aligny>center</aligny>
 			<textcolor>ff000000</textcolor>
-			<visible>!Skin.HasSetting(LockViews)</visible>
 		</control>
 		
 		<control type="image">
@@ -37,7 +35,6 @@
 			<width>297</width>
 			<height>4</height>
 			<texture>confluence/separator.png</texture>
-			<visible>!Skin.HasSetting(LockViews)</visible>
 		</control>
 		<control type="image" id="999">
 			<description>background image</description>
@@ -45,7 +42,6 @@
 			<posy>0</posy>
 			<width>370</width>
 			<texture border="45,0,45,0">confluence/DialogContextMiddle.png</texture>
-			<visible>!Skin.HasSetting(LockViews)</visible>
 		</control>
 		<control type="image" id="998">
 			<description>background bottom image</description>
@@ -53,7 +49,6 @@
 			<width>370</width>
 			<height>50</height>
 			<texture border="45,0,45,49">confluence/DialogContextBottom.png</texture>
-			<visible>!Skin.HasSetting(LockViews)</visible>
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>
@@ -69,7 +64,6 @@
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="5">confluence/button-focus.png</texturefocus>
 			<texturenofocus>-</texturenofocus>
-			<visible>!Skin.HasSetting(LockViews)</visible>
 		</control>
 		<include>Global_Time</include>
 	</controls>

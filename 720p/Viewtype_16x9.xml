@@ -570,7 +570,7 @@
 				<animation effect="slide" start="340,900" end="340,520" time="600" delay="2800" condition="Container.Content(episodes) + ![Container(59).OnNext | Container(59).OnPrevious]">Conditional</animation>
 				<visible>Control.IsVisible(59) + Container.Content(episodes)</visible>
 			</control>
-		<include>Trailer_16x9</include>
-		<include>Music_Global_Showcase</include>
+		
+		
 	</include>
 </includes>

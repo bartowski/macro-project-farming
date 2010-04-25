@@ -494,8 +494,7 @@
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Landscape_BottomInfo</include>
 		</control>
-		<include>Trailer</include>
-		<include>Trailer_TVLandscape</include>
+		
 	</include>
 
 </includes>

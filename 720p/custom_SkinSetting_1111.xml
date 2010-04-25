@@ -125,13 +125,13 @@
 						<onclick>-</onclick>
 					</item>
 					<item id="5">
-						<label>TV Shows</label>
-						<label2>Options</label2>
+						<label>31028</label>
+						<label2>31112</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="6">
-						<label>Disable Views</label>
-						<label2>Options</label2>
+						<label>31029</label>
+						<label2>31112</label2>
 						<onclick>-</onclick>
 					</item>
 				</content>
@@ -191,7 +191,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
-						<label>Debug mode [COLOR=red](for skinning not error reporting)[/COLOR]</label>
+						<label>$LOCALIZE[31030] [COLOR=red]($LOCALIZE[31031])[/COLOR]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -203,7 +203,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
-						<label>Disable Clock</label>
+						<label>$LOCALIZE[31032]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -215,7 +215,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
-						<label>Scroll Plot for Movies and TV</label>
+						<label>$LOCALIZE[31033]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -227,7 +227,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
-						<label>Disable Media Flags</label>
+						<label>$LOCALIZE[31034]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -239,7 +239,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
-						<label>Enable Movies Watched Overlays</label>
+						<label>$LOCALIZE[31035]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -251,7 +251,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
-						<label>Enable TV Show Watched Overlays</label>
+						<label>$LOCALIZE[31036]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -263,7 +263,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
-						<label>Lock Views in Place(Kiosk Mode)</label>
+						<label>$LOCALIZE[31037]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -275,7 +275,7 @@
 						<width>750</width>
 						<height>45</height>
 						<font>font16caps</font>
-						<label>Music Visualization Options</label>
+						<label>$LOCALIZE[31038]</label>
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -285,7 +285,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
-						<label>Use Fanart Instead of Visualisation</label>
+						<label>$LOCALIZE[31039]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -297,7 +297,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
-						<label>Use JukeBox for Fullscreen Playback</label>
+						<label>$LOCALIZE[31040]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -309,7 +309,7 @@
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
-						<label>Enable Dark Fanart for Fullscreen Playback</label>
+						<label>$LOCALIZE[31041]</label>
 						<textcolor>grey2</textcolor>
 						<focusedcolor>white</focusedcolor>
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -466,7 +466,7 @@
 						<width>750</width>
 						<height>45</height>
 						<font>font16caps</font>
-						<label>Hide Main Menu Items</label>
+						<label>$LOCALIZE[31042]</label>
 						<textcolor>mainblue</textcolor>
 						<shadowcolor>black</shadowcolor>
 						<align>left</align>
@@ -1735,7 +1735,7 @@
 							<width>750</width>
 							<height>45</height>
 							<font>font16caps</font>
-							<label>Set Options for TV Shows</label>
+							<label>$LOCALIZE[31043]</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -1746,7 +1746,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>Use Posters for TV Section</label>
+							<label>$LOCALIZE[31044]</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1758,7 +1758,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>Use Banners for TV Section</label>
+							<label>$LOCALIZE[31045]</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1770,7 +1770,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>Enable clearART</label>
+							<label>$LOCALIZE[31046]</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1810,7 +1810,7 @@
 							<width>750</width>
 							<height>45</height>
 							<font>font16caps</font>
-							<label>Disable Movies and TV Views</label>
+							<label>$LOCALIZE[31047]</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -1821,7 +1821,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"16x9"</label>
+							<label>"$LOCALIZE[31048]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1833,7 +1833,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"BannerPanel"</label>
+							<label>"$LOCALIZE[31049]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1845,7 +1845,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"Episode"</label>
+							<label>"$LOCALIZE[31050]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1857,7 +1857,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"Panel"</label>
+							<label>"$LOCALIZE[31051]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1869,7 +1869,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"Landscape"</label>
+							<label>"$LOCALIZE[31052]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1881,7 +1881,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"3D Landscape"</label>
+							<label>"$LOCALIZE[31053]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1893,7 +1893,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"LandPanel"</label>
+							<label>"$LOCALIZE[31054]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1905,7 +1905,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"Poster"</label>
+							<label>"$LOCALIZE[31062]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1917,7 +1917,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"Showcase"</label>
+							<label>"$LOCALIZE[31063]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1929,7 +1929,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"Wall"</label>
+							<label>"$LOCALIZE[31064]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1941,7 +1941,7 @@
 							<width>750</width>
 							<height>45</height>
 							<font>font16caps</font>
-							<label>Disable Music Views</label>
+							<label>"$LOCALIZE[31065]"</label>
 							<textcolor>mainblue</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
@@ -1951,7 +1951,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"Jukebox"</label>
+							<label>"$LOCALIZE[31066]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1963,7 +1963,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"Showcase"</label>
+							<label>"$LOCALIZE[31063]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
@@ -1975,7 +1975,7 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>"Wall"</label>
+							<label>"$LOCALIZE[31064]"</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>

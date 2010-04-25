@@ -32,6 +32,49 @@
 	<string id="31025">Items</string>
 	<string id="31326">Created</string>
 	<string id="31327">Resolution</string>
+	<string id="31028">TV Shows</string>
+	<string id="31029">Disable Views</string>
+	
+	<!-- Settings labels -->
+	<string id="31030">Debug mode</string>
+	<string id="31031">for skinning not error reporting</string>
+	<string id="31032">Disable Clock</string>
+	<string id="31033">Scroll Plot for Movies and TV</string>
+	<string id="31034">Disable Media Flags</string>
+	<string id="31035">Enable Movies Watched Overlays</string>
+	<string id="31036">Enable TV Show Watched Overlays</string>
+	<string id="31037">Lock Views in Place(Kiosk Mode)</string>
+	<string id="31038">Music Visualization Options</string>
+	<string id="31039">Use Fanart Instead of Visualisation</string>
+	<string id="31040">Use JukeBox for Fullscreen Playback</string>
+	<string id="31041">Enable Dark Fanart for Fullscreen Playback</string>
+	<string id="31042">Hide Main Menu Items</string>
+	<string id="31043">Set Options for TV Shows</string>
+	<string id="31044">Use Posters for TV Section</string>
+	<string id="31045">Use Banners for TV Section</string>
+	<string id="31046">Enable clearART</string>
+	
+	
+	<string id="31047">Disable Movies and TV Views</string>
+	<string id="31048">16x9</string>
+	<string id="31049">BannerPanel</string>
+	<string id="31050">Episode</string>
+	<string id="31051">Panel</string>
+	<string id="31052">Landscape</string>
+	<string id="31053">3D Landscape</string>
+	<string id="31054">LandPanel</string>
+	<string id="31062">Poster</string>
+	<string id="31063">Showcase</string>
+	<string id="31064">Wall</string>
+	<string id="31065">Disable Music Views</string>
+	<string id="31066">Jukebox</string>
+	
+	
+	<string id="31067">Filemanager</string>
+	<string id="31068"></string>
+	
+	
+	
 	<!-- Playlist Editor labels -->
 	  <string id="31055">Open playlist</string>
 	  <string id="31056">Save playlist</string>

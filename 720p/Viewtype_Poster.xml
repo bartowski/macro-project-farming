@@ -581,7 +581,7 @@
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
 		</control>
-		<include>Trailer_Poster</include>
+		
 	</include>
 	
 	<!-- Square View -->
