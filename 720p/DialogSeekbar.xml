@@ -58,9 +58,9 @@
 				<midtexture>osd/mid.png</midtexture>
 				<righttexture>osd/new_pause2.png</righttexture>
 				<info>Player.Progress</info>
-				<posx>100</posx>
+				<posx>90</posx>
 				<posy>130</posy>
-				<width>800</width>
+				<width>786</width>
 				<height>19</height>
 				<visible>VideoPlayer.Content(episodes) + Skin.HasSetting(clearART)</visible>
 			</control>
@@ -135,6 +135,7 @@
 				<font>Font_ListDetail</font>
 				<textcolor>ff67ffff</textcolor>
 				<label>[B]$INFO[VideoPlayer.Time][/B]</label>
+				<animation effect="slide" start="0,0" end="-10,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + Skin.HasSetting(clearART)">Conditional</animation>
 			</control>
 			<control type="label">
 				<posx>1190</posx>
@@ -144,7 +145,7 @@
 				<font>Font_ListDetail</font>
 				<textcolor>ffffffff</textcolor>
 				<label>[B]$INFO[VideoPlayer.Duration][/B]</label>
-				<animation effect="slide" start="0,0" end="-280,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + Skin.HasSetting(clearART)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="-304,0" time="0" tween="cubic" easing="inout" condition="VideoPlayer.Content(episodes) + Skin.HasSetting(clearART)">Conditional</animation>
 			</control>
 			<control type ="image"> 
 				<description>tv show image</description>
