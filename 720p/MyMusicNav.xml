@@ -74,8 +74,8 @@
 			<control type="togglebutton" id="22">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
-				<label>Gimme Fanart</label>
-				<altlabel>Dark Showcase</altlabel>
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31094]</altlabel>
 				<onclick>Skin.ToggleSetting(MusicShowcaseFanart)</onclick>
 				<selected>Skin.HasSetting(MusicShowcaseFanart)</selected>
 				<visible>Control.IsVisible(58)</visible>
@@ -86,7 +86,7 @@
 			</control>
 			<control type="button" id="21">
 				<include>WindowMenuButton</include>
-				<label>Files</label>
+				<label>$LOCALIZE[31003]</label>
 				<onclick>ReplaceWindow(MusicFiles)</onclick>
 			</control>
 			<control type="radiobutton" id="16">
@@ -95,7 +95,7 @@
 			</control>	
 			<control type="button" id="9">
 				<include>WindowMenuButton</include>
-				<label>RANDOM</label>
+				<label>$LOCALIZE[31087]</label>
 			</control>
 		</control>
 
@@ -105,28 +105,28 @@
 			<posy>660</posy>
 			<control type="button" id="40">
 				<include>WindowMenuLabel</include>
-				<label>VIEWTYPE</label>
+				<label>$LOCALIZE[31088]</label>
 			</control>
 			<control type="button" id="45">
 				<include>WindowMenuLabel</include>
-				<label>VIEW OPTIONS</label>
+				<label>$LOCALIZE[31089]</label>
 				<visible>Control.IsVisible(58)</visible>		
 			</control>
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>
-				<label>ORDER</label>
+				<label>$LOCALIZE[31090]</label>
 			</control>
 			<control type="button" id="42">
 				<include>WindowMenuLabel</include>
-				<label>MODE</label>
+				<label>$LOCALIZE[31091]</label>
 			</control>
 			<control type="button" id="43">
 				<include>WindowMenuLabel</include>
-				<label>PLAYBACK</label>
+				<label>$LOCALIZE[31092]</label>
 			</control>	
 			<control type="button" id="44">
 				<include>WindowMenuLabel</include>
-				<label>SEQUENCE</label>
+				<label>$LOCALIZE[31093]</label>
 			</control>				
 		</control>
 	

@@ -100,7 +100,7 @@
 				<posy>92</posy>
 				<width>1080</width>
 				<height>25</height>
-				<label>Current Time: [COLOR=ff67ffff][B]$INFO[System.Time][/COLOR][/B] | Finish Time: [COLOR=ff67ffff][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
+				<label>$LOCALIZE[31074]: [COLOR=ff67ffff][B]$INFO[System.Time][/COLOR][/B] | $LOCALIZE[31075]: [COLOR=ff67ffff][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
 				<textcolor>ffffffff</textcolor>
 				<font>Font_Bartowski_Extras_Pause</font>
 				<align>center</align>
@@ -118,7 +118,7 @@
 				<posy>92</posy>
 				<width>1080</width>
 				<height>25</height>
-				<label>Current Time: [COLOR=ff67ffff][B]$INFO[System.Time][/COLOR][/B] | Finish Time: [COLOR=ff67ffff][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
+				<label>$LOCALIZE[31074] [COLOR=ff67ffff][B]$INFO[System.Time][/COLOR][/B] | $LOCALIZE[31075]: [COLOR=ff67ffff][B]$INFO[Player.FinishTime][/B][/COLOR]</label>
 				<textcolor>ffffffff</textcolor>
 				<font>Font_Bartowski_Extras_Pause</font>
 				<align>center</align>
@@ -241,7 +241,7 @@
 			<posy>27</posy>
 			<width>800</width> 
 			<height>25</height> 
-			<label>Season $INFO[VideoPlayer.season]/Episode $INFO[VideoPlayer.episode]</label>
+			<label>$LOCALIZE[31068] $INFO[VideoPlayer.season]/$LOCALIZE[31069] $INFO[VideoPlayer.episode]</label>
 			<align>left</align> 
 			<aligny>center</aligny> 
 			<font>Font_Bartowski_Under_Pause</font>

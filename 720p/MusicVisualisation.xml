@@ -121,7 +121,7 @@ Normal Fullscreen
 				<align>left</align>
 				<font>Font_Date</font>
 				<textcolor>ffffffff</textcolor>
-				<label>$INFO[MusicPlayer.year,[B]YEAR: [/B]]</label>
+				<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[31070]: [/B]]</label>
 			</control>
 	</control>
 		

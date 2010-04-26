@@ -138,7 +138,7 @@
 				<texturefocus border="5">confluence/button-focus.png</texturefocus>
 				<align>center</align>
 				<aligny>middle</aligny>
-				<label>OK</label>
+				<label>$LOCALIZE[186]</label>
 			</control>
 			<control type="button" id="414">
 				<description>Cancel</description>

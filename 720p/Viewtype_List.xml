@@ -12,6 +12,7 @@
 			<height>720</height>
 			<texture>movie-poster/movie-back3.png</texture>
 			<aspectratio>scale</aspectratio>
+			<include>Animation_BackdropFade</include>
 		</control>
 		
 		

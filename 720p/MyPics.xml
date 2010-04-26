@@ -8,7 +8,7 @@
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
-			<texture>backdrops/curtains_diffuse.png</texture>
+			<texture>backdrops/curtains.png</texture>
 			<include>Animation_CommonFade</include>
 			<visible></visible>
 		</control>
@@ -64,7 +64,7 @@
 			</control>	
 			<control type="button" id="9">
 				<include>WindowMenuButton</include>
-				<label>RANDOM</label>
+				<label>$LOCALIZE[31087]</label>
 			</control>
 		</control>
 		
@@ -74,20 +74,20 @@
 			<posy>658</posy>
 			<control type="button" id="40">
 				<include>WindowMenuLabel</include>
-				<label>VIEWTYPE</label>
+				<label>$LOCALIZE[31088]</label>
 			</control>
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>
-				<label>ORDER</label>
+				<label>$LOCALIZE[31090]</label>
 			</control>
 			
 			<control type="button" id="43">
 				<include>WindowMenuLabel</include>
-				<label>WATCH</label>
+				<label>$LOCALIZE[31095]</label>
 			</control>	
 			<control type="button" id="44">
 				<include>WindowMenuLabel</include>
-				<label>SEQUENCE</label>
+				<label>$LOCALIZE[31093]</label>
 			</control>				
 		</control>
 		

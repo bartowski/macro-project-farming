@@ -55,7 +55,7 @@
 			<control type="button" id="40">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
-				<label>VIEWTYPE</label>
+				<label>$LOCALIZE[31088]</label>
 			</control>
 							
 		</control>

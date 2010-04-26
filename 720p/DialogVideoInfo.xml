@@ -26,7 +26,7 @@
 				<font>Font_Bartowski_BigMusic</font>
 				<shadowcolor>678b8b8b</shadowcolor>
 				<textcolor>678b8b8b</textcolor>
-				<label>Kiosk Mode</label>
+				<label>$LOCALIZE[31076]</label>
 				<animation effect="fade" start="0" end="100" time="600" >WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="100" delay="800" >WindowClose</animation>
 			</control>
@@ -934,6 +934,6 @@
 			</control>
 		</control>
 		
-		<!--<include>Clock</include>-->
+		<include>Clock</include>
 	</controls>
 </window>

@@ -48,7 +48,7 @@
 				<textcolor>Date</textcolor>
 				<align>right</align>
 				<font>Font_Bartowski_ListView_Season</font>
-				<label>MUTE</label>
+				<label>$LOCALIZE[31073]</label>
 			</control>
 		</control>
 

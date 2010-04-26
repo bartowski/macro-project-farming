@@ -11,7 +11,7 @@
 			<texture background="true">$INFO[Fanart.Image]</texture>
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
-			<include>Animation_CommonFade</include>
+			<include>Animation_BackdropFade</include>
 			<visible>![IsEmpty(Fanart.Image) | Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592)]</visible>
 		</control>
 		<control type="largeimage">
@@ -19,14 +19,14 @@
 			<fadetime>400</fadetime>
 			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<aspectratio>scale</aspectratio>
-			<include>Animation_CommonFade</include>
+			<include>Animation_BackdropFade</include>
 			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart) | Control.IsVisible(54) | Control.IsVisible(59) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592)]</visible>
 		</control>
 		<control type="largeimage">
 			<include>Dimensions_Fullscreen</include>
 			<texture>special://skin/media/backdrops/curtains.png</texture>
 			<aspectratio>scale</aspectratio>
-			<include>Animation_CommonFade</include>
+			<include>Animation_BackdropFade</include>
 			<visible>!Control.IsVisible(54) + [IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)]</visible>
 		</control>
 		<!--<control type="largeimage">
@@ -40,14 +40,14 @@
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains.png</texture>
-			<include>Animation_CommonFade</include>
+			<include>Animation_BackdropFade</include>
 			<visible>Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592)</visible>
 		</control>
 		<control type="image">
 			<include>Dimensions_Fullscreen</include>
 			<fadetime>400</fadetime>
 			<texture>backdrops/curtains_diffuse.png</texture>
-			<include>Animation_CommonFade</include>
+			<include>Animation_BackdropFade</include>
 			<visible>Control.IsVisible(59) | [Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart)]</visible>
 		</control>
 		
@@ -111,8 +111,8 @@
 			<control type="togglebutton" id="22">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
-				<label>Gimme Fanart</label>
-				<altlabel>Dark Showcase</altlabel>
+				<label>$LOCALIZE[31086]</label>
+				<altlabel>$LOCALIZE[31094]</altlabel>
 				<onclick>Skin.ToggleSetting(ShowcaseFanart)</onclick>
 				<selected>Skin.HasSetting(ShowcaseFanart)</selected>
 				<visible>Control.IsVisible(58)</visible>
@@ -120,8 +120,8 @@
 			<control type="togglebutton" id="25">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
-				<label>Show Thumbs</label>
-				<altlabel>Disable Thumbs</altlabel>
+				<label>$LOCALIZE[31200]</label>
+				<altlabel>$LOCALIZE[31201]</altlabel>
 				<onclick>Skin.ToggleSetting(extrathumbs)</onclick>
 				<selected>Skin.HasSetting(extrathumbs)</selected>
 				<visible>Control.IsVisible(58)</visible>
@@ -129,17 +129,17 @@
 			<control type="togglebutton" id="24">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
-				<label>Use Cleartitle</label>
-				<altlabel>No Cleartitle</altlabel>
+				<label>$LOCALIZE[31202]</label>
+				<altlabel>$LOCALIZE[31203]</altlabel>
 				<onclick>Skin.ToggleSetting(ClearTitle)</onclick>
 				<selected>Skin.HasSetting(ClearTitle)</selected>
-				<visible>Control.IsVisible(59) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+				<visible>Control.IsVisible(59)</visible>
 			</control>
 			<control type="togglebutton" id="23">
 				<description>Toggle MoviesFanart</description>
 				<include>WindowMenuButton</include>
-				<label>Disable Flags</label>
-				<altlabel>Show Flags</altlabel>
+				<label>$LOCALIZE[31204]</label>
+				<altlabel>$LOCALIZE[31205]</altlabel>
 				<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
 				<selected>Skin.HasSetting(no_media_flags)</selected>
 				<visible>Container.Content(movies) | Container.Content(episodes)</visible>	
@@ -151,9 +151,9 @@
 			<control type="togglebutton" id="14">
 				<include>WindowMenuButton</include>
 				<!-- LOC -->
-				<label>SHOWN</label>
+				<label>$LOCALIZE[31096]</label>
 				<!-- LOC -->
-				<altlabel>HIDDEN</altlabel>				
+				<altlabel>$LOCALIZE[31097]</altlabel>				
 			</control>
 			<control type="button" id="8">
 				<include>WindowMenuButton</include>
@@ -172,42 +172,42 @@
 			<control type="button" id="40">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
-				<label>VIEWTYPE</label>
+				<label>$LOCALIZE[31088]</label>
 			</control>
 			<control type="button" id="45">
 				<include>WindowMenuLabel</include>
-				<label>VIEW OPTIONS</label>
+				<label>$LOCALIZE[31089]</label>
 				<visible>[Control.IsVisible(58) | Control.IsVisible(59)] + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>		
 			</control>
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>
-				<label>Extrathumbs</label>
+				<label>$LOCALIZE[31206]</label>
 				<visible>Control.IsVisible(58)</visible>		
 			</control>
 			<control type="button" id="46">
 				<include>WindowMenuLabel</include>
-				<label>Flags</label>
+				<label>$LOCALIZE[31207]</label>
 				<visible>Container.Content(movies) | Container.Content(episodes)</visible>		
 			</control>
 			<control type="button" id="41">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
-				<label>ORDER</label>
+				<label>$LOCALIZE[31090]</label>
 			</control>
 			<control type="button" id="42">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
-				<label>WATCHED</label>
+				<label>$LOCALIZE[31098]</label>
 			</control>
 			<control type="button" id="43">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
-				<label>TITLE</label>
+				<label>$LOCALIZE[31099]</label>
 			</control>	
 			<control type="button" id="44">
 				<include>WindowMenuLabel</include>
 				<!-- LOC -->
-				<label>TITLE</label>
+				<label>$LOCALIZE[31099]</label>
 			</control>				
 		</control>
 		<!--<include>Global_Time</include>

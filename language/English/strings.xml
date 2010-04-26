@@ -4,27 +4,27 @@
 
 	<!-- Main Labels -->
 	
-	<string id="31000">GENRES</string>
-	<string id="31001">YEARS</string>
-	<string id="31002">ACTORS</string>
-	<string id="31003">FILES</string>
+	<string id="31000">Genres</string>
+	<string id="31001">Years</string>
+	<string id="31002">Actors</string>
+	<string id="31003">Files</string>
 	<string id="31005">VIDEO SETTINGS</string>
 	<string id="31004">NOW PLAYING</string>
 	<string id="31006">MUSIC VIDEOS</string>
-	<string id="31007">PLUGINS</string>
+	<string id="31007">Plugins</string>
 	<string id="31008">FAVOURITES</string>
-	<string id="31009">PROGRAMS</string>
-	<string id="31010">MUSIC</string>
-	<string id="31011">GAMES</string>
-	<string id="31012">PICTURES</string>
-	<string id="31013">MOVIES</string>
-	<string id="31014">TV SHOWS</string>
-	<string id="31015">VIDEOS</string>
-	<string id="31016">SETTINGS</string>
-	<string id="31017">WEATHER</string>
-	<string id="31018">PLAY DISC</string>
+	<string id="31009">Programs</string>
+	<string id="31010">Music</string>
+	<string id="31011">Games</string>
+	<string id="31012">Pictures</string>
+	<string id="31013">Movies</string>
+	<string id="31014">TV Shows</string>
+	<string id="31015">Videos</string>
+	<string id="31016">Settings</string>
+	<string id="31017">Weather</string>
+	<string id="31018">Play Disc</string>
 	<string id="31019">SHUTDOWN</string>
-	<string id="31020">SCRIPTS</string>
+	<string id="31020">Scripts</string>
 	<string id="31021">RESTART</string>
 	<string id="31022">SIGN OUT</string>
 	<string id="31023">WORKING</string>
@@ -53,9 +53,9 @@
 	<string id="31044">Use Posters for TV Section</string>
 	<string id="31045">Use Banners for TV Section</string>
 	<string id="31046">Enable clearART</string>
-	
-	
 	<string id="31047">Disable Movies and TV Views</string>
+	
+<!--VIEWS -->	
 	<string id="31048">16x9</string>
 	<string id="31049">BannerPanel</string>
 	<string id="31050">Episode</string>
@@ -69,9 +69,53 @@
 	<string id="31065">Disable Music Views</string>
 	<string id="31066">Jukebox</string>
 	
-	
+<!--MORE COMMON PHRASES -->	
 	<string id="31067">Filemanager</string>
-	<string id="31068"></string>
+	<string id="31068">Season</string>
+	<string id="31069">Episode</string>
+	<string id="31070">Year</string>
+	<string id="31071">Director</string>
+	<string id="31072">Genre</string>
+	<string id="31073">MUTE</string>
+	<string id="31074">Current Time</string>
+	<string id="31075">Finish Time</string>
+	<string id="31076">Kiosk Mode</string>
+	<string id="31077">Library</string>
+	<string id="31078">Video Plugins</string>
+	<string id="31079">Titles</string>
+	<string id="31080">Directors</string>
+	<string id="31081">Recently Added</string>
+	<string id="31082">Credits</string>
+	<string id="31083">Artists</string>
+	<string id="31084">Albums</string>
+	<string id="31085">Songs</string>
+	<string id="31086">Show Fanart</string>
+	<string id="31087">Random</string>
+	<string id="31088">VIEWTYPE</string>
+	<string id="31089">VIEW OPTIONS</string>
+	<string id="31090">ORDER</string>
+	<string id="31091">MODE</string>
+	<string id="31092">PLAYBACK</string>
+	<string id="31093">SEQUENCE</string>
+	<string id="31094">Dark Showcase</string>
+	<string id="31095">WATCH</string>
+	<string id="31096">Shown</string>
+	<string id="31097">Hidden</string>
+	<string id="31098">Watched</string>
+	<string id="31099">TITLE</string>
+	
+	<string id="31200">Show Thumbs</string>
+	<string id="31201">Disable Thumbs</string>
+	<string id="31202">Use Logo</string>
+	<string id="31203">No Logo</string>
+	<string id="31204">Disable Flags</string>
+	<string id="31205">Show Flags</string>
+	<string id="31206">Extrathumbs</string>
+	<string id="31207">FLAGS</string>
+	<string id="31208">Title</string>
+	
+	
+	
 	
 	
 	

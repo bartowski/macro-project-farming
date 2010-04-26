@@ -142,7 +142,7 @@
 						<align>left</align>
 						<font>Font_Date</font>
 						<textcolor>ffffffff</textcolor>
-						<label>$INFO[MusicPlayer.year,[B]YEAR: [/B]]</label>
+						<label>$INFO[MusicPlayer.year,[B]$LOCALIZE[31070]: [/B]]</label>
 					</control>
 			</control>
 				
@@ -205,7 +205,6 @@
 	<include name="Music_Global_TopRight">
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>Window.IsActive(502) + Control.IsVisible(58)</visible>
 		<visible>[Control.IsVisible(50) | Control.IsVisible(53)] + Player.HasAudio</visible>		
 			<control type="group">
 				<posx>1086</posx>
@@ -338,7 +337,7 @@
 						<align>right</align>
 						<font>Font_Date</font>
 						<textcolor>ffffffff</textcolor>
-						<label>$INFO[MusicPlayer.year] [B]:YEAR[/B]</label>
+						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[31070][/B]</label>
 					</control>
 			</control>
 				
@@ -520,7 +519,7 @@
 						<align>right</align>
 						<font>Font_Date</font>
 						<textcolor>ffffffff</textcolor>
-						<label>$INFO[MusicPlayer.Album] [B]:$LOCALIZE[558][/B]</label>
+						<label>$INFO[MusicPlayer.Album] [B]:$LOCALIZE[31070][/B]</label>
 					</control>
 					<control type="label">
 						<description>album name</description>
@@ -532,7 +531,7 @@
 						<align>right</align>
 						<font>Font_Date</font>
 						<textcolor>ffffffff</textcolor>
-						<label>$INFO[MusicPlayer.year] [B]:YEAR[/B]</label>
+						<label>$INFO[MusicPlayer.year] [B]:$LOCALIZE[31070][/B]</label>
 					</control>
 			</control>
 				

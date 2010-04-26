@@ -103,7 +103,7 @@
 					<posy>50</posy>
 					<width>412</width> 
 					<height>25</height> 
-					<label>Season $INFO[VideoPlayer.Season]/Episode $INFO[VideoPlayer.Episode]</label>
+					<label>$LOCALIZE[31068] $INFO[VideoPlayer.Season]/$LOCALIZE[31069] $INFO[VideoPlayer.Episode]</label>
 					<align>left</align> 
 					<aligny>center</aligny> 
 					<font>Font_Bartowski_Under_Pause</font>
@@ -151,7 +151,7 @@
 					<aligny>center</aligny>
 					<align>left</align>
 					<font>Font_ListDetail</font>
-					<label>[B][COLOR=ff67ffff]Year:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Year][/COLOR]</label>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[31070]:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Year][/COLOR]</label>
 				</control>
 				<control type="label">
 					<description>Director Info</description>
@@ -162,7 +162,7 @@
 					<aligny>center</aligny>
 					<align>left</align>
 					<font>Font_ListDetail</font>
-					<label>[B][COLOR=ff67ffff]Director:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Director][/COLOR]</label>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[31071]:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Director][/COLOR]</label>
 				</control>
 				<control type="label">
 					<description>Genre Info</description>
@@ -173,7 +173,7 @@
 					<aligny>center</aligny>
 					<align>left</align>
 					<font>Font_ListDetail</font>
-					<label>[B][COLOR=ff67ffff]Genre:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Genre][/COLOR]</label>
+					<label>[B][COLOR=ff67ffff]$LOCALIZE[31072]:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Genre][/COLOR]</label>
 				</control>
 			</control>
 		</control>
