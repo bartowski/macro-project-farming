@@ -32,15 +32,15 @@
 			<posy>-105</posy><!-- -105 -->
 			<width>800</width>
 			<height>885</height><!-- 1570  1280 -->
-			<pagecontrol>60</pagecontrol>
 			<scrolltime>300</scrolltime>
 			<orientation>vertical</orientation>
 			<viewtype label="Panel">List</viewtype>
 			<onleft>7000</onleft>
-			<onright>7000</onright>
+			<onright>65</onright>
 			<onup>56</onup>
 			<ondown>56</ondown>
 			<preloaditems>2</preloaditems>
+			<pagecontrol>65</pagecontrol>
 			<include>Animation_Viewtype_Panel_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
 			<itemlayout width="230" height="350">
@@ -308,6 +308,22 @@
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_BottomArea</include>
 		</control>
+	</control>
+	<control type="scrollbar" id="65">
+		<include>Animation_ZoomInZoomOut</include>
+		<include>Animation_ZoomedByMenu</include>
+		<posx>1280</posx>
+		<posy>100</posy>
+		<width>25</width>
+		<height>460</height>
+		<visible allowhiddenfocus="true">Control.IsVisible(56) + Control.HasFocus(65)</visible>
+		<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+		<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
+		<onleft>56</onleft>
+		<showonepage>false</showonepage>
+		<orientation>vertical</orientation>
+		<include>Animation_CommonFade</include>
+		<animation effect="slide" start="0,0" end="-40,0" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(65)">Conditional</animation>
 	</control>
 		<include>Trailer_Panel</include>
 		<include>Music_Global_Showcase</include>
