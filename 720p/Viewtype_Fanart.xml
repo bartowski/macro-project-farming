@@ -114,11 +114,11 @@
 			<posx>60</posx>
 			<posy>0</posy>
 				<control type="image">
-					<posx>-76</posx>
-					<posy>30</posy>
-					<width>390</width>
-					<height>498</height>
-					<texture>panel/panel_movie_glow.png</texture>
+					<posx>-90</posx>
+					<posy>38</posy>
+					<width>392</width>
+					<height>500</height>
+					<texture>panel/panel_poster_back.png</texture>
 					<animation type="Focus" reversible="false">
 						<effect type="zoom" center="auto" start="51" end="110" time="600" tween="back" easing="out" />
 						<effect type="fade" start="0" end="60" time="800" />
@@ -296,8 +296,8 @@
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
 			<posy>680</posy>
-			<width>1280</width>
-			<align>left</align>
+			<width>540</width>
+			<align>center</align>
 			<itemgap>0</itemgap>
 			<orientation>horizontal</orientation>
 			<include>VideoCodecFlaggingConditions</include>

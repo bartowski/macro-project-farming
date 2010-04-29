@@ -23,7 +23,7 @@
 	<string id="31016">Settings</string>
 	<string id="31017">Weather</string>
 	<string id="31018">Play Disc</string>
-	<string id="31019">SHUTDOWN</string>
+	<string id="31019">Shutdown</string>
 	<string id="31020">Scripts</string>
 	<string id="31021">RESTART</string>
 	<string id="31022">SIGN OUT</string>
@@ -103,7 +103,6 @@
 	<string id="31097">Hidden</string>
 	<string id="31098">Watched</string>
 	<string id="31099">TITLE</string>
-	
 	<string id="31200">Show Thumbs</string>
 	<string id="31201">Disable Thumbs</string>
 	<string id="31202">Use Logo</string>
@@ -113,6 +112,9 @@
 	<string id="31206">Extrathumbs</string>
 	<string id="31207">FLAGS</string>
 	<string id="31208">Title</string>
+	<string id="31209">TV</string>
+	<string id="31210">Fanart Thumbs</string>
+	<string id="31211">16x9 Thumbs</string>
 	
 	
 	

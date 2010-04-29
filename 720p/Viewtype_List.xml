@@ -73,6 +73,16 @@
 						<fadetime>200</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
+					<!--<control type="image">
+						<posx>-150</posx>
+						<posy>130</posy>
+						<width>304</width>
+						<height>172</height>
+						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>Skin.HasSetting(3dFanart) + !Container.Content(episodes)</visible>
+					</control>-->
 					<control type="image">
 						<posx>-150</posx>
 						<posy>130</posy>
@@ -118,6 +128,17 @@
 						<colordiffuse>89FFFFFF</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
+					<!--<control type="image">
+						<posx>-150</posx>
+						<posy>298</posy>
+						<width>304</width>
+						<height>172</height>
+						<texture background="true" flipy="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+						<fadetime>200</fadetime>
+						<colordiffuse>89FFFFFF</colordiffuse>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>Skin.HasSetting(3dFanart) + !Container.Content(episodes)</visible>
+					</control>-->
 					<control type="image">
 						<visible>Container.Content(episodes)</visible>
 						<posx>-140</posx>
@@ -235,6 +256,21 @@
 						</animation>
 						<include>Animation_HiddenByInfo</include>
 					</control>
+					<!--<control type="image">
+						<posx>-150</posx>
+						<posy>312</posy>
+						<width>407</width>
+						<height>224</height>
+						<texture background="true" flipy="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
+							<effect type="fade" start="0" end="70" time="600" />
+						</animation>
+						<include>Animation_HiddenByInfo</include>
+						<visible>Skin.HasSetting(3dFanart) + !Container.Content(episodes)</visible>
+					</control>-->
 					<control type="image">
 						<posx>-150</posx>
 						<posy>86</posy>
@@ -248,6 +284,20 @@
 							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
 						</animation>
 					</control>
+					<!--<control type="image">
+						<posx>-150</posx>
+						<posy>86</posy>
+						<width>407</width>
+						<height>232</height>
+						<texture background="true" diffuse="movie-poster/xper_test.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+						<fadetime>200</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<include>Animation_PosterInfoSlide_Poster</include>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="60,238" start="80" end="100" time="600" tween="back" easing="out" />
+						</animation>
+						<visible>Skin.HasSetting(3dFanart) + !Container.Content(episodes)</visible>
+					</control>-->
 					<control type="image">
 						<posx>-150</posx>
 						<posy>86</posy>

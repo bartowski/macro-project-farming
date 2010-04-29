@@ -121,11 +121,11 @@
 					</item>
 					<item id="4">
 						<label>31116</label>
-						<label2>31200</label2>
+						<label2>not in yet</label2>
 						<onclick>-</onclick>
 					</item>
 					<item id="5">
-						<label>31028</label>
+						<label>$LOCALIZE[31013] / $LOCALIZE[31209]</label>
 						<label2>31112</label2>
 						<onclick>-</onclick>
 					</item>
@@ -211,54 +211,7 @@
 						<onclick>Skin.ToggleSetting(no_clock)</onclick>
 						<selected>Skin.HasSetting(no_clock)</selected>
 					</control>
-					<control type="radiobutton" id="103">
-						<width>750</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<label>$LOCALIZE[31033]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(autoscroll)</onclick>
-						<selected>Skin.HasSetting(autoscroll)</selected>
-					</control>
-					<control type="radiobutton" id="104">
-						<width>750</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<label>$LOCALIZE[31034]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
-						<selected>Skin.HasSetting(no_media_flags)</selected>
-					</control>
-					<control type="radiobutton" id="105">
-						<width>750</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<label>$LOCALIZE[31035]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
-						<selected>Skin.HasSetting(movieoverlays)</selected>
-					</control>
-					<control type="radiobutton" id="106">
-						<width>750</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<label>$LOCALIZE[31036]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
-						<selected>Skin.HasSetting(tvoverlays)</selected>
-					</control>
+					
 					<control type="radiobutton" id="107">
 						<width>750</width>
 						<height>40</height>
@@ -1778,18 +1731,54 @@
 							<onclick>Skin.ToggleSetting(clearART)</onclick>
 							<selected>Skin.HasSetting(clearART)</selected>
 						</control>
-						<!--<control type="radiobutton" id="505">
+						<control type="radiobutton" id="504">
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>Enable autoscrolling in TV section</label>
+							<label>$LOCALIZE[31033]</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.ToggleSetting(TVscroll)</onclick>
-							<selected>Skin.HasSetting(TVscroll)</selected>
-						</control>-->
+							<onclick>Skin.ToggleSetting(autoscroll)</onclick>
+							<selected>Skin.HasSetting(autoscroll)</selected>
+						</control>
+						<control type="radiobutton" id="505">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>$LOCALIZE[31034]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
+							<selected>Skin.HasSetting(no_media_flags)</selected>
+						</control>
+						<control type="radiobutton" id="506">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>$LOCALIZE[31035]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
+							<selected>Skin.HasSetting(movieoverlays)</selected>
+						</control>
+						<control type="radiobutton" id="507">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>$LOCALIZE[31036]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
+							<selected>Skin.HasSetting(tvoverlays)</selected>
+						</control>
 						
 					</control>
 				</control>

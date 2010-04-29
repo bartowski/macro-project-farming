@@ -53,13 +53,14 @@ MOVIE SECTION
 			<width>1920</width>
 			<onleft>50</onleft>
 			<onright>50</onright>
-			<onup>7000</onup>
+			<onup>67</onup>
 			<ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
 			<viewtype label="Showcase">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>4</focusposition>
 			<scrolltime>400</scrolltime>
 			<preloaditems>2</preloaditems>
+			<pagecontrol>67</pagecontrol>
 			<include>Animation_Viewtype_Showcase_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
 			<visible>!Skin.HasSetting(no_Showcase) + Container.Content(movies)</visible>
@@ -138,7 +139,7 @@ MOVIE SECTION
 					<texture>showcase/showcase_glow.png</texture>
 					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="90,258" start="51" end="100" time="300" tween="back" easing="out" />
+						<effect type="zoom" center="90,258" start="81" end="100" time="400" tween="back" easing="out" />
 						<effect type="fade" start="0" end="100" time="1000" delay="400"/>
 					</animation>
 					<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
@@ -153,7 +154,7 @@ MOVIE SECTION
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="80,238" start="51" end="100" time="300" tween="back" easing="out" />
+						<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
 					</animation>
 					<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
 					<visible>!Container.Content(Genres)</visible>
@@ -168,7 +169,7 @@ MOVIE SECTION
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="80,238" start="51" end="100" time="300" tween="back" easing="out" />
+						<effect type="zoom" center="80,238" start="81" end="100" time="400" tween="back" easing="out" />
 						<effect type="fade" start="0" end="60" time="600" />
 					</animation>
 					<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
@@ -184,7 +185,7 @@ MOVIE SECTION
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="160,238" start="51" end="100" time="600" tween="back" easing="out" />
+						<effect type="zoom" center="160,238" start="81" end="100" time="400" tween="back" easing="out" />
 					</animation>
 					<visible>Container.Content(Genres)</visible>
 				</control>
@@ -196,7 +197,7 @@ MOVIE SECTION
 					<texture>posterframeF.png</texture>
 					<include>Animation_HiddenByInfo</include>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="90,258" start="51" end="100" time="300" tween="back" easing="out" />
+						<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
 						<effect type="fade" start="0" end="60" time="600" />
 					</animation>
 					<animation effect="slide" start="0,0" end="0,30" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
@@ -208,7 +209,7 @@ MOVIE SECTION
 					<height>76</height>
 					<texture>dialogs/movies/$INFO[ListItem.Overlay]</texture>
 					<animation type="Focus" reversible="false">
-						<effect type="zoom" center="90,258" start="51" end="100" time="300" tween="back" easing="out" />
+						<effect type="zoom" center="90,258" start="81" end="100" time="300" tween="back" easing="out" />
 					</animation>
 					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
@@ -477,6 +478,23 @@ MOVIE SECTION
 		<include>Trailer_Showcase</include>
 		<include>Music_Global_Showcase</include>
 		
+		<control type="scrollbar" id="67">
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<posx>100</posx>
+			<posy>900</posy>
+			<width>1080</width>
+			<height>25</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(58) + Control.HasFocus(67)</visible>
+			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
+			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
+			<onup>7000</onup>
+			<ondown>58</ondown>
+			<showonepage>false</showonepage>
+			<orientation>horizontal</orientation>
+			<include>Animation_CommonFade</include>
+			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(67)">Conditional</animation>
+		</control>
 	</include>
 	
 </includes>

@@ -42,7 +42,7 @@
 			<height>70</height>
 			<texture>backdrops/test2.png</texture>
 			<visible>ControlGroup(7000).HasFocus + !Skin.HasSetting(LockViews)</visible>
-			<include>Animation_ViewOptions</include>
+			<include>Animation_ViewOptions_whitebar</include>
 		</control>
 		<control type="grouplist" id="7000">
 			<include>WindowMenuVars</include>
@@ -112,8 +112,8 @@
 			</control>				
 		</control>
 		
-		<!--<include>Global_Time</include>-->
-		<include>Global_RSS</include>
+		<!--<include>Global_Time</include>
+		<include>Global_RSS</include>-->
 		
 		<include>Object_DebugGrid</include>
 	

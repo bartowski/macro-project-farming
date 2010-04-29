@@ -45,7 +45,7 @@
 			<include>Animation_BackdropFade</include>
 		</control>
 		<include condition="Skin.HasSetting(homepageHideRecentlyAdded)">HomeRecentlyAddedInfo</include>
-		<control type="wraplist" id="300">
+		<control type="fixedlist" id="300">
 			<posx>-131</posx>
 			<posy>100</posy>
 			<height>465</height>
@@ -57,12 +57,13 @@
 			<viewtype>list</viewtype>
 			<orientation>vertical</orientation>
 			<focusposition>2</focusposition>
+			<movement>0</movement>
 			<scrolltime>200</scrolltime>
 			<include>Animation_Bartowski_ZoomOutZoomIn</include>				
-			<itemlayout width="500" height="61">
+			<itemlayout width="600" height="61">
 				<control type="label">
 					<width>500</width>
-					<height>71</height>
+					<height>61</height>
 					<posx>150</posx>
 					<posy>91</posy>
 					<font>Font_Bartowski_MainMenu</font>
@@ -81,7 +82,7 @@
 					<textcolor>ffffffff</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<label>$INFO[ListItem.label]</label>
-					<animation effect="slide" end=",-300" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
+					<animation effect="slide" end="0,-300" time="300" condition="ControlGroup(9001).HasFocus">conditional</animation>
 				</control>
 			</focusedlayout>
 			<content>
@@ -109,13 +110,13 @@
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</item>
-				<!--<item id="4">
+				<item id="4">
 					<label>HD Movies</label>
 					<icon>special://skin/media/backgrounds/movies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomHDMoviesFolder)]</thumb>			
 					<onclick>ActivateWindow(10025,videodb://1/1/9/,return)</onclick>
 					<visible>!Skin.HasSetting(nomovies)</visible>
-				</item>-->
+				</item>
 				<item id="5">
 					<description>TV shows</description>
 					<label>$LOCALIZE[31014]</label>
@@ -180,7 +181,7 @@
 					<icon>special://skin/media/mainmenu/shutdown.png</icon>				
 					<label>31019</label>
 					<onclick>XBMC.Shutdown()</onclick>
-					<visible>false</visible>
+					<visible></visible>
 				</item>			
 			</content>
 		</control>
