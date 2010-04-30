@@ -95,14 +95,13 @@
 					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + Container.Content(episodes)</visible>
 				</control>
 				<control type="image">
-					<visible>Container.Content(episodes)</visible>
 					<posx>10</posx>
 					<posy>20</posy>
 					<width>280</width>
 					<height>8</height>
 					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 				<control type="image">
 					<visible>Container.Content(movies)</visible>
@@ -414,14 +413,13 @@
 					</control>
 				</control>-->
 				<control type="image">
-					<visible>Container.Content(episodes)</visible>
 					<posx>10</posx>
 					<posy>20</posy>
 					<width>280</width>
 					<height>8</height>
 					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>![Container(55).OnNext | Container(55).OnPrevious] + Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 				<control type="image">
 					<visible>Container.Content(movies)</visible>
@@ -431,7 +429,7 @@
 					<height>8</height>
 					<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>![Container(55).OnNext | Container(55).OnPrevious] + Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 				</control>
 			</focusedlayout>
 		</control>		

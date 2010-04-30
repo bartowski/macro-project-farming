@@ -18,7 +18,7 @@
 		
 		<control type="fixedlist" id="53">
 			<posx>-50</posx>
-			<posy>185</posy>
+			<posy>210</posy>
 			<height>715</height>
 			<width>1400</width>
 			<onleft>53</onleft>
@@ -173,12 +173,12 @@
 			</itemlayout>
 			<focusedlayout width="360" height="515">
 				<control type="group">
-				<posx>146</posx>
+				<posx>124</posx>
 				<posy>60</posy>
 					<control type="image">
 						<posx>236</posx>
 						<posy>90</posy>
-						<width>34</width>
+						<width>38</width>
 						<height>226</height>
 						<texture>movie-poster/newcase.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -191,7 +191,7 @@
 					<control type="image">
 						<posx>238</posx>
 						<posy>306</posy>
-						<width>48</width>
+						<width>54</width>
 						<height>304</height>
 						<texture>movie-poster/test2.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>

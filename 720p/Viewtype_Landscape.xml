@@ -78,7 +78,6 @@
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 				</control>
 				<control type="image">
-					<visible>Container.Content(episodes)</visible>
 					<posx>-8</posx>
 					<posy>120</posy>
 					<width>240</width>
@@ -86,7 +85,7 @@
 					<info>ListItem.Overlay</info>
 					<colordiffuse>ListTrackF</colordiffuse>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout width="280" height="1285">
@@ -146,14 +145,13 @@
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 				</control>
 				<control type="image">
-					<visible>Container.Content(episodes)</visible>
 					<posx>10</posx>
 					<posy>120</posy>
 					<width>250</width>
 					<height>4</height>
 					<info>ListItem.Overlay</info>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
 				</control>
 			</focusedlayout>
 		</control>

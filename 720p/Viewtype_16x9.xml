@@ -80,7 +80,6 @@
 						<texture>$INFO[listitem.studio,extras/Studios/,.png]</texture>
 					</control>
 					<control type="image">
-						<visible>Container.Content(episodes)</visible>
 						<posx>0</posx>
 						<posy>102</posy>
 						<width>260</width>
@@ -88,7 +87,7 @@
 						<texture>dialogs/tv/$INFO[ListItem.Overlay]</texture>
 						<colordiffuse>ff67ffff</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 					</control>
 				</control>
 			</itemlayout>
@@ -185,8 +184,6 @@
 						</animation>
 					</control>
 					<control type="image">
-						<visible>Container.Content(episodes)</visible>
-						<posx>0</posx>
 						<posy>90</posy>
 						<width>500</width>
 						<height>12</height>
@@ -197,7 +194,7 @@
 							<effect type="zoom" center="191,440" start="70" end="100" time="400" tween="back" easing="out" />
 							<effect type="fade" start="80" end="100" time="400" />
 						</animation>
-						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 					</control>
 				</control>	
 			</focusedlayout>

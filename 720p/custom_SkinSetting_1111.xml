@@ -363,45 +363,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="202">
-						<description>enable video info</description>
-						<width>750</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>20176 - not in yet</label>
-						<onclick>Skin.ToggleSetting(homepageVideoinfo)</onclick>
-						<selected>!Skin.HasSetting(homepageVideoinfo)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="203">
-						<description>enable music info</description>
-						<width>750</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>20083 - not in yet</label>
-						<onclick>Skin.ToggleSetting(homepageMusicinfo)</onclick>
-						<selected>!Skin.HasSetting(homepageMusicinfo)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-					</control>
-					<control type="radiobutton" id="204">
-						<description>enable weather info</description>
-						<width>750</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<label>20084 - not in yet</label>
-						<onclick>Skin.ToggleSetting(homepageWeatherinfo)</onclick>
-						<selected>!Skin.HasSetting(homepageWeatherinfo)</selected>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-					</control>
+					
 					<control type="radiobutton" id="205">
 						<description>Show Recently added info</description>
 						<width>750</width>

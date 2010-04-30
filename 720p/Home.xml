@@ -48,7 +48,7 @@
 		<control type="fixedlist" id="300">
 			<posx>-131</posx>
 			<posy>100</posy>
-			<height>465</height>
+			<height>466</height>
 			<width>1541</width>
 			<onup>300</onup>
 			<ondown>300</ondown>
@@ -182,7 +182,7 @@
 					<label>31019</label>
 					<onclick>XBMC.Shutdown()</onclick>
 					<visible></visible>
-				</item>			
+				</item>
 			</content>
 		</control>
 		
