@@ -28,7 +28,7 @@
 			<movement>9</movement>
 			<pagecontrol>60</pagecontrol>
 			<include>Animation_HiddenByInfo</include>
-			<include>Animation_Viewtype_Files_LeftArea</include>
+			<include>Animation_Viewtype_Panel_FocusArea</include>
 			<visible>Container.Content(songs)</visible>
 			<itemlayout width="1210" height="36">
 				<control type="label">
@@ -91,6 +91,8 @@
 		</control>		
 		
 	<control type="group">
+	<include>Animation_HiddenByInfo</include>
+	<include>Animation_Viewtype_Showcase_ThumbArea</include>
 	<visible>Control.IsVisible(52) + Container.Content(songs)</visible>
 		<!--<control type="image">
 			<posx>150</posx>
@@ -159,21 +161,16 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<animation effect="slide" start="0,0" end="60,0" time="800" delay="800" tween="cubic" easing="inout" condition="!IsEmpty(Control.GetLabel(9171))">Conditional</animation>
 		</control>
+		<control type="image">
+			<posx>300</posx>
+			<posy>580</posy>
+			<width>183</width>
+			<height>33</height>
+			<texture>$INFO[ListItem.StarRating]</texture>
+			<colordiffuse>mainblue</colordiffuse>
+		</control>
 	</control>
 		
-		<control type="textbox"><!-- Plot TV -->
-			<visible>Control.IsVisible(52) + Container.Content(songs)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>476</width>
-			<height>280</height>
-			<align>left</align>
-			<info>Window(2001).Property(Album_Description)</info>
-			<font>Font_Bartowski_Movies</font>
-			<textcolor>ffffffff</textcolor>
-			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-		</control>
-	
 		<control type="scrollbar" id="60">
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
