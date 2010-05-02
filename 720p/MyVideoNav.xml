@@ -3,7 +3,7 @@
 <window id="25">
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,51,52,53,54,55,56,57,58,59,592</views>
+	<views>50,51,52,53,54,55,56,57,58,59,592,597</views>
 	<controls>
 		<include>Global_Background</include>
 		<control type="largeimage">
@@ -12,7 +12,7 @@
 			<aspectratio>scale</aspectratio>
 			<fadetime>400</fadetime>
 			<include>Animation_BackdropFade</include>
-			<visible>![IsEmpty(Fanart.Image) | Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592)]</visible>
+			<visible>![IsEmpty(Fanart.Image) | Control.IsVisible(59) | Control.IsVisible(54) | Control.IsVisible(57) | Control.IsVisible(56) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
 		</control>
 		<control type="largeimage">
 			<include>Dimensions_Fullscreen</include>
@@ -20,7 +20,7 @@
 			<texture>$INFO[ListItem.Property(Fanart_Image)]</texture>
 			<aspectratio>scale</aspectratio>
 			<include>Animation_BackdropFade</include>
-			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart) | Control.IsVisible(54) | Control.IsVisible(59) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592)]</visible>
+			<visible>![Skin.HasSetting(hidefanart) | Control.IsVisible(58) + !Skin.HasSetting(ShowcaseFanart) | Control.IsVisible(54) | Control.IsVisible(59) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(592) | Control.IsVisible(597)]</visible>
 		</control>
 		<control type="largeimage">
 			<include>Dimensions_Fullscreen</include>
@@ -64,6 +64,7 @@
 		<include>Viewtype_Wall</include><!--  54  -->
 		<include>Viewtype_PanelLandscape</include><!--  57  -->
 		<include>Viewtype_BannerPanel</include><!--  592  -->
+		<include>Viewtype_WallPanel</include><!--  592  -->
 		
 		
 		

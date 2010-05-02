@@ -2,7 +2,7 @@
 	<defaultcontrol>5</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>440</posx>
+		<posx>0</posx>
 		<posy>75</posy>
 		<origin x="240" y="75">!Window.IsVisible(FullscreenInfo)</origin>
 	</coordinates>
@@ -12,21 +12,12 @@
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
 			<control type="image">
 				<description>background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>800</width>
-				<height>490</height>
-				<colordiffuse>DDFFFFFF</colordiffuse>
-				<texture border="40">dialogs/yes_no_back.png</texture>
+				<posx>-240</posx>
+				<posy>-75</posy>
+				<width>1280</width>
+				<height>720</height>
+				<texture border="40">osd/videoOSD_settings_back1.png</texture>
 			</control>
-			<!--<control type="image">
-				<posx>80</posx>
-				<posy>10</posy>
-				<width>640</width>
-				<height>90</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>confluence/GlassTitleBar.png</texture>
-			</control>-->
 			<control type="label">
 				<description>header label</description>
 				<posx>20</posx>
@@ -38,7 +29,6 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<visible>Window.IsVisible(123)</visible>
 			</control>
 			<control type="label">
@@ -52,7 +42,6 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
 				<visible>Window.IsVisible(124)</visible>
 			</control>
 			<control type="label" id="3">
@@ -62,7 +51,7 @@
 				<width>760</width>
 				<align>center</align>
 				<label>13390</label>
-				<font>font16capscaps</font>
+				<font>font16caps</font>
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
@@ -98,38 +87,42 @@
 		<control type="sliderex" id="10">
 			<description>Default Slider</description>
 			<height>40</height>
+			<textoffsetx>20</textoffsetx>
 			<texturefocus border="5">confluence/button-focus.png</texturefocus>
 			<font>font16caps</font>
-			<textcolor>black</textcolor>
+			<textcolor>white</textcolor>
 			<focusedcolor>white</focusedcolor>
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
+			<textoffsetx>20</textoffsetx>
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>40</height>
 			<font>font16caps</font>
-			<textcolor>black</textcolor>
+			<textcolor>white</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="5">confluence/button-focus.png</texturefocus>
 		</control>
 		<control type="radiobutton" id="8">
 			<description>Default RadioButton</description>
+			<textoffsetx>20</textoffsetx>
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>40</height>
 			<font>font16caps</font>
-			<textcolor>black</textcolor>
+			<textcolor>white</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="5">confluence/button-focus.png</texturefocus>
 		</control>
 		<control type="spincontrolex" id="9">
 			<description>Default SpinControlex</description>
+			<textoffsetx>20</textoffsetx>
 			<posx>0</posx>
 			<posy>0</posy>
 			<height>40</height>
 			<font>font16caps</font>
-			<textcolor>black</textcolor>
+			<textcolor>white</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="5">confluence/button-focus.png</texturefocus>
 			<aligny>center</aligny>

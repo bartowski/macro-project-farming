@@ -76,7 +76,7 @@
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>20</posy>
+					<posy>40</posy>
 					<width>750</width> 
 					<height>25</height> 
 					<label>$INFO[VideoPlayer.Title]</label>
@@ -88,7 +88,7 @@
 				</control>
 				<control type="label">
 					<posx>0</posx>
-					<posy>50</posy>
+					<posy>70</posy>
 					<width>412</width> 
 					<height>25</height> 
 					<label>$INFO[VideoPlayer.Year]/$INFO[VideoPlayer.Studio]</label>
@@ -143,17 +143,6 @@
 				<posx>20</posx>
 				<posy>-80</posy>
 				<control type="label">
-					<description>Year Info</description>
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>600</width>
-					<height>18</height>
-					<aligny>center</aligny>
-					<align>left</align>
-					<font>Font_ListDetail</font>
-					<label>[B][COLOR=ff67ffff]$LOCALIZE[31070]:[/COLOR][/B] [COLOR=ffffffff]$INFO[VideoPlayer.Year][/COLOR]</label>
-				</control>
-				<control type="label">
 					<description>Director Info</description>
 					<posx>0</posx>
 					<posy>24</posy>
@@ -190,9 +179,11 @@
 			<bordertexture border="32">osd/paused_glow.png</bordertexture>
 			<bordersize>32</bordersize>
 			<animation type="WindowOpen">
-				<effect type="fade" start="0" end="100" time="900" delay="400" />
+				<effect type="fade" start="0" end="100" time="600" />
 			</animation>
-			<visible></visible>
+			<animation type="WindowClose">
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
 		</control>
 	</control>
 		

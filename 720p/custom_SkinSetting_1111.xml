@@ -1888,7 +1888,19 @@
 							<onclick>Skin.ToggleSetting(no_Wall)</onclick>
 							<selected>Skin.HasSetting(no_Wall)</selected>
 						</control>
-						<control type="label" id="611">
+						<control type="radiobutton" id="611">
+							<width>750</width>
+							<height>40</height>
+							<font>Font_KeyboardKeys</font>
+							<label>"$LOCALIZE[31213]"</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<onclick>Skin.ToggleSetting(no_WallPanel)</onclick>
+							<selected>Skin.HasSetting(no_WallPanel)</selected>
+						</control>
+						<control type="label">
 							<width>750</width>
 							<height>45</height>
 							<font>font16caps</font>

@@ -883,9 +883,9 @@
 					</focusedlayout>
 				</control>
 				<control type="grouplist" id="9000">
-					<posx>110</posx>
+					<posx>0</posx>
 					<posy>662</posy>
-					<width>1030</width>
+					<width>1280</width>
 					<height>40</height>
 					<itemgap>2</itemgap>
 					<align>center</align>
@@ -929,6 +929,14 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>20410</label>
 						<visible>!IsEmpty(ListItem.Trailer)</visible>
+					</control>
+					<control type="button" id="13">
+						<description>Play Trailer</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$LOCALIZE[31212]</label>
+						<onclick>Playlist.Clear</onclick>
+						<onclick>Dialog.Close(MovieInformation)</onclick>
+						<onclick>RunScript(special://home/scripts/Home Theater Experience/default.py)</onclick> 
 					</control>
 				</control>
 			</control>
