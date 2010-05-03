@@ -1,13 +1,13 @@
 <skin>
   <defaultresolution>720p</defaultresolution>
   <defaultresolutionwide>720p</defaultresolutionwide>
-  <version>2.11</version>
+  <version>3.00</version>
   <effectslowdown>1</effectslowdown>
   <zoom>1.0</zoom>
-
+  <debugging>false</debugging>
 <credits>
-	<skinname>Alaska</skinname>
-    	<name>by Duncan Harris</name>
+	<skinname>Night</skinname>
+    	<name>by mcborzu</name>
 </credits>
 </skin>
 

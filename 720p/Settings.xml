@@ -116,7 +116,7 @@
 						<label>24001</label>
 						<label2>31408</label2>
 						<onclick>ActivateWindow(AddonBrowser)</onclick>
-						<icon>special://skin/backgrounds/addons.jpg</icon>
+						<icon>special://skin/media/backgrounds/addons.jpg</icon>
 					</item>
 					<item id="7">
 						<label>705</label>

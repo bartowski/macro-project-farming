@@ -48,7 +48,7 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>![Window.IsActive(25) | Window.IsActive(502) | Window.IsActive(500) | Window.IsActive(Programs)]</visible>
+					<visible>![Window.IsActive(25) | Window.IsActive(502) | Window.IsActive(500) | Window.IsActive(Programs) | Window.IsActive(AddonBrowser)]</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -59,7 +59,7 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
-					<visible>Window.IsActive(Programs)</visible>
+					<visible>Window.IsActive(Programs) | Window.IsActive(AddonBrowser)</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -135,7 +135,7 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>ffffffff</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>![Window.IsActive(25) | Window.IsActive(502) | Window.IsActive(500) | Window.IsActive(Programs)]</visible>
+					<visible>![Window.IsActive(25) | Window.IsActive(502) | Window.IsActive(500) | Window.IsActive(Programs) | Window.IsActive(AddonBrowser)]</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -146,7 +146,7 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>ffffffff</textcolor>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
-					<visible>Window.IsActive(Programs)</visible>
+					<visible>Window.IsActive(Programs) | Window.IsActive(AddonBrowser)</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -435,6 +435,7 @@
 		</control>		
 	<control type="group">	
 	<include>Animation_Viewtype_Files_RightArea</include>
+	<include>Animation_HiddenByInfo</include>
 	<visible>Container.Content(movies) + Control.IsVisible(55)</visible>
 		<control type="image">
 			<posx>790</posx>
@@ -482,6 +483,7 @@
 	</control>
 	<control type="group">	
 	<include>Animation_Viewtype_Files_RightArea</include>
+	<include>Animation_HiddenByInfo</include>
 	<visible>Container.Content(Genres) + Control.IsVisible(55)</visible>
 		<control type="image">
 			<posx>790</posx>
@@ -528,6 +530,7 @@
 		</control>
 	</control>
 	<control type="group">
+	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(55) + ![Container.Content(movies) | Container.Content(Genres) | Container.Content(episodes) | Container.Content(albums) | Container.Content(songs)]</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
@@ -537,7 +540,7 @@
 			<height>380</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true" diffuse="common/new_files_diffuse.png">$INFO[ListItem.Icon]</texture>
-			<bordertexture border="32">list/files_list_glow.png</bordertexture>
+			<!--<bordertexture border="32">list/files_list_glow.png</bordertexture>-->
 			<fadetime>400</fadetime>
 			<bordersize>32</bordersize>
 		</control>
@@ -548,8 +551,8 @@
 			<height>380</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true" diffuse="common/new_files_diffuse.png">$INFO[ListItem(-1).Icon]</texture>
-			<bordertexture border="32">list/files_list_glow.png</bordertexture>
-			<bordersize>32</bordersize>
+			<!--<bordertexture border="32">list/files_list_glow.png</bordertexture>
+			<bordersize>32</bordersize>-->
 			<animation type="Hidden">
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
@@ -563,8 +566,8 @@
 			<height>380</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true" diffuse="common/new_files_diffuse.png">$INFO[ListItem(1).Icon]</texture>
-			<bordertexture border="32">list/files_list_glow.png</bordertexture>
-			<bordersize>32</bordersize>
+			<!--<bordertexture border="32">list/files_list_glow.png</bordertexture>
+			<bordersize>32</bordersize>-->
 			<animation type="Hidden">
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
@@ -575,6 +578,7 @@
 	<control type="group">
 	<posx>930</posx>
 	<posy>370</posy>
+	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(55) + [Container.Content(albums) | Container.Content(songs)]</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>
 		<control type="image">
@@ -634,6 +638,7 @@
 	<control type="group">
 	<posx>-6</posx>
 	<posy>26</posy>
+	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(55) + Container.Content(episodes)</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>
 		<control type="image">
@@ -774,7 +779,7 @@
 				<posy>190</posy>
 				<width>476</width>
 				<height>280</height>
-				<align>left</align>
+				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Font_Bartowski_Movies</font>
 				<textcolor>ffffffff</textcolor>
@@ -787,8 +792,20 @@
 				<posy>90</posy>
 				<width>476</width>
 				<height>280</height>
-				<align>left</align>
+				<align>justify</align>
 				<info>Container(55).ShowPlot</info>
+				<font>Font_Bartowski_Movies</font>
+				<textcolor>ffffffff</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			</control>
+			<control type="textbox"><!-- Plot TV -->
+				<visible>Window.IsActive(AddonBrowser)</visible>
+				<posx>750</posx>
+				<posy>90</posy>
+				<width>476</width>
+				<height>280</height>
+				<align>justify</align>
+				<info>ListItem.Property(Addon.Description)</info>
 				<font>Font_Bartowski_Movies</font>
 				<textcolor>ffffffff</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>

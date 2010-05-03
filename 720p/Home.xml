@@ -186,6 +186,8 @@
 			</content>
 		</control>
 		
+		<!-- PREMERGE RECENTLY ADDON
+		
 		<control type="button" id="8999">
 				<description>Run Recently added</description>
 				<posx>-20</posx>
@@ -195,6 +197,23 @@
 				<label>-</label>
 				<font>-</font>
 				<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=10)</onfocus>
+				<onfocus>SetFocus(300)</onfocus>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+			</control>
+			
+			-->
+			
+			<control type="button" id="8999">
+				<description>Run Recently added</description>
+				<posx>-20</posx>
+				<posy>-20</posy>
+				<width>1</width>
+				<height>1</height>
+				<label>-</label>
+				<font>-</font>
+				<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>
 				<onfocus>SetFocus(300)</onfocus>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
