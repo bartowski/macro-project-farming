@@ -493,6 +493,19 @@
 						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 					</control>
+					<control type="radiobutton" id="213">
+						<description>Hide Weather Button</description>
+						<width>750</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<label>$LOCALIZE[31111] - $LOCALIZE[31019]</label>
+						<onclick>Skin.ToggleSetting(HomeMenuNoShutdownButton)</onclick>
+						<selected>Skin.HasSetting(HomeMenuNoShutdownButton)</selected>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+					</control>
 				</control>
 				<control type="scrollbar" id="60">
 					<posx>1060</posx>
@@ -650,14 +663,14 @@
 								<onclick>-</onclick>
 								<icon>special://skin/media/backgrounds/movies.jpg</icon>
 								<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>
-								<!--<visible>Skin.HasSetting(HomeMenuNoMoviesButton) + Library.HasContent(Movies)</visible>-->
+								<visible>Library.HasContent(Movies)</visible>
 							</item>
 							<item id="11">
 								<label>20343</label><!-- tv shows -->
 								<onclick>-</onclick>
 								<icon>special://skin/media/backgrounds/tvshows.jpg</icon>
 								<thumb>$INFO[Skin.String(CustomTVShowsFolder)]</thumb>
-								<!--<visible>Skin.HasSetting(HomeMenuNoTVShowsButton) + Library.HasContent(TVShows)</visible>-->
+								<visible>Library.HasContent(TVShows)</visible>
 							</item>
 							<item id="2">
 								<label>2</label>
@@ -694,6 +707,12 @@
 								<onclick>-</onclick>
 								<icon>special://skin/media/backgrounds/settings.jpg</icon>
 								<thumb>$INFO[Skin.String(CustomSettingsFolder)]</thumb>
+							</item>
+							<item id="8">
+								<label>31019</label>
+								<onclick>-</onclick>
+								<icon>special://skin/media/backgrounds/shutdown.jpg</icon>
+								<thumb>$INFO[Skin.String(CustomShutdownFolder)]</thumb>
 							</item>
 						</content>
 					</control>
@@ -1069,6 +1088,66 @@
 						</control>
 						<control type="group">
 							<visible>Container(9003).HasFocus(7)</visible>
+							<control type="button" id="300">
+								<description>Single Image button</description>
+								<posx>5</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31113</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetImage(CustomSettingsFolder)</onclick>
+								<onleft>302</onleft>
+								<onright>301</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="301">
+								<description>Multi Image button</description>
+								<posx>190</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>31114</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.SetPath(CustomSettingsFolder)</onclick>
+								<onleft>300</onleft>
+								<onright>302</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+							<control type="button" id="302">
+								<description>Default Image button</description>
+								<posx>375</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>40</height>
+								<label>571</label>
+								<font>font12caps_title</font>
+								<textcolor>grey2</textcolor>
+								<focusedcolor>white</focusedcolor>
+								<align>center</align>
+								<texturenofocus border="5">confluence/button-nofocus.png</texturenofocus>
+								<texturefocus border="5">confluence/button-focus.png</texturefocus>
+								<onclick>Skin.Reset(CustomSettingsFolder)</onclick>
+								<onleft>301</onleft>
+								<onright>300</onright>
+								<onup>304</onup>
+								<ondown>304</ondown>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container(9003).HasFocus(8)</visible>
 							<control type="button" id="300">
 								<description>Single Image button</description>
 								<posx>5</posx>

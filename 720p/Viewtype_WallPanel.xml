@@ -401,7 +401,7 @@
 				<animation effect="zoom" start="80" end="80" time="0" condition="true">Conditional</animation>
 			</control>
 			<control type="textbox">
-				<visible>![Container.OnNext | Container.OnPrevious]]</visible>
+				<visible>![Container.OnNext | Container.OnPrevious] + !Player.HasAudio</visible>
 				<posx>0</posx>
 				<posy>224</posy>
 				<width>460</width>
@@ -413,10 +413,23 @@
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<animation effect="fade" start="30" end="100" time="400">Visible</animation>
 			</control>
+			<control type="textbox">
+				<visible>![Container.OnNext | Container.OnPrevious] + Player.HasAudio</visible>
+				<posx>0</posx>
+				<posy>224</posy>
+				<width>460</width>
+				<height>264</height>
+				<align>left</align>
+				<info>ListItem.Plot</info>
+				<font>Font_Bartowski_Movies_Plot</font>
+				<textcolor>ffffffff</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<animation effect="fade" start="30" end="100" time="400">Visible</animation>
+			</control>
 	</control>
 	
 		<control type="grouplist">
-			<visible>Control.IsVisible(597) + Container.Content(movies) + !Skin.HasSetting(no_media_flags)</visible>
+			<visible>Control.IsVisible(597) + Container.Content(movies) + !Skin.HasSetting(no_media_flags) + !Player.HasAudio</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>800</posx>
 			<posy>680</posy>
@@ -458,7 +471,7 @@
 			<aligny>center</aligny>
 			<font>Font_Alaya_Movie-trailer</font>
 			<textcolor>ffffffff</textcolor>
-			<label>*Press Down for Trailer*</label>
+			<label>*Press Left for Trailer*</label>
 			<shadowcolor>black</shadowcolor>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>

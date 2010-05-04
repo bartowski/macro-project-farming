@@ -263,7 +263,7 @@
 			<visible>Container.Content(movies) + !Player.HasAudio</visible>
 			<posx>15</posx>
 			<posy>390</posy>
-			<width>555</width>
+			<width>540</width>
 			<height>264</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>ffffffff</textcolor>
@@ -276,7 +276,7 @@
 			<visible>Container.Content(movies) + Player.HasAudio</visible>
 			<posx>15</posx>
 			<posy>390</posy>
-			<width>555</width>
+			<width>540</width>
 			<height>170</height>
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>ffffffff</textcolor>

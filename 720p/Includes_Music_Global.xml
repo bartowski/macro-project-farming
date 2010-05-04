@@ -399,7 +399,7 @@
 	<include name="Music_Global_LowerRight">
 		<control type="group">
 		<include>Animation_CommonFade</include>
-		<visible>[Control.IsVisible(52) + Container.Content(tvshows)] + Player.HasAudio</visible>		
+		<visible>[[Control.IsVisible(52) + Container.Content(tvshows)] + Player.HasAudio] | [[Control.IsVisible(597) + Container.Content(movies)] + Player.HasAudio]</visible>		
 			<control type="group">
 				<posx>1086</posx>
 				<posy>684</posy>

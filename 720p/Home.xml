@@ -178,10 +178,11 @@
 					<visible>Skin.HasSetting(signout)</visible>
 				</item>				
 				<item id="13">
-					<icon>special://skin/media/mainmenu/shutdown.png</icon>				
 					<label>31019</label>
+					<icon>special://skin/media/backgrounds/shutdown.jpg</icon>
+					<thumb>$INFO[Skin.String(CustomShutdownFolder)]</thumb>
 					<onclick>XBMC.Shutdown()</onclick>
-					<visible></visible>
+					<visible>!Skin.HasSetting(HomeMenuNoShutdownButton)</visible>
 				</item>
 			</content>
 		</control>
