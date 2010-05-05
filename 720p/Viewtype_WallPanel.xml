@@ -455,7 +455,7 @@
 			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
 			<onleft>7000</onleft>
-			<onright>597</onright>
+			<onright>7000</onright>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 			<include>Animation_CommonFade</include>

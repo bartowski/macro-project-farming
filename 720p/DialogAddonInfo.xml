@@ -116,7 +116,7 @@
 				<posy>130</posy>
 				<visible>![Control.HasFocus(10) | Control.HasFocus(62)]</visible>
 				<include>VisibleFadeEffect</include>
-				<control type="label">
+				<!--<control type="label">
 					<description>Type txt</description>
 					<posx>150</posx>
 					<posy>0</posy>
@@ -125,8 +125,8 @@
 					<label>$LOCALIZE[146]</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>mainblue</textcolor>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>grey</textcolor>
 				</control>
 				<control type="label">
 					<description>Type Value</description>
@@ -137,7 +137,8 @@
 					<label fallback="416">$INFO[ListItem.Property(Addon.Type)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font13</font>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>white</textcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -149,8 +150,8 @@
 					<label>$LOCALIZE[21863]:</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>mainblue</textcolor>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>grey</textcolor>
 				</control>
 				<control type="label">
 					<description>Author Value</description>
@@ -161,9 +162,10 @@
 					<label fallback="416">$INFO[ListItem.Property(Addon.Creator)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font13</font>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>white</textcolor>
 					<scroll>true</scroll>
-				</control>
+				</control>-->
 				<control type="label">
 					<description>Version txt</description>
 					<posx>150</posx>
@@ -173,8 +175,8 @@
 					<label>$LOCALIZE[24051]</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>mainblue</textcolor>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>grey</textcolor>
 				</control>
 				<control type="label">
 					<description>Version Value</description>
@@ -185,7 +187,8 @@
 					<label fallback="416">$INFO[ListItem.Property(Addon.Version)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font13</font>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>white</textcolor>
 					<scroll>true</scroll>
 				</control>
 				<control type="label">
@@ -197,8 +200,8 @@
 					<label>$LOCALIZE[563]:</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>mainblue</textcolor>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>grey</textcolor>
 				</control>
 				<control type="image">
 					<description>Rating value</description>
@@ -217,8 +220,8 @@
 					<label>$LOCALIZE[20037]:</label>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>mainblue</textcolor>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>grey</textcolor>
 				</control>
 				<control type="fadelabel">
 					<description>Summary Value</description>
@@ -229,7 +232,8 @@
 					<label fallback="416">$INFO[ListItem.Property(Addon.Summary)]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font13</font>
+					<font>Font_KeyboardKeys</font>
+					<textcolor>white</textcolor>
 					<scrollout>false</scrollout>
 					<pauseatend>2000</pauseatend>
 				</control>
@@ -364,7 +368,7 @@
 					<label>$LOCALIZE[24036]</label>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_Movies_Plot</font>
+					<font>Font_KeyboardKeys</font>
 					<textcolor>mainblue</textcolor>
 				</control>
 				<control type="label">

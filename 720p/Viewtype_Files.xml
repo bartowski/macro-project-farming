@@ -540,7 +540,7 @@
 			<height>380</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true" diffuse="common/new_files_diffuse.png">$INFO[ListItem.Icon]</texture>
-			<!--<bordertexture border="32">list/files_list_glow.png</bordertexture>-->
+			<bordertexture border="32">list/files_list_glow.png</bordertexture>
 			<fadetime>400</fadetime>
 			<bordersize>32</bordersize>
 		</control>
@@ -551,8 +551,8 @@
 			<height>380</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true" diffuse="common/new_files_diffuse.png">$INFO[ListItem(-1).Icon]</texture>
-			<!--<bordertexture border="32">list/files_list_glow.png</bordertexture>
-			<bordersize>32</bordersize>-->
+			<bordertexture border="32">list/files_list_glow.png</bordertexture>
+			<bordersize>32</bordersize>
 			<animation type="Hidden">
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />
@@ -566,8 +566,8 @@
 			<height>380</height>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<texture background="true" diffuse="common/new_files_diffuse.png">$INFO[ListItem(1).Icon]</texture>
-			<!--<bordertexture border="32">list/files_list_glow.png</bordertexture>
-			<bordersize>32</bordersize>-->
+			<bordertexture border="32">list/files_list_glow.png</bordertexture>
+			<bordersize>32</bordersize>
 			<animation type="Hidden">
 			<effect type="zoom" time="400" center="auto" start="100" end="180" tween="cubic" easing="in" />
 				<effect type="fade" time="400" start="100" end="0" />

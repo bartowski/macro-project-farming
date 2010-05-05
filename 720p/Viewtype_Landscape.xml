@@ -19,8 +19,8 @@
 		<control type="wraplist" id="52">
 			<posx>10</posx>
 			<posy>0</posy>
-			<height>1515</height>
-			<width>1656</width>
+			<height>500</height>
+			<width>1280</width>
 			<onleft>300</onleft>
 			<onright>300</onright>
 			<onup>7000</onup>
@@ -29,6 +29,7 @@
 			<orientation>horizontal</orientation>
 			<focusposition>2</focusposition>
 			<scrolltime>300</scrolltime>
+			<preloaditems>2</preloaditems>
 			<include>Animation_Viewtype_Landscape_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
 			<visible>!Skin.HasSetting(no_Landscape) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
