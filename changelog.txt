@@ -1,0 +1,9 @@
+Update 5/5/2010
+  -Change Landscape to behave better with PageUp/Page Down
+  -Continued tightening up addon merge stuff
+  -Started adding some default icons
+  -Playing around with a new look for Movie list view
+  -Change cleartART to be detected automatically, no more skin setting
+
+Update 5/4/2010
+  -Fixed List view to be compatitable with pre-merge builds
