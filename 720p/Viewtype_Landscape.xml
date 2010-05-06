@@ -20,7 +20,7 @@
 			<posx>10</posx>
 			<posy>0</posy>
 			<height>500</height>
-			<width>1280</width>
+			<width>1280</width><!-- 1656-->
 			<onleft>300</onleft>
 			<onright>300</onright>
 			<onup>7000</onup>

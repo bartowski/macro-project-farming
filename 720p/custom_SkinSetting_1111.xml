@@ -187,19 +187,7 @@
 						<align>left</align>
 						<aligny>center</aligny>
 					</control>
-					<control type="radiobutton" id="101"><!--first main option-->
-						<width>750</width>
-						<height>40</height>
-						<font>Font_KeyboardKeys</font>
-						<label>$LOCALIZE[31030] [COLOR=red]($LOCALIZE[31031])[/COLOR]</label>
-						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-						<onclick>Skin.ToggleSetting(debugmode)</onclick>
-						<selected>Skin.HasSetting(debugmode)</selected>
-					</control>
-					<control type="radiobutton" id="102">
+					<control type="radiobutton" id="101">
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -1367,8 +1355,8 @@
 							<width>750</width>
 							<height>45</height>
 							<font>Font_KeyboardKeys</font>
-							<label>toto</label>
-							<textcolor>blue</textcolor>
+							<label>Waiting for merge before doing any script stuff</label>
+							<textcolor>red</textcolor>
 							<shadowcolor>black</shadowcolor>
 							<align>left</align>
 							<aligny>center</aligny>
@@ -1764,18 +1752,6 @@
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
-							<label>$LOCALIZE[31046]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.ToggleSetting(clearART)</onclick>
-							<selected>Skin.HasSetting(clearART)</selected>
-						</control>
-						<control type="radiobutton" id="504">
-							<width>750</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
 							<label>$LOCALIZE[31033]</label>
 							<textcolor>grey2</textcolor>
 							<focusedcolor>white</focusedcolor>
@@ -1784,7 +1760,7 @@
 							<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 							<selected>Skin.HasSetting(autoscroll)</selected>
 						</control>
-						<control type="radiobutton" id="505">
+						<control type="radiobutton" id="504">
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -1796,7 +1772,7 @@
 							<onclick>Skin.ToggleSetting(no_media_flags)</onclick>
 							<selected>Skin.HasSetting(no_media_flags)</selected>
 						</control>
-						<control type="radiobutton" id="506">
+						<control type="radiobutton" id="505">
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>
@@ -1808,7 +1784,7 @@
 							<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
 							<selected>Skin.HasSetting(movieoverlays)</selected>
 						</control>
-						<control type="radiobutton" id="507">
+						<control type="radiobutton" id="506">
 							<width>750</width>
 							<height>40</height>
 							<font>Font_KeyboardKeys</font>

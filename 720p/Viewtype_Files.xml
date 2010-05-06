@@ -48,7 +48,7 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>![Window.IsActive(25) | Window.IsActive(502) | Window.IsActive(500) | Window.IsActive(Programs) | Window.IsActive(AddonBrowser)]</visible>
+					<visible>![Window.IsActive(videolibrary) | Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist) | Window.IsActive(Programs)]</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -59,7 +59,26 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>Text-Filemode</textcolor>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
-					<visible>Window.IsActive(Programs) | Window.IsActive(AddonBrowser)</visible>
+					<visible>Window.IsActive(Programs)</visible>
+				</control>
+				<control type="label">
+					<posx>660</posx>
+					<posy>0</posy>
+					<width>700</width>
+					<height>46</height>
+					<aligny>center</aligny>
+					<font>Font_Bartowski_List_Main</font>
+					<textcolor>Text-Filemode</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<visible>Window.IsActive(AddonBrowser)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>4</posy>
+					<width>880</width>
+					<height>4</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>confluence/separator.png</texture>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -94,6 +113,24 @@
 					<label>$INFO[ListItem.Episode]$INFO[ListItem.Title,. ]</label>
 					<visible>!IsEmpty(ListItem.Title) + Window.IsActive(25) + Container.Content(episodes)</visible>
 				</control>
+				<control type="label">
+					<posx>690</posx>
+					<posy>0</posy>
+					<width>700</width>
+					<height>46</height>
+					<aligny>center</aligny>
+					<font>Font_Bartowski_List_Main</font>
+					<textcolor>Text-Filemode</textcolor>
+					<label>$INFO[ListItem.year]/</label>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="group">
+					<posx>1250</posx>
+					<posy>24</posy>
+					<include>VideoMPAAFlaggingConditions_Grey</include>
+					<animation effect="zoom" start="60" end="60" time="0" condition="true">Conditional</animation>
+					<visible>Container.Content(movies)</visible>
+				</control>
 				<control type="image">
 					<posx>10</posx>
 					<posy>20</posy>
@@ -115,7 +152,14 @@
 				</control>
 			</itemlayout>
 			<focusedlayout width="1210" height="36">
-				
+				<control type="image">
+					<posx>0</posx>
+					<posy>4</posy>
+					<width>880</width>
+					<height>4</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>confluence/separator.png</texture>
+				</control>
 				<control type="image">
 					<posx>-70</posx>
 					<posy>-34</posy>
@@ -135,7 +179,7 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>ffffffff</textcolor>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>![Window.IsActive(25) | Window.IsActive(502) | Window.IsActive(500) | Window.IsActive(Programs) | Window.IsActive(AddonBrowser)]</visible>
+					<visible>![Window.IsActive(25) | Window.IsActive(502) | Window.IsActive(500) | Window.IsActive(Programs)]</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
@@ -146,7 +190,36 @@
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>ffffffff</textcolor>
 					<label>$INFO[ListItem.Label]$INFO[ListItem.Label2, - ]</label>
-					<visible>Window.IsActive(Programs) | Window.IsActive(AddonBrowser)</visible>
+					<visible>Window.IsActive(Programs)</visible>
+				</control>
+				<control type="label">
+					<posx>660</posx>
+					<posy>0</posy>
+					<width>700</width>
+					<height>46</height>
+					<aligny>center</aligny>
+					<font>Font_Bartowski_List_Main</font>
+					<textcolor>white</textcolor>
+					<label>$INFO[ListItem.Label2]</label>
+					<visible>Window.IsActive(AddonBrowser)</visible>
+				</control>
+				<control type="label">
+					<posx>690</posx>
+					<posy>0</posy>
+					<width>700</width>
+					<height>46</height>
+					<aligny>center</aligny>
+					<font>Font_Bartowski_List_Main</font>
+					<textcolor>white</textcolor>
+					<label>$INFO[ListItem.year]/</label>
+					<visible>Container.Content(movies)</visible>
+				</control>
+				<control type="group">
+					<posx>1250</posx>
+					<posy>24</posy>
+					<include>VideoMPAAFlaggingConditions</include>
+					<animation effect="zoom" start="60" end="60" time="0" condition="true">Conditional</animation>
+					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="label">
 					<posx>20</posx>
