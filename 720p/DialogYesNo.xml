@@ -86,7 +86,7 @@
 			<posy>400</posy>
 			<height>39</height>
 			<width>200</width>
-			<font>Font_Bartowski_Episode_ContextMenu</font>
+			<font>Font_Bartowski_Press_S</font>
 			<textcolor>black</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="5">confluence/button-focus.png</texturefocus>
@@ -107,7 +107,7 @@
 			<width>200</width>
 			<align>center</align>
 			<aligny>center</aligny>
-			<font>Font_Bartowski_Episode_ContextMenu</font>
+			<font>Font_Bartowski_Press_S</font>
 			<textcolor>black</textcolor>
 			<focusedcolor>white</focusedcolor>
 			<texturefocus border="5">confluence/button-focus.png</texturefocus>

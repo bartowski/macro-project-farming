@@ -3,8 +3,6 @@
 	<allowoverlay>no</allowoverlay>
 	<views>55,50,500</views>
 	<controls>
-		<!--<include>CommonAddonsBackground</include>
-		<include>CommonMediaPlayingBackground</include>-->
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>		
 			<!--<control type="largeimage">
@@ -22,29 +20,7 @@
 				<include>Animation_BackdropFade</include>
 			</control>
 			
-			
-		
-			
-			
-			<control type="image">
-				<posx>0</posx>
-				<posy>128r</posy>
-				<width>1280</width>
-				<height>128</height>
-				<texture>floor.png</texture>
-				<include>VisibleFadeEffect</include>
-				<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
-			</control>
-			<control type="image">
-				<posx>0</posx>
-				<posy>-5</posy>
-				<width>1280</width>
-				<height>725</height>
-				<texture border="0.5.0.0">ContentPanel4.png</texture>
-				<include>VisibleFadeEffect</include>
-				<visible>Control.IsVisible(500)</visible>
-			</control>
-			<control type="group">
+			<!--<control type="group">
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50)</visible>
 				<control type="image">
@@ -81,15 +57,15 @@
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture diffuse="diffuse_mirror3.png" flipy="true" border="20">ContentPanel.png</texture>
 				</control>
-			</control>
+			</control>-->
 		</control>
 		<control type="group">
-				<include>Viewtype_Files</include><!--  55  -->
+				<include>Viewtype_Addons</include><!--  55  -->
 				<include>Viewtype_Poster</include><!--  50  -->
 		</control>
-		<include>CommonPageCount</include>
+		<!--<include>CommonPageCount</include>
 		<include>BehindDialogFadeOut</include>
-		<include>ScrollOffsetLabel</include>
+		<include>ScrollOffsetLabel</include>-->
 		<control type="group">
 			<animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(7000).HasFocus | Control.HasFocus(8999)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="-250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(7000).HasFocus | Control.HasFocus(8999)">WindowClose</animation>

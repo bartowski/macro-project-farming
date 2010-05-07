@@ -1,3 +1,9 @@
+Update 5/6/2010
+  -Skinned master lock dialog
+  -File view for addons now is a seperate .xml
+  -removed Alaska's skin debugging skin setting 
+  -Trying out some new VideoOSD icons
+
 Update 5/5/2010
   -Change Landscape to behave better with PageUp/Page Down
   -Continued tightening up addon merge stuff
