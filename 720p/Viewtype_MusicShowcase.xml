@@ -57,12 +57,13 @@ MUSIC SECTION
 			<onleft>50</onleft>
 			<onright>50</onright>
 			<onup>7000</onup>
-			<ondown>7000</ondown>
+			<ondown>68</ondown>
 			<viewtype label="Showcase">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>3</focusposition>
 			<scrolltime>200</scrolltime>
 			<preloaditems>2</preloaditems>
+			<pagecontrol>68</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
 			<visible>!Skin.HasSetting(no_MusicShowcase) + [Container.Content(artists) | Container.Content(albums)]</visible>
@@ -200,6 +201,25 @@ MUSIC SECTION
 			</focusedlayout>
 		</control>
 		
+		<control type="scrollbar" id="68">
+			<include>Animation_ZoomInZoomOut</include>
+			<include>Animation_ZoomedByMenu</include>
+			<posx>100</posx>
+			<posy>900</posy>
+			<width>1080</width>
+			<height>25</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(58) + Control.HasFocus(68)</visible>
+			<texturesliderbackground>osd/osd_progress_back1.png</texturesliderbackground>
+			<textureslidernibfocus>ScrollBarV_Nib_Focus1.png</textureslidernibfocus>
+			<onup>7000</onup>
+			<ondown>50</ondown>
+			<showonepage>false</showonepage>
+			<orientation>horizontal</orientation>
+			<include>Animation_CommonFade</include>
+			<animation effect="slide" start="0,0" end="0,-220" time="400" tween="cubic" easing="inout" condition="Control.HasFocus(68)">Conditional</animation>
+		</control>
+		
+<!--NOW PLAYING -->
 		<control type="group">
 		<include>Animation_CommonFade</include>
 		<visible>Control.IsVisible(58) + Player.HasAudio</visible>

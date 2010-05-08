@@ -27,6 +27,23 @@
 			<label>$INFO[ListItem.label]</label>
 			<include>Animation_HiddenByInfo</include>
 		</control>
+		<control type="label"><!--Big Title-->
+			<visible>Control.IsVisible(58) + Container.Content(movies) + IsEmpty(ListItem.Title)</visible>
+			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies) + Skin.HasSetting(ShowcaseFanart)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,-110" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(58) + Container.Content(movies)">Conditional</animation>
+			<posx>0</posx>
+			<posy>370</posy>
+			<width>1280</width>
+			<height>50</height>
+			<align>center</align>
+			<font>Font_Bartowski_BigMusic</font>
+			<shadowcolor>678b8b8b</shadowcolor>
+			<textcolor>678b8b8b</textcolor>
+			<label>GO BACK</label>
+			<include>Animation_HiddenByInfo</include>
+		</control>
+		
+		
 		<control type="largeimage">
 			<visible>Control.IsVisible(58) + Container.Content(movies) + !Player.HasVideo + !Skin.HasSetting(ShowcaseFanart)</visible>
 			<posx>0</posx>

@@ -145,7 +145,8 @@
 				<item id="8">
 					<description>weather</description>
 					<label>$LOCALIZE[31017]</label>
-					<icon>weather/$INFO[Window(Weather).Property(Current.FanartCode)]</icon>				
+					<icon>special://skin/media/backgrounds/weather.jpg</icon>
+					<thumb>$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]$INFO[Weather.FanartCode]</thumb>				
 					<onclick>xbmc.activatewindow(2600)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoWeatherButton)</visible>
 				</item>
