@@ -1,3 +1,12 @@
+Update 5//2010
+  -More small tweaks
+  -Added a glow around big focused image in Landscpe view
+  -Hide Landscape tv show level when banners selected...
+  -Users cannot check both Poster and Banner option
+  -Finished basic weather section, waiting till I know merge version of script works before doing more
+  -Finished Profile section
+  -Fixed dialogbusy.xml background
+
 Update 5/7/2010
   -Bunch of small tweaks
   -Added a glow around big focused image in episode view

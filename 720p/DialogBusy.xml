@@ -13,7 +13,7 @@
 				<posy>-60</posy>
 				<width>338</width>
 				<height>328</height>
-				<texture>busy/busy_back.png</texture>
+				<texture>common/busy_back.png</texture>
 			</control>
 			<control type="multiimage">
 				<description>Busy animation</description>

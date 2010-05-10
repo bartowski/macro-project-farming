@@ -14,17 +14,34 @@
 			<texture>panel/panel-back.png</texture>
 		</control>
 		<control type="largeimage">
-			<visible>Control.IsVisible(56) + [Container.Content(movies) | Container.Content(tvshows)] + !Player.HasVideo</visible>
+			<visible>Control.IsVisible(56) + [Container.Content(movies) | Container.Content(tvshows)] + !Player.HasVideo + !IsEmpty(ListItem.Title)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>570</width>
 			<height>318</height>
-			<texture diffuse="Showcase/showcase-diffuse.png">$INFO[Container(56).listitem.property(fanart_image)]</texture>
+			<texture diffuse="Showcase/showcase-diffuse.png" fallback="special://skin/media/backgrounds/missing.jpg">$INFO[Container(56).listitem.property(fanart_image)]</texture>
 			<fadetime>400</fadetime>
 			<aspectratio>stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Panel_Fanart</include>
 		</control>
+		<control type="label"><!--Big Title-->
+			<visible>Control.IsVisible(56) + Container.Content(movies) + IsEmpty(ListItem.Title)</visible>
+			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(50) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
+			<posx>0</posx>
+			<posy>135</posy>
+			<width>600</width>
+			<height>800</height>
+			<align>center</align>
+			<font>Font_Bartowski_BigMusic</font>
+			<shadowcolor>678b8b8b</shadowcolor>
+			<textcolor>678b8b8b</textcolor>
+			<label>GO [CR]BACK</label>
+			<include>Animation_HiddenByInfo</include>
+			<include>Animation_Bartowski_Context_Zoom</include>
+		</control>
+		
+		
 		
 		<control type="panel" id="56">
 			<visible>!Skin.HasSetting(no_Panel) + [Container.Content(Movies) | [Container.Content(tvshows) + Skin.HasSetting(TVPosters)]]</visible>

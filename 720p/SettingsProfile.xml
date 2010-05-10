@@ -2,8 +2,14 @@
 	<defaultcontrol always="true">2</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
 	<controls>
-		<include>CommonSettingsBackground</include>
-		<include>CommonMediaPlayingBackground</include>
+		<control type="largeimage">
+			<include>Dimensions_Fullscreen</include>
+			<width>1280</width>
+			<height>720</height>
+			<texture>special://skin/media/backdrops/curtains_diffuse.png</texture>
+			<aspectratio>scale</aspectratio>
+			<include>VisibleFadeEffect</include>
+		</control>
 		<control type="group">
 			<posx>90</posx>
 			<posy>50</posy>
@@ -15,12 +21,12 @@
 				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
 				<effect type="fade" start="100" end="0" time="300" />
 			</animation>			
-			<control type="image">
+			<!--<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1100</width>
 				<height>640</height>
-				<texture border="20">DialogBack.png</texture>
+				<texture border="20">confluence/DialogBack1.png</texture>
 			</control>
 			<control type="image">
 				<description>LOGO</description>
@@ -30,7 +36,7 @@
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
 				<texture>Confluence_Logo.png</texture>
-			</control>
+			</control>-->
 			<control type="button" id ="4">
 				<description>Enable Login screen</description>
 				<posx>10</posx>
@@ -40,10 +46,11 @@
 				<textoffsety>13</textoffsety>
 				<label>20096</label>
 				<font>font24caps_title</font>
-				<align>right</align>
+				<focusedcolor>white</focusedcolor>
+				<align>center</align>
 				<aligny>top</aligny>
 				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-				<texturefocus border="5">MenuItemFO.png</texturefocus>
+				<texturefocus border="5">confluence/button-focus.png</texturefocus>
 				<onleft>2</onleft>
 				<onright>2</onright>
 				<onup>4</onup>
@@ -51,25 +58,25 @@
 				<enable>!Window.IsVisible(ProfileSettings)</enable>
 			</control>
 			<control type="label">
-				<posx>250</posx>
-				<posy>135</posy>
+				<posx>12</posx>
+				<posy>138</posy>
 				<width>240</width>
 				<height>25</height>
 				<font>font13caps</font>
 				<textcolor>grey2</textcolor>
-				<align>right</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<label>305</label>
 				<visible>System.HasLoginScreen</visible>
 			</control>
 			<control type="label">
-				<posx>250</posx>
-				<posy>135</posy>
+				<posx>12</posx>
+				<posy>138</posy>
 				<width>240</width>
 				<height>25</height>
 				<font>font13caps</font>
 				<textcolor>grey2</textcolor>
-				<align>right</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<label>1223</label>
 				<visible>!System.HasLoginScreen</visible>
@@ -85,7 +92,7 @@
 					<aspectratio>keep</aspectratio>
 					<bordertexture border="12">ThumbBorder.png</bordertexture>
 					<bordersize>10</bordersize>
-					<texture fallback="unknown-user.png">$INFO[Container(2).Listitem.Icon]</texture>
+					<texture fallback="DefaultActor.png">$INFO[Container(2).Listitem.Icon]</texture>
 				</control>
 				<control type="label">
 					<posx>0</posx>
@@ -93,7 +100,7 @@
 					<width>240</width>
 					<height>20</height>
 					<font>font12caps_title</font>
-					<textcolor>blue</textcolor>
+					<textcolor>mainblue</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[31319]</label>
@@ -115,7 +122,7 @@
 					<width>240</width>
 					<height>30</height>
 					<font>font12caps_title</font>
-					<textcolor>blue</textcolor>
+					<textcolor>mainblue</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[31320]</label>
@@ -132,7 +139,7 @@
 					<label fallback="13170">$INFO[Container(2).ListItem.Label2]</label>
 				</control>
 			</control>
-			<control type="image">
+			<!--<control type="image">
 				<posx>268</posx>
 				<posy>10</posy>
 				<width>790</width>
@@ -146,14 +153,14 @@
 				<height>70</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>GlassTitleBar.png</texture>
-			</control>
+			</control>-->
 			<control type="label">
 				<description>header label</description>
 				<posx>300</posx>
-				<posy>20</posy>
+				<posy>0</posy>
 				<width>740</width>
 				<height>30</height>
-				<font>font30caps_title</font>
+				<font>Font_Bartowski_MainMenu_Context</font>
 				<label>$LOCALIZE[10034]</label>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -180,7 +187,7 @@
 						<height>145</height>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture fallback="unknown-user.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultActor.png">$INFO[Listitem.Icon]</texture>
 					</control>
 					<control type="label">
 						<posx>94</posx>
@@ -203,15 +210,15 @@
 						<height>145</height>
 						<bordertexture border="5">folder-focus.png</bordertexture>
 						<bordersize>5</bordersize>
-						<texture fallback="unknown-user.png">$INFO[Listitem.Icon]</texture>
+						<texture fallback="DefaultActor.png">$INFO[Listitem.Icon]</texture>
 					</control>
 					<control type="label">
 						<posx>94</posx>
 						<posy>145</posy>
 						<width>178</width>
 						<height>25</height>
-						<font>font11</font>
-						<textcolor>white</textcolor>
+						<font>Font_KeyboardEdit</font>
+						<textcolor>mainblue</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>center</align>
 						<aligny>center</aligny>
@@ -235,40 +242,7 @@
 				<orientation>vertical</orientation>
 			</control>
 		</control>
-		<include>BehindDialogFadeOut</include>
-		<control type="image">
-			<posx>-820</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture>HomeBlade.png</texture>
-		</control>
-		<control type="image">
-			<posx>26r</posx>
-			<posy>0</posy>
-			<width>846</width>
-			<height>720</height>
-			<texture flipx="true">HomeBlade.png</texture>
-		</control>
-		<control type="group">
-			<posx>60</posx>
-			<posy>0</posy>
-			<animation effect="slide" end="-310,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
-			<animation effect="slide" start="-310,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
-			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>250</width>
-				<height>35</height>
-				<texture border="0,0,32,0">header.png</texture>
-			</control>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<posx>220</posx>
-				<label>$LOCALIZE[13200]</label>
-			</control>
-		</control>
-		<include>WindowTitleHomeButton</include>
-		<include>Clock</include>
+		
+	
 	</controls>
 </window>

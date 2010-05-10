@@ -14,7 +14,28 @@
 			<texture>tv-landscape/tv-background.png</texture>
 			<aspectratio>scale</aspectratio>
 		</control>
-		
+		<control type="image"><!-- 1st Background -->
+			<visible>Control.IsVisible(52) + !Skin.HasSetting(TVPosters)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>684</width>
+			<height>720</height>
+			<texture>tv-landscape/landscape_thumb_glow.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>Animation_LandscapeFade</include>
+			<include>Animation_HiddenByInfo</include>
+		</control>
+		<control type="image"><!-- 1st Background -->
+			<visible>Control.IsVisible(52) + Skin.HasSetting(TVPosters)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>544</width>
+			<height>720</height>
+			<texture>tv-landscape/tv_poster_glow.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<include>Animation_LandscapeFade</include>
+			<include>Animation_HiddenByInfo</include>
+		</control>
 		
 		<control type="wraplist" id="52">
 			<posx>10</posx>
@@ -32,7 +53,7 @@
 			<preloaditems>2</preloaditems>
 			<include>Animation_Viewtype_Landscape_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>!Skin.HasSetting(no_Landscape) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<visible>[![Skin.HasSetting(no_Landscape) | Skin.HasSetting(TVBanners)] + Container.Content(tvshows)] | !Skin.HasSetting(no_Landscape) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
 			<itemlayout width="250" height="225">
 				<control type="largeimage">
 					<visible>Container.Content(tvshows)</visible>

@@ -1724,30 +1724,32 @@
 							<aligny>center</aligny>
 						</control>
 
-						<control type="radiobutton" id="501">
-							<width>750</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<label>$LOCALIZE[31044]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.ToggleSetting(TVPosters)</onclick>
-							<selected>Skin.HasSetting(TVPosters)</selected>
-						</control>
-						<control type="radiobutton" id="502">
-							<width>750</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<label>$LOCALIZE[31045]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
-							<onclick>Skin.ToggleSetting(TVBanners)</onclick>
-							<selected>Skin.HasSetting(TVBanners)</selected>
-						</control>
+						<control type="radiobutton" id="501"> 
+                            <width>750</width> 
+                            <height>40</height> 
+                            <font>Font_KeyboardKeys</font> 
+                            <label>$LOCALIZE[31044]</label> 
+                            <textcolor>grey2</textcolor> 
+                            <focusedcolor>white</focusedcolor> 
+                            <texturefocus>confluence/MenuItemFO1.png</texturefocus> 
+                            <texturenofocus>confluence/MenuItemNF.png</texturenofocus> 
+                            <onclick>Skin.ToggleSetting(TVPosters)</onclick> 
+                            <onclick>Skin.Reset(TVBanners)</onclick> 
+                            <selected>Skin.HasSetting(TVPosters)</selected> 
+                        </control> 
+                        <control type="radiobutton" id="502"> 
+                            <width>750</width> 
+                            <height>40</height> 
+                            <font>Font_KeyboardKeys</font> 
+                            <label>$LOCALIZE[31045]</label> 
+                            <textcolor>grey2</textcolor> 
+                            <focusedcolor>white</focusedcolor> 
+                            <texturefocus>confluence/MenuItemFO1.png</texturefocus> 
+                            <texturenofocus>confluence/MenuItemNF.png</texturenofocus> 
+                            <onclick>Skin.ToggleSetting(TVBanners)</onclick> 
+                            <onclick>Skin.Reset(TVPosters)</onclick> 
+                            <selected>Skin.HasSetting(TVBanners)</selected> 
+                        </control> 
 						<control type="radiobutton" id="503">
 							<width>750</width>
 							<height>40</height>

@@ -135,17 +135,6 @@
 	<include>Animation_Viewtype_Panel_Title</include>
 	<include>Animation_HiddenByInfo</include>
 	<visible>Control.IsVisible(592)</visible>
-		<control type="label"><!--Movie title-->
-			<visible>Container.Content(movies)</visible>
-			<posx>15</posx>
-			<posy>320</posy>
-			<width>555</width>
-			<height>50</height>
-			<align>center</align>
-			<font>Font_InfoYear2</font>
-			<textcolor>ff67ffff</textcolor>
-			<label>$INFO[ListItem.Label]</label>
-		</control>
 		<control type="largeimage" id="7047">
 			<visible>Container.Content(tvshows)</visible>
 			<posx>160</posx>
@@ -178,33 +167,10 @@
 			<textcolor>ffffffff</textcolor>
 			<label>$INFO[ListItem.Genre]</label>
 		</control>
-		<control type="label">
-			<visible>Container.Content(movies)</visible>
-			<posx>15</posx>
-			<posy>356</posy>
-			<width>555</width>
-			<height>50</height>
-			<align>center</align>
-			<font>Font_Bartowski_Showcase_runtime_year</font>
-			<textcolor>ffffffff</textcolor>
-			<label>$INFO[ListItem.Duration]</label>
-		</control>
 	</control>
 	<control type="group">
 	<visible>Control.IsVisible(592)</visible>
 	<include>Animation_HiddenByInfo</include>
-		<control type="textbox"><!--Movie Plot-->
-			<visible>Container.Content(movies)</visible>
-			<posx>15</posx>
-			<posy>390</posy>
-			<width>555</width>
-			<height>264</height>
-			<font>Font_Bartowski_Showcase_plot</font>
-			<textcolor>ffffffff</textcolor>
-			<label>$INFO[ListItem.Plot]</label>
-			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-			<include>Animation_Viewtype_Panel_BottomArea</include>
-		</control>
 		<control type="textbox"><!--TV Plot-->
 			<visible>Container.Content(tvshows)</visible>
 			<posx>15</posx>
@@ -214,6 +180,7 @@
 			<font>Font_Bartowski_Showcase_plot</font>
 			<textcolor>ffffffff</textcolor>
 			<label>$INFO[ListItem.Plot]</label>
+			<align>justify</align>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<include>Animation_Viewtype_Panel_BottomArea</include>
 		</control>

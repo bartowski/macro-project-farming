@@ -110,7 +110,7 @@
 					<aligny>center</aligny>
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>Text-Filemode</textcolor>
-					<label>$INFO[ListItem.year]/</label>
+					<label>$INFO[ListItem.year]</label>
 					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="group">
@@ -182,17 +182,6 @@
 					<visible>Window.IsActive(Programs)</visible>
 				</control>
 				<control type="label">
-					<posx>660</posx>
-					<posy>0</posy>
-					<width>700</width>
-					<height>46</height>
-					<aligny>center</aligny>
-					<font>Font_Bartowski_List_Main</font>
-					<textcolor>white</textcolor>
-					<label>$INFO[ListItem.Label2]</label>
-					<visible>Window.IsActive(AddonBrowser)</visible>
-				</control>
-				<control type="label">
 					<posx>690</posx>
 					<posy>0</posy>
 					<width>700</width>
@@ -200,7 +189,7 @@
 					<aligny>center</aligny>
 					<font>Font_Bartowski_List_Main</font>
 					<textcolor>white</textcolor>
-					<label>$INFO[ListItem.year]/</label>
+					<label>$INFO[ListItem.year]</label>
 					<visible>Container.Content(movies)</visible>
 				</control>
 				<control type="group">
@@ -807,8 +796,9 @@
 		<posy>0</posy>
 		<include>Animation_HiddenByInfo</include>
 		<include>Animation_Viewtype_Files_RightArea</include>
+		<visible>Control.IsVisible(55) + !IsEmpty(ListItem.Title)</visible>
 			<control type="label">
-				<visible>Control.IsVisible(55) + Container.Content(episodes)</visible>
+				<visible>Container.Content(episodes)</visible>
 				<posx>830</posx>
 				<posy>90</posy>
 				<width>630</width>
@@ -818,7 +808,7 @@
 				<label>[B]Season $INFO[ListItem.Season]     Episode $INFO[ListItem.Episode][/B]</label>
 			</control>
 			<control type="label">
-				<visible>Control.IsVisible(55) + Container.Content(episodes)</visible>
+				<visible>Container.Content(episodes)</visible>
 				<posx>770</posx>
 				<posy>136</posy>
 				<width>630</width>
@@ -827,7 +817,7 @@
 				<label>[COLOR=ListTrackF][B]Aired[/COLOR] [COLOR=white]$INFO[ListItem.Date][/COLOR][/B]</label>
 			</control>
 			<control type="label">
-				<visible>Control.IsVisible(55) + Container.Content(episodes)</visible>
+				<visible>Container.Content(episodes)</visible>
 				<posx>770</posx>
 				<posy>162</posy>
 				<width>630</width>
@@ -836,7 +826,7 @@
 				<label>[COLOR=ListTrackF][B]IMDB[/COLOR] [COLOR=white]$INFO[ListItem.Rating][/COLOR][/B]      [COLOR=ListTrackF][B]Rated[/COLOR] [COLOR=white]$INFO[ListItem.mpaa][/COLOR][/B]</label>
 			</control>
 			<control type="textbox"><!-- Plot TV -->
-				<visible>Control.IsVisible(55) + [Container.Content(episodes) | Container.Content(tvshows)]</visible>
+				<visible>Container.Content(episodes) | Container.Content(tvshows)</visible>
 				<posx>750</posx>
 				<posy>190</posy>
 				<width>476</width>
@@ -849,7 +839,7 @@
 				<animation effect="slide" start="0,0" end=",-80" time="0" tween="cubic" easing="inout" condition="Container.Content(tvshows)">Conditional</animation>
 			</control>
 			<control type="textbox"><!-- Plot TV -->
-				<visible>Control.IsVisible(55) + Container.Content(seasons)</visible>
+				<visible>Container.Content(seasons)</visible>
 				<posx>750</posx>
 				<posy>90</posy>
 				<width>476</width>

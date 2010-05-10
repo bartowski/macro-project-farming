@@ -50,9 +50,9 @@
 							<posy>5</posy>
 							<width>116</width>
 							<height>190</height>
-							<info>ListItem.Thumb</info>
+							<info>ListItem.Icon</info>
 							<texture background="true" diffuse="movie-poster/posterview_diffuse.png" />
-							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<colordiffuse>79FFFFFF</colordiffuse>
 							<animation effect="fade" start="100" end="0" time="200" condition="Container(54).HasFocus">Conditional</animation>
 						</control>
@@ -84,13 +84,12 @@
 							<height>190</height>
 							<info>ListItem.Icon</info>
 							<texture background="true" diffuse="movie-poster/posterview_diffuse.png">$INFO[ListItem.Icon]</texture>
-							<aspectratio align="center" scalediffuse="false">scale</aspectratio>
+							<aspectratio align="center" scalediffuse="false">stretch</aspectratio>
 							<animation type="Focus" reversible="false">
 								<effect type="zoom" start="90" end="130" center="auto" time="600" tween="back" easing="out" />
 								<!--<effect type="rotatey" start="0,0" end="50,0" center="0,0" time="0" tween="sine" easing="out" />
 								<effect type="fade" start="0" end="100" time="600" />-->
 							</animation>
-							<visible>!IsEmpty(ListItem.Thumb)</visible>
 						</control>
 						<control type="image">
 							<description>Poster</description>

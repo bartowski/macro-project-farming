@@ -105,7 +105,7 @@
 	
 	<control type="group">
 	<include>Animation_HiddenByInfo</include>
-	<visible></visible>
+	<visible>Control.IsVisible(55)</visible>
 	<include>Animation_Viewtype_Files_RightArea</include>	
 		<control type="image">
 			<posx>766</posx>
