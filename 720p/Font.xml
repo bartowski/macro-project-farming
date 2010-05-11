@@ -100,6 +100,11 @@
 			<size>38</size>
 		</font>
 		<font>
+			<name>Font_Bartowski_Filebrowser</name>
+			<filename>alaska_nocaps.ttf</filename>
+			<size>46</size>
+		</font>
+		<font>
 			<name>Font_Bartowski_Extras_Pause</name>
 			<filename>Comfortaa Thin.ttf</filename>
 			<size>22</size>

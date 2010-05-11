@@ -1,4 +1,8 @@
-Update 5//2010
+Update 5/10/2010
+  -Finished up addon settings dialog
+  -Fixed/Finished the cast info selction for Video Info screen
+
+Update 5/9/2010
   -More small tweaks
   -Added a glow around big focused image in Landscpe view
   -Hide Landscape tv show level when banners selected...

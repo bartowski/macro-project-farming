@@ -12,14 +12,10 @@
 			<aspectratio>scale</aspectratio>
 			<include>VisibleFadeEffect</include>
 		</control>
-		<control type="label">
-			<include>DialogID</include>
-			<label>FileBrowser.xml</label>
-			<visible>Skin.HasSetting(debugmode)</visible>
-		</control>
+		
 		<control type="fixedlist" id="450">
 			<posx>490</posx>
-			<posy>90</posy>
+			<posy>110</posy>
 			<height>546</height>
 			<width>990</width>
 			<onup>450</onup>
@@ -31,7 +27,7 @@
 			<focusposition>4</focusposition>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
-			<itemlayout width="750" height="50">
+			<itemlayout width="750" height="40">
 				<control type="label">
 					<posx>0</posx>
 					<posy>5</posy>
@@ -42,43 +38,25 @@
 					<textcolor>white</textcolor>
 					<info>ListItem.Label</info>
 				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>25</posy>
-					<width>750</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label fallback="-">[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
-				</control>
+				
 			</itemlayout>
 			<focusedlayout width="750" height="100">
 				<control type="label">
 					<posx>0</posx>
-					<posy>25</posy>
+					<posy>30</posy>
 					<width>750</width>
 					<height>25</height>
 					<aligny>center</aligny>
-					<font>Font_Bartowski_Movies_Title</font>
+					<font>Font_Bartowski_Filebrowser</font>
 					<textcolor>mainblue</textcolor>
 					<label>[UPPERCASE][B]$INFO[ListItem.Label][/B][/UPPERCASE]</label>
 				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>50</posy>
-					<width>750</width>
-					<height>25</height>
-					<aligny>center</aligny>
-					<font>Font_ListDetail</font>
-					<textcolor>ListTitleF</textcolor>
-					<label fallback="-">[UPPERCASE]$INFO[ListItem.Size][/UPPERCASE]</label>
-				</control>
+				
 			</focusedlayout>
 		</control>
 		<control type="image">
 			<posx>0</posx>
-			<posy>290</posy>
+			<posy>270</posy>
 			<width>1280</width>
 			<height>2</height>
 			<texture>common/line_1.png</texture>
@@ -88,7 +66,7 @@
 		</control>
 		<control type="image">
 			<posx>0</posx>
-			<posy>390</posy>
+			<posy>370</posy>
 			<width>1280</width>
 			<height>2</height>
 			<texture>common/line_1.png</texture>
@@ -103,15 +81,15 @@
 			<width>450</width>
 			<height>450</height>
 			<aspectratio align="right" aligny="center">keep</aspectratio>
-			<texture>$INFO[Container(450).ListItem.Icon]</texture>
-			<bordertexture border="22">common/thumb_border3.png</bordertexture>
-			<bordersize>22</bordersize>
+			<texture background="true" diffuse="common/new_files_diffuse.png">$INFO[Container(450).ListItem.Icon]</texture>
+			<bordertexture border="32">list/files_list_glow.png</bordertexture>
+			<bordersize>32</bordersize>
 			<include>Animation_ZoomInZoomOut</include>
 			<include>Animation_ZoomedByMenu</include>
 		</control>
 	<!-- view options -->
 		<control type="image"><!-- Floor -->
-			<posx>360</posx>
+			<posx>320</posx>
 			<posy>650</posy>
 			<width>640</width>
 			<height>70</height>
@@ -192,8 +170,6 @@
 				<include>Global_HeadingDetailVars</include>
 			</control>
 		</control>
-		<include>Global_Time</include>
-		<include>Global_RSS</include>
-		<include>Object_DebugGrid</include>
+		
 	</controls>
 </window>

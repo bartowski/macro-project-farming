@@ -3,13 +3,13 @@
 	<coordinates>
 		<system>1</system>
 		<posx>240</posx>
-		<posy>55</posy>
+		<posy>100</posy>
 	</coordinates>
 	<controls>
 		<control type="group">
-		<posx>-40</posx>
-		<posy>-40</posy>
-			<control type="label">
+		<posx>-210</posx>
+		<posy>-100</posy>
+			<!--<control type="label">
 				<description>Addon Title value</description>
 				<posx>280</posx>
 				<posy>60</posy>
@@ -21,7 +21,7 @@
 				<label>[B]"$INFO[ListItem.Property(Addon.Name)]"[/B]</label>
 				<textcolor>mainblue</textcolor>
 				<scroll>true</scroll>
-			</control>
+			</control>-->
 			<control type="label">
 				<description>Addon Title value</description>
 				<posx>280</posx>
@@ -51,15 +51,15 @@
 		</control>
 		<control type="label" id="20">
 			<description>header label</description>
-			<posx>-20</posx>
+			<posx>10</posx>
 			<posy>-44</posy>
 			<width>760</width>
 			<height>30</height>
-			<font>Font_Bartowski_Title_TVShow</font>
+			<font>Font_Bartowski_MainMenu_Context</font>
 			<label>-</label>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>white</textcolor>
+			<textcolor>mainblue</textcolor>
 			<shadowcolor>black</shadowcolor>
 		</control>
 		<control type="grouplist" id="2">
@@ -67,7 +67,7 @@
 			<posx>30</posx>
 			<posy>54</posy>
 			<width>740</width>
-			<height>420</height>
+			<height>440</height>
 			<itemgap>-1</itemgap>
 			<onup>2</onup>
 			<ondown>2</ondown>
@@ -77,37 +77,37 @@
 		<control type="button" id="3">
 			<description>Default Button</description>
 			<height>40</height>
-			<font>font13</font>
+			<font>Font_KeyboardEdit</font>
+			<textoffsetx>20</textoffsetx>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<texturefocus border="0,2,0,2">confluence/button-focus-big.png</texturefocus>
 		</control>
 		<control type="radiobutton" id="4">
 			<description>Default RadioButton</description>
 			<height>40</height>
-			<font>font13</font>
+			<font>Font_KeyboardEdit</font>
+			<textoffsetx>20</textoffsetx>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+			<texturefocus border="0,2,0,2">confluence/button-focus-big.png</texturefocus>
 		</control>
 		<control type="spincontrolex" id="5">
 			<description>Default spincontrolex</description>
 			<height>40</height>
 			<textcolor>grey2</textcolor>
 			<focusedcolor>white</focusedcolor>
-			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
-			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
-			<font>font13</font>
+			<textoffsetx>20</textoffsetx>
+			<texturefocus border="0,2,0,2">confluence/button-focus-big.png</texturefocus>
+			<font>Font_KeyboardEdit</font>
 			<aligny>center</aligny>
 			<reverse>yes</reverse>
 		</control>
 		<control type="label" id="7">
 			<height>45</height>
-			<font>font13_title</font>
+			<font>Font_KeyboardKeys</font>
 			<label>-</label>
-			<textcolor>blue</textcolor>
+			<textcolor>mainblue</textcolor>
 			<shadowcolor>black</shadowcolor>
 			<align>left</align>
 			<aligny>center</aligny>
@@ -118,7 +118,14 @@
 			<texture>separator2.png</texture>
 		</control>
 		<control type="group" id="9001">
-			<posy>540</posy>
+			<posy>562</posy>
+			<control type="image"><!-- Floor -->
+				<posx>-240</posx>
+				<posy>-12</posy>
+				<width>1280</width>
+				<height>70</height>
+				<texture>backdrops/test2.png</texture>
+			</control>
 			<control type="button" id="10">
 				<description>OK Button</description>
 				<posx>300</posx>
@@ -128,7 +135,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturefocus border="5">confluence/button-focus.png</texturefocus>
-				<textcolor>white</textcolor>
+				<textcolor>black</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<font>font16caps</font>
 				<label>186</label>
@@ -148,7 +155,7 @@
 				<texturefocus border="5">confluence/button-focus.png</texturefocus>
 				<font>font16caps</font>
 				<label>222</label>
-				<textcolor>white</textcolor>
+				<textcolor>black</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<font>Font_Bartowski_Episode_ContextMenu</font>
 				<onleft>10</onleft>
@@ -167,7 +174,7 @@
 				<texturefocus border="5">confluence/button-focus.png</texturefocus>
 				<font>font16caps</font>
 				<label>409</label>
-				<textcolor>white</textcolor>
+				<textcolor>black</textcolor>
 				<focusedcolor>white</focusedcolor>
 				<font>Font_Bartowski_Episode_ContextMenu</font>
 				<onleft>11</onleft>

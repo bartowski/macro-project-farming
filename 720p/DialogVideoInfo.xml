@@ -838,7 +838,7 @@
 							<posy>0</posy>
 							<width>430</width>
 							<height>40</height>
-							<texture border="5">button-nofocus.png</texture>
+							<texture border="5">confluence/button-nofocus.png</texture>
 						</control>
 						<control type="label">
 							<posx>10</posx>
@@ -859,7 +859,7 @@
 							<width>430</width>
 							<height>40</height>
 							<visible>!Control.HasFocus(50)</visible>
-							<texture border="5">button-nofocus.png</texture>
+							<texture border="5">confluence/button-nofocus.png</texture>
 						</control>
 						<control type="image">
 							<posx>0</posx>
@@ -867,17 +867,17 @@
 							<width>430</width>
 							<height>40</height>
 							<visible>Control.HasFocus(50)</visible>
-							<texture border="5">button-focus.png</texture>
+							<texture border="5">confluence/button-focus.png</texture>
 						</control>
 						<control type="label">
 							<posx>10</posx>
 							<posy>0</posy>
 							<width>410</width>
 							<height>40</height>
-							<font>font12</font>
+							<font>font12caps_title</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<selectedcolor>white</selectedcolor>
+							<textcolor>white</textcolor>
 							<info>ListItem.Label</info>
 						</control>
 					</focusedlayout>
@@ -942,6 +942,6 @@
 			</control>
 		</control>
 		
-		<include>Clock</include>
+		
 	</controls>
 </window>
