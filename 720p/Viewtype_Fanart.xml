@@ -277,7 +277,7 @@
 	<visible>Control.IsVisible(56)</visible>
 	<include>Animation_HiddenByInfo</include>
 		<control type="textbox">
-			<visible>Container.Content(movies) + !Player.HasAudio</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows)] + !Player.HasAudio</visible>
 			<posx>15</posx>
 			<posy>390</posy>
 			<width>540</width>
@@ -290,7 +290,7 @@
 			<include>Animation_Viewtype_Panel_BottomArea</include>
 		</control>
 		<control type="textbox">
-			<visible>Container.Content(movies) + Player.HasAudio</visible>
+			<visible>[Container.Content(movies) | Container.Content(tvshows)] + Player.HasAudio</visible>
 			<posx>15</posx>
 			<posy>390</posy>
 			<width>540</width>

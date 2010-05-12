@@ -6,7 +6,16 @@
 
 		<!-- Browser -->
 		<control type="image"><!-- 1st Background -->
-			<visible>Control.IsVisible(52)</visible>
+			<visible>Control.IsVisible(52) + Skin.HasSetting(Landscape_Fanart)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>tv-landscape/landscape_fanart_back.png</texture>
+			<aspectratio>scale</aspectratio>
+		</control>
+		<control type="image"><!-- 1st Background -->
+			<visible>Control.IsVisible(52) + !Skin.HasSetting(Landscape_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -15,7 +24,7 @@
 			<aspectratio>scale</aspectratio>
 		</control>
 		<control type="image"><!-- 1st Background -->
-			<visible>Control.IsVisible(52) + !Skin.HasSetting(TVPosters)</visible>
+			<visible>Control.IsVisible(52) + !Skin.HasSetting(TVPosters) + !Skin.HasSetting(Landscape_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>684</width>
@@ -26,7 +35,7 @@
 			<include>Animation_HiddenByInfo</include>
 		</control>
 		<control type="image"><!-- 1st Background -->
-			<visible>Control.IsVisible(52) + Skin.HasSetting(TVPosters)</visible>
+			<visible>Control.IsVisible(52) + Skin.HasSetting(TVPosters) + !Skin.HasSetting(Landscape_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>544</width>
@@ -53,7 +62,9 @@
 			<preloaditems>2</preloaditems>
 			<include>Animation_Viewtype_Landscape_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>[![Skin.HasSetting(no_Landscape) | Skin.HasSetting(TVBanners)] + Container.Content(tvshows)] | !Skin.HasSetting(no_Landscape) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<visible>!Skin.HasSetting(no_Landscape) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+			<animation effect="slide" start="0,0" end="0,560" time="800" delay="200" condition="Skin.HasSetting(Landscape_Fanart)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-220,0" time="800" delay="200" condition="Container.Content(episodes)">Conditional</animation>
 			<itemlayout width="250" height="225">
 				<control type="largeimage">
 					<visible>Container.Content(tvshows)</visible>
@@ -189,7 +200,7 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Landscape_RightArea</include>
-			<visible>Control.IsVisible(52) + !Container.Content(tvshows)</visible>
+			<visible>Control.IsVisible(52) + !Container.Content(tvshows) + !Skin.HasSetting(Landscape_Fanart)</visible>
 		</control>
 		<control type="largeimage" id="9014">
 			<visible></visible>
@@ -202,10 +213,10 @@
 			<aspectratio scalediffuse="false">stretch</aspectratio>
 			<include>Animation_HiddenByInfo</include>
 			<include>Animation_Viewtype_Landscape_RightArea</include>
-			<visible>Control.IsVisible(52) + !Container.Content(tvshows)</visible>
+			<visible>Control.IsVisible(52) + !Container.Content(tvshows) + !Skin.HasSetting(Landscape_Fanart)</visible>
 		</control>
 		<control type="image"><!-- Last Overlay -->
-			<visible>Control.IsVisible(52)</visible>
+			<visible>Control.IsVisible(52) + !Skin.HasSetting(Landscape_Fanart)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -224,7 +235,7 @@
 			<label>[B]$INFO[ListItem.TVShowtitle][/B]</label>
 			<include>Animation_Viewtype_Landscape_RightArea</include>
 			<include>Animation_HiddenByInfo</include>
-			<visible>Control.IsVisible(52) + IsEmpty(Control.GetLabel(7014)) + IsEmpty(Control.GetLabel(9014)) + !Container.Content(tvshows)</visible>
+			<visible>Control.IsVisible(52) + IsEmpty(Control.GetLabel(7014)) + IsEmpty(Control.GetLabel(9014)) + !Container.Content(tvshows) + !Skin.HasSetting(Landscape_Fanart)</visible>
 		</control>
 		<!--<control type="textbox">
 			<posx>870</posx>
@@ -243,7 +254,8 @@
 			<posx>20</posx>
 			<posy>48</posy>
 			<include>Animation_Viewtype_Landscape_ThumbArea</include>
-			<include>Animation_HiddenByInfo</include>	
+			<include>Animation_HiddenByInfo</include>
+			<visible>Control.IsVisible(52) + !Skin.HasSetting(Landscape_Fanart)</visible>
 			<!--<control type="image">
 				<visible>Control.IsVisible(52) + Container.OnPrevious</visible>
 				<posx>2</posx>
@@ -265,7 +277,7 @@
 				<animation effect="zoom" start="2,122,500,281" end="0,0,500,281" time="1200">Hidden</animation>
 			</control>-->
 			<control type="image">
-				<visible>Control.IsVisible(52) + ![Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+				<visible>![Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
 				<posx>2</posx>
 				<posy>122</posy>
 				<width>500</width>
@@ -276,7 +288,7 @@
 				<!--<animation effect="zoom" start="2,122,0,281" end="0,0,500,281" time="800" delay="200">Visible</animation>-->
 			</control>
 			<control type="image">
-				<visible>Control.IsVisible(52) + Container.Content(episodes)</visible>
+				<visible>Container.Content(episodes)</visible>
 				<posx>2</posx>
 				<posy>355</posy>
 				<width>500</width>
@@ -286,7 +298,7 @@
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
 			<control type="image">
-				<visible>Control.IsVisible(52) + ![Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+				<visible>![Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
 				<posx>-20</posx>
 				<posy>106</posy>
 				<width>544</width>
@@ -294,7 +306,7 @@
 				<texture>tv-landscape/landscapeframeFO.png</texture>
 			</control>
 			<control type="image"><!-- USE POSTERS  -->
-				<visible>Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+				<visible>[Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
 				<posx>82</posx>
 				<posy>122</posy>
 				<width>268</width>
@@ -304,7 +316,7 @@
 				<aspectratio scalediffuse="false">stretch</aspectratio>
 			</control>
 			<control type="label"><!-- Episode Description -->
-				<visible>Control.IsVisible(52) + Container.Content(episodes)</visible>
+				<visible>Container.Content(episodes)</visible>
 				<posx>5</posx>
 				<posy>362</posy>
 				<width>500</width>
@@ -316,7 +328,7 @@
 				<include>Animation_HiddenByInfo</include>
 			</control>
 			<control type="image"><!-- USE POSTERS  -->
-				<visible>Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+				<visible>[Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]</visible>
 				<posx>66</posx>
 				<posy>106</posy>
 				<width>300</width>
@@ -325,14 +337,13 @@
 			</control>
 		</control>
 		<control type="group"> 
-			<visible>!IsEmpty(ListItem.Title)</visible>
 			<posx>20</posx>
 			<posy>0</posy>
 			<animation effect="slide" start="0,0" end="-120,0" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
 			<include>Animation_Viewtype_Landscape_RightArea</include>
 			<include>Animation_HiddenByInfo</include>
+			<visible>Control.IsVisible(52) + !Skin.HasSetting(Landscape_Fanart) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(Landscape_Fanart)</visible>
 				<control type="textbox"><!-- Plot and TV -->
-					<visible>Control.IsVisible(52)</visible>
 					<posx>530</posx>
 					<posy>170</posy>
 					<width>590</width>
@@ -344,7 +355,7 @@
 					<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				</control>
 				<control type="textbox"><!-- Plot and TV -->
-					<visible>Control.IsVisible(52) + Container.Content(seasons)</visible>
+					<visible>Container.Content(seasons)</visible>
 					<posx>530</posx>
 					<posy>170</posy>
 					<width>590</width>
@@ -357,7 +368,7 @@
 				</control>
 		</control>
 		<control type="group"> 
-			<visible>!IsEmpty(ListItem.Title)</visible>
+			<visible>Control.IsVisible(52) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(Landscape_Fanart)</visible>
 			<posx>20</posx>
 			<posy>0</posy>
 			<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
@@ -372,7 +383,7 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B][COLOR=ff67ffff]Rated:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Mpaa][/COLOR]</label>
-					<visible>Control.IsVisible(52) + Container.Content(tvshows)</visible>
+					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="label"><!-- 1st Seasons -->
 					<posx>5</posx>
@@ -383,7 +394,7 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B][COLOR=ff67ffff]Season:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Season][/COLOR]</label>
-					<visible>Control.IsVisible(52) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
+					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
 				</control>
 				<control type="label"><!-- Episodes -->
 					<posx>5</posx>
@@ -394,7 +405,7 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B][COLOR=ff67ffff]Episodes:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
-					<visible>Control.IsVisible(52) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 				</control>
 				<control type="label"><!-- Episodes -->
 					<posx>5</posx>
@@ -405,7 +416,7 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B][COLOR=ff67ffff]Episode:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Episode][/COLOR]</label>
-					<visible>Control.IsVisible(52) + Container.Content(episodes)</visible>
+					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="label"><!-- Genre -->
 					<posx>5</posx>
@@ -415,7 +426,7 @@
 					<aligny>center</aligny>
 					<font>Font_TVShow</font>
 					<label>[B][COLOR=ff67ffff]Genre:[/COLOR][/B] [COLOR=ffffffff]$INFO[ListItem.Genre][/COLOR]</label>
-					<visible>Control.IsVisible(52) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
+					<visible>Container.Content(tvshows) | Container.Content(seasons)</visible>
 				</control>
 				<control type="label"><!-- Episode Rating -->
 					<posx>5</posx>
@@ -426,11 +437,11 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B][COLOR=ff67ffff]Rating:[/B] [COLOR=ffffffff]$INFO[ListItem.Rating][/COLOR]</label>
-					<visible>Control.IsVisible(52) + Container.Content(episodes)</visible>
+					<visible>Container.Content(episodes)</visible>
 				</control>
 			</control>
 			<control type="grouplist">
-				<visible>!IsEmpty(ListItem.Title)</visible>
+				<visible>Control.IsVisible(52) + !IsEmpty(ListItem.Title) + !Skin.HasSetting(Landscape_Fanart)</visible>
 				<animation effect="slide" start="0,0" end="0,120" time="0" tween="cubic" easing="inout" condition="Control.IsVisible(52) + [Skin.HasSetting(TVPosters) + [Container.Content(tvshows) | Container.Content(seasons)]]">Conditional</animation>
 				<include>Animation_Viewtype_Landscape_BottomInfo</include>
 				<include>Animation_HiddenByInfo</include>
@@ -445,7 +456,7 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B]First Premiered in $INFO[ListItem.Year][/B]</label>
-					<visible>Control.IsVisible(52) + Container.Content(tvshows)</visible>
+					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="label">
 					<posx>0</posx>
@@ -455,7 +466,7 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B] on [/B]</label>
-					<visible>Control.IsVisible(52) + Container.Content(tvshows) + !IsEmpty(ListItem.Studio)</visible>
+					<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Studio)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -464,7 +475,7 @@
 					<height>47</height>
 					<texture>$INFO[listitem.studio,extras/Studios/,.png]</texture>
 					<colordiffuse>ff67ffff</colordiffuse>
-					<visible>Control.IsVisible(52) + Container.Content(tvshows)</visible>
+					<visible>Container.Content(tvshows)</visible>
 					<animation effect="slide" start="0,0" end="-6,-12" time="0" tween="cubic" easing="inout" condition="Container.Content(tvshows)">Conditional</animation>
 				</control>
 				<control type="label">
@@ -475,7 +486,7 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B]This Show Aired $INFO[ListItem.Date][/B]</label>
-					<visible>Control.IsVisible(52) + Container.Content(episodes)</visible>
+					<visible>Container.Content(episodes)</visible>
 				</control>
 				<control type="label">
 					<posx>0</posx>
@@ -485,7 +496,7 @@
 					<font>Font_TVShow</font>
 					<textcolor>ff67ffff</textcolor>
 					<label>[B] on [/B]</label>
-					<visible>Control.IsVisible(52) + Container.Content(episodes) + !IsEmpty(ListItem.Studio)</visible>
+					<visible>Container.Content(episodes) + !IsEmpty(ListItem.Studio)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -494,12 +505,41 @@
 					<height>47</height>
 					<texture>$INFO[listitem.studio,extras/Studios/,.png]</texture>
 					<colordiffuse>ff67ffff</colordiffuse>
-					<visible>Control.IsVisible(52) + Container.Content(episodes)</visible>
+					<visible>Container.Content(episodes)</visible>
 					<animation effect="slide" start="0,0" end="-10,-12" time="0" tween="cubic" easing="inout" condition="Container.Content(episodes)">Conditional</animation>
 				</control>
 			</control>
+	<control type="group">
+	<posy>24</posy>
+	<visible>Control.IsVisible(52) + Skin.HasSetting(Landscape_Fanart) + Container.Content(episodes)</visible>
+		<control type="image">
+			<posx>726</posx>
+			<posy>326</posy>
+			<width>559</width>
+			<height>370</height>
+			<texture>list/file_glow1.png</texture>
+		</control>
+		<control type="image">
+			<posx>854</posx>
+			<posy>454</posy>
+			<width>400</width>
+			<height>224</height>
+			<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Icon]</texture>
+			<fadetime>400</fadetime>
+		</control>
+		<control type="image">
+			<posx>838</posx>
+			<posy>440</posy>
+			<width>430</width>
+			<height>252</height>
+			<texture>tv-landscape/landscapeframeFO.png</texture>
+		</control>
+	</control>
+	
+	
+		
 		<control type="grouplist">
-			<visible>Control.IsVisible(52) + Container.Content(episodes) + !Skin.HasSetting(no_media_flags)</visible>
+			<visible>Control.IsVisible(52) + Container.Content(episodes) + !Skin.HasSetting(no_media_flags) + !Skin.HasSetting(Landscape_Fanart)</visible>
 			<description>Media Codec Flagging Images</description>
 			<posx>20</posx>
 			<posy>680</posy>

@@ -3,7 +3,7 @@
 	<id>skin.night</id>
 	<type>skin</type>
 	<title>Night</title>
-	<version>3.00.0</version>
+	<version>3.00</version>
 	<author>mcborzu</author>
 	<library>skin.xml</library>
 	<icon>icon.png</icon>

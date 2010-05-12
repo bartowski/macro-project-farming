@@ -31,6 +31,17 @@
 	<include file="Includes_Music_Global.xml" />
 	
 	
+	<include name="Land_Fanart">
+		<focusposition>3</focusposition>
+	</include>
+	<include name="Land_Dark">
+		<focusposition>2</focusposition>
+	</include>
+	<include name="Land_Normal">
+		<width>1280</width>
+	</include>
+	
+	
 	<include name="ButtonHomeSubCommonValues">
 		<width>600</width>
 		<height>71</height>
