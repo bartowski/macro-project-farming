@@ -16,7 +16,10 @@
 			<font>-</font>
 			<onfocus>SetFocus(11)</onfocus>
 		</control>
-		<!--<control type="button" id="11">
+		
+		<!--COMMENT OUT THE BLOCK BELOW AND UNCOMMENT THE OTHER BLOCK FOR MERGE VERSION -->
+		
+		<control type="button" id="11">
 			<description>Trigger Latest Added</description>
 			<posx>-20</posx>
 			<posy>-20</posy>
@@ -28,7 +31,10 @@
 			<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
 			<font>-</font>
 			<onfocus>SetFocus(12)</onfocus>
-		</control>-->
+		</control>
+		
+		<!-- MERGE VERSION RECENTLY ADDED
+		
 		<control type="button" id="11">
 			<description>Trigger Latest Added</description>
 			<posx>-20</posx>
@@ -42,6 +48,8 @@
 			<font>-</font>
 			<onfocus>SetFocus(12)</onfocus>
 		</control>
+		-->
+		
 		<control type="button" id="12">
 			<posx>-20</posx>
 			<posy>-20</posy>

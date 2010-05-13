@@ -438,6 +438,15 @@
 			<effect type="slide" start="0" end="0,-200" time="600" tween="cubic" easing="inout" />
 		</animation>	
 	</include>
+	<include name="Animation_Viewtype_Landscape_Fanart_FocusArea">
+		<animation type="WindowOpen">
+			<effect type="slide" start="1400" end="-400,0" time="600" tween="cubic" easing="inout" />
+			<effect type="slide" start="0,0" end="400,0" time="800" delay="600" tween="cubic" easing="inout" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" start="0" end="0,200" time="600" tween="cubic" easing="inout" />
+		</animation>	
+	</include>
 	<include name="Animation_Viewtype_Landscape_RightArea">
 		<animation type="WindowOpen">
 			<effect type="slide" start="1000,0" end="0,0" time="800" tween="cubic" easing="inout" />

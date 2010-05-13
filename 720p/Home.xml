@@ -110,13 +110,13 @@
 					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</item>
-				<!--<item id="4">
+				<item id="4">
 					<label>HD Movies</label>
 					<icon>special://skin/media/backgrounds/movies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomHDMoviesFolder)]</thumb>			
 					<onclick>ActivateWindow(10025,videodb://1/1/9/,return)</onclick>
 					<visible>!Skin.HasSetting(nomovies)</visible>
-				</item>-->
+				</item>
 				<item id="5">
 					<description>TV shows</description>
 					<label>$LOCALIZE[31014]</label>
@@ -188,9 +188,9 @@
 			</content>
 		</control>
 		
-		<!-- PREMERGE RECENTLY ADDON
 		
-		<control type="button" id="8999">
+		
+		<!--<control type="button" id="8999">
 				<description>Run Recently added</description>
 				<posx>-20</posx>
 				<posy>-20</posy>
@@ -203,9 +203,11 @@
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
 				<visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
-			</control>
+			</control>-->
 			
-			-->
+			
+			
+			
 			
 			<control type="button" id="8999">
 				<description>Run Recently added</description>
@@ -215,7 +217,8 @@
 				<height>1</height>
 				<label>-</label>
 				<font>-</font>
-				<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>
+				<!--<onfocus>XBMC.RunScript(script.recentlyadded,limit=10)</onfocus>-->
+				<onfocus>XBMC.RunScript(special://skin/scripts/RecentlyAdded.py,limit=10)</onfocus>
 				<onfocus>SetFocus(300)</onfocus>
 				<texturenofocus>-</texturenofocus>
 				<texturefocus>-</texturefocus>
@@ -234,6 +237,10 @@
 				<texturefocus>-</texturefocus>
 				<visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
 			</control>
+			
+			
+			
+			
 		<control type="group" id="9001">
 				<posx>20</posx>
 				<posy>120</posy>

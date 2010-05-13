@@ -13,9 +13,11 @@
 				<texture>osd/osd_back.png</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
+			
 			<control type="group" id="200">
 				<posx>417</posx>
 				<posy>4</posy>
+				
 				<control type="button" id="700">
 					<posx>0</posx>
 					<posy>0</posy>
@@ -25,7 +27,7 @@
 					<font>-</font>
 					<texturefocus>confluence/OSDBookMarksFO.png</texturefocus>
 					<texturenofocus>confluence/OSDBookMarksNF.png</texturenofocus>
-					<onleft>705</onleft>
+					<onleft>706</onleft>
 					<onright>701</onright>
 					<onup>600</onup>
 					<ondown>600</ondown>
@@ -74,23 +76,24 @@
 			<control type="group" id="201">
 				<posx>718</posx>
 				<posy>4</posy>
-				<control type="button" id="703">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>45</width>
-					<height>45</height>
-					<label>31356</label>
+				<control type="button" id="706">
+					<description>Subtitles Menu</description>
+					<posx>6</posx>
+					<posy>6</posy>
+					<width>32</width>
+					<height>32</height>
+					<label>-</label>
 					<font>-</font>
-					<texturefocus>confluence/OSDSubtitlesFO.png</texturefocus>
-					<texturenofocus>confluence/OSDSubtitlesNF.png</texturenofocus>
-					<onleft>702</onleft>
-					<onright>704</onright>
-					<onup>604</onup>
-					<ondown>604</ondown>
+					<texturenofocus>confluence/osd-subs-nofocus.png</texturenofocus>
+					<texturefocus>confluence/osd-subs-focus.png</texturefocus>
 					<onclick>Close</onclick>
+					<!--<onclick>RunScript($INFO[Skin.String(SubsScript_Path)])</onclick>-->
 					<onclick>XBMC.RunScript($INFO[Skin.String(SubtitleScript_Path)])</onclick>
-					<enable>Skin.HasSetting(SubtitleDownload_Enable) + !IsEmpty(Skin.String(SubtitleScript_Path))</enable>
-					<animation effect="fade" start="100" end="50" time="100" condition="![Skin.HasSetting(SubtitleDownload_Enable) + !IsEmpty(Skin.String(SubtitleScript_Path))]">Conditional</animation>
+					<onleft>705</onleft>
+					<onright>700</onright>
+					<onup>600</onup>
+					<ondown>600</ondown>
+					<visible>Skin.HasSetting(SubsScript_Enable)</visible>
 				</control>
 				<control type="button" id="704">
 					<posx>60</posx>
@@ -128,7 +131,7 @@
 				</control>
 			</control>
 			<control type="group" id="100">
-				<posx>490</posx>
+				<posx>474</posx>
 				<posy>40</posy>
 				<control type="button" id="600">
 					<posx>0</posx>

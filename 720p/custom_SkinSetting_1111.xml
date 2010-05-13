@@ -200,7 +200,7 @@
 						<selected>Skin.HasSetting(no_clock)</selected>
 					</control>
 					
-					<control type="radiobutton" id="107">
+					<control type="radiobutton" id="102">
 						<width>750</width>
 						<height>40</height>
 						<font>Font_KeyboardKeys</font>
@@ -211,6 +211,33 @@
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(LockViews)</onclick>
 						<selected>Skin.HasSetting(LockViews)</selected>
+					</control>
+					<control type="radiobutton" id="103">
+						<width>750</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<label>$LOCALIZE[31215]</label>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.ToggleSetting(SubsScript_Enable)</onclick>
+						<selected>Skin.HasSetting(SubsScript_Enable)</selected>
+					</control>
+					<control type="button" id="105">
+						<width>750</width>
+						<height>40</height>
+						<font>Font_KeyboardKeys</font>
+						<textoffsetx>50</textoffsetx>
+						<label>- $LOCALIZE[31216]</label>
+						<label2>[COLOR=mainblue]$INFO[Skin.String(SubsScript_Path)][/COLOR]</label2>
+						<textcolor>grey2</textcolor>
+						<focusedcolor>white</focusedcolor>
+						<texturefocus>confluence/MenuItemFO1.png</texturefocus>
+						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+						<onclick>Skin.SetFile(SubsScript_Path,Script)</onclick>
+						<enable>Skin.HasSetting(SubsScript_Enable)</enable>
+						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
 					</control>
 					<control type="label" id="110">
 						<width>750</width>
@@ -258,7 +285,7 @@
 						<onclick>Skin.ToggleSetting(DarkFullscreenMusicPlayback)</onclick>
 						<selected>Skin.HasSetting(DarkFullscreenMusicPlayback)</selected>
 					</control>
-					<control type="label" id="120">
+					<!--<control type="label" id="120">
 						<width>750</width>
 						<height>45</height>
 						<font>Font_KeyboardKeys</font>
@@ -327,7 +354,7 @@
 						<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 						<onclick>Skin.ToggleSetting(ShowBackgroundVis)</onclick>
 						<selected>!Skin.HasSetting(ShowBackgroundVis)</selected>
-					</control>
+					</control>-->
 				</control>
 				<control type="grouplist" id="9002">
 					<visible>Container(9000).Hasfocus(2)</visible>

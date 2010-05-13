@@ -61,7 +61,7 @@ MUSIC SECTION
 			<viewtype label="Showcase">list</viewtype>
 			<orientation>horizontal</orientation>
 			<focusposition>3</focusposition>
-			<scrolltime>200</scrolltime>
+			<scrolltime>300</scrolltime>
 			<preloaditems>2</preloaditems>
 			<pagecontrol>68</pagecontrol>
 			<include>Animation_ZoomInZoomOut</include>

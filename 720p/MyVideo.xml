@@ -34,7 +34,7 @@
 		<include>Viewtype_List</include>
 		<include>Viewtype_Poster</include>
 		<include>Viewtype_Episode</include>
-
+		<include>Viewtype_Wall</include><!--  54  -->
 		
 		<include>Trailer</include>
 		<include>Trailer_TVLandscape</include>

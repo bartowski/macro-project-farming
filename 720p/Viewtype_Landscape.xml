@@ -50,21 +50,21 @@
 			<posx>10</posx>
 			<posy>0</posy>
 			<height>500</height>
-			<width>1280</width><!-- 1656-->
+			<width>1280</width>
 			<onleft>300</onleft>
 			<onright>300</onright>
 			<onup>7000</onup>
 			<ondown>7000</ondown>			
 			<viewtype label="Landscape">list</viewtype>
 			<orientation>horizontal</orientation>
-			<focusposition>2</focusposition>
 			<scrolltime>300</scrolltime>
+			<focusposition>2</focusposition>
 			<preloaditems>2</preloaditems>
-			<include>Animation_Viewtype_Landscape_FocusArea</include>
+			<include condition="!Skin.HasSetting(Landscape_Fanart)">Animation_Viewtype_Landscape_FocusArea</include>
+			<include condition="Skin.HasSetting(Landscape_Fanart)">Animation_Viewtype_Landscape_Fanart_FocusArea</include>
 			<include>Animation_HiddenByInfo</include>
 			<visible>!Skin.HasSetting(no_Landscape) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 			<animation effect="slide" start="0,0" end="0,560" time="800" delay="200" condition="Skin.HasSetting(Landscape_Fanart)">Conditional</animation>
-			<animation effect="slide" start="0,0" end="-220,0" time="800" delay="200" condition="Container.Content(episodes)">Conditional</animation>
 			<itemlayout width="250" height="225">
 				<control type="largeimage">
 					<visible>Container.Content(tvshows)</visible>
@@ -510,29 +510,50 @@
 				</control>
 			</control>
 	<control type="group">
-	<posy>24</posy>
-	<visible>Control.IsVisible(52) + Skin.HasSetting(Landscape_Fanart) + Container.Content(episodes)</visible>
+	<animation effect="zoom" start="640,0,1,720" end="0,0,1280,720" time="200" delay="200">Visible</animation>
+	<include>Animation_LandscapeFade</include>
+	<include>Animation_HiddenByInfo</include>
+	<visible>Control.IsVisible(52) + Skin.HasSetting(Landscape_Fanart) + Container.Content(episodes) + ![Container(52).OnNext | Container(52).OnPrevious]</visible>
 		<control type="image">
-			<posx>726</posx>
-			<posy>326</posy>
-			<width>559</width>
-			<height>370</height>
-			<texture>list/file_glow1.png</texture>
+			<posx>288</posx>
+			<posy>302</posy>
+			<width>752</width>
+			<height>420</height>
+			<texture>tv-landscape/lanscape_tv_fanart_glow.png</texture>
 		</control>
 		<control type="image">
-			<posx>854</posx>
-			<posy>454</posy>
+			<posx>454</posx>
+			<posy>424</posy>
 			<width>400</width>
 			<height>224</height>
 			<texture background="true" diffuse="tv-landscape/landscapematteFO.png">$INFO[ListItem.Icon]</texture>
 			<fadetime>400</fadetime>
 		</control>
 		<control type="image">
-			<posx>838</posx>
-			<posy>440</posy>
+			<posx>454</posx>
+			<posy>424</posy>
+			<width>400</width>
+			<height>224</height>
+			<texture>tv-landscape/tv_fanart_land_back.png</texture>
+			<visible>!IsEmpty(ListItem.Title)</visible>
+		</control>
+		<control type="image">
+			<posx>438</posx>
+			<posy>410</posy>
 			<width>430</width>
 			<height>252</height>
 			<texture>tv-landscape/landscapeframeFO.png</texture>
+		</control>
+		<control type="label">
+			<posx>440</posx>
+			<posy>612</posy>
+			<width>430</width>
+			<label>[B]$INFO[ListItem.Title][/B]</label>
+			<align>center</align>
+			<font>Font_Bartowski_Extras_Pause</font>
+			<textcolor>ffffffff</textcolor>
+			<visible>!IsEmpty(ListItem.Title)</visible>
+			<include>Animation_HiddenByInfo</include>
 		</control>
 	</control>
 	

@@ -14,7 +14,7 @@
 	<include name="Viewtype_Wall">
 											<!--START ONSCROLLNEXT FAKE THUMBS -->
 	<control type="image">
-		<visible>Control.IsVisible(54) + Container.Content(movies)</visible>
+		<visible>Control.IsVisible(54)</visible>
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>1280</width>
@@ -23,10 +23,10 @@
 		<aspectratio>stretch</aspectratio>
 		<include>Animation_CommonFade</include>
 	</control>
-	
+
 	
 		<control type="panel" id="54">
-					<visible>!Skin.HasSetting(no_Wall) + Container.Content(Movies)</visible>
+					<visible>!Skin.HasSetting(no_Wall) + [Container.Content(Movies) | Window.IsVisible(VideoFiles)]</visible>
 					<posx>0</posx>
 					<posy>-90</posy><!-- -105 -->
 					<width>1206</width>
@@ -111,7 +111,7 @@
 	
 	
 	<control type="image">
-		<visible>Control.IsVisible(54) + Container.Content(movies)</visible>
+		<visible>Control.IsVisible(54)</visible>
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>1280</width>
@@ -119,6 +119,18 @@
 		<texture>wall/wall_lastoverlay.png</texture>
 		<aspectratio>stretch</aspectratio>
 		<include>Animation_CommonFade</include>
+	</control>
+	<control type="label">
+		<posx>1280</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>50</height>
+		<align>right</align>
+		<aligny>center</aligny>
+		<font>Font_Bartowski_Movies_Title</font>
+		<textcolor>ff67ffff</textcolor>
+		<label>[B]$INFO[ListItem.Label][/B]</label>
+		<visible>Control.IsVisible(54) + Window.IsVisible(VideoFiles)</visible>
 	</control>
 	<control type="group">
 		<posx>890</posx>

@@ -14,7 +14,7 @@
 			<aspectratio>scale</aspectratio>
 		</control>
 		<control type="label"><!--Big Title-->
-			<visible>Control.IsVisible(50) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]</visible>
+			<visible>Control.IsVisible(50) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies)]</visible>
 			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(50) + ![Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(movies)]">Conditional</animation>
 			<posx>0</posx>
 			<posy>235</posy>
@@ -29,7 +29,7 @@
 			<include>Animation_Bartowski_Context_Zoom</include>
 		</control>
 		<control type="label"><!--Big Title-->
-			<visible>Control.IsVisible(50) + Container.Content(movies) + IsEmpty(ListItem.Title)</visible>
+			<visible>Control.IsVisible(50) + Container.Content(movies) + IsEmpty(ListItem.Title) + !Window.IsVisible(VideoFiles)</visible>
 			<animation effect="slide" start="0,0" end="0,-70" time="1000" delay="600" tween="cubic" easing="inout" condition="Control.IsVisible(50) + Container.Content(movies) + IsEmpty(ListItem.Title)">Conditional</animation>
 			<posx>0</posx>
 			<posy>235</posy>
